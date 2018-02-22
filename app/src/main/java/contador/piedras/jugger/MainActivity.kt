@@ -1,5 +1,4 @@
-package com.example.ccanadas.myapplication
-
+package contador.priedras.jugger
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
@@ -7,7 +6,6 @@ import android.view.KeyEvent
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
-import contador.piedras.jugger.JuggerStonesApplication
 import contador.piedras.jugger.R
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.alert
@@ -73,23 +71,4 @@ class MainActivity : AppCompatActivity() {
         }
         counter.text = actualValue.toString()
     }
-
-    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
-        when (keyCode) {
-            KeyEvent.KEYCODE_VOLUME_UP -> {
-                JuggerStonesApplication.increaseVolume()
-                return true
-            }
-            KeyEvent.KEYCODE_VOLUME_DOWN ->{
-                JuggerStonesApplication.decreaseVolume()
-                return true
-            }
-            KeyEvent.KEYCODE_BACK ->{
-                finish()
-                return true
-            }
-            else -> return true
-        }
-    }
-
 }
