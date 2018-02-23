@@ -1,16 +1,16 @@
-package contador.priedras.jugger
-import android.support.v7.app.AppCompatActivity
+package contador.piedras.jugger
+
+import android.app.AlertDialog
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
-import android.view.KeyEvent
+import android.support.v7.app.AppCompatActivity
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
-import contador.piedras.jugger.R
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.alert
+import com.jaredrummler.android.colorpicker.ColorPickerDialog
 
-class MainActivity : AppCompatActivity() {
+
+class Game : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +33,28 @@ class MainActivity : AppCompatActivity() {
         showAlertDialog(tv_t1)
         showAlertDialog(tv_t2)
 
+        congifLongListener(tv_t1)
+        congifLongListener(tv_t2)
+
+    }
+
+    private fun changeTeamColors(team: TextView) {
+        ColorPickerDialog.newBuilder()
+                .setDialogType(ColorPickerDialog.TYPE_PRESETS)
+                .setDialogId(0)
+                .setDialogTitle(R.string.app_name) //TODO change this
+                .setColor(team.getCurrentTextColor())
+                .setShowAlphaSlider(false)
+                .setAllowCustom(false)
+                .setSelectedButtonText(android.R.string.ok)
+                .show(this)
+    }
+
+    private fun congifLongListener(textView: TextView){
+        textView.setOnLongClickListener({
+            changeTeamColors(textView)
+            true
+        })
     }
 
     private fun configListener(button: ImageButton, mode: String, counter: TextView){
