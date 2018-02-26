@@ -1,16 +1,18 @@
 package contador.piedras.jugger
 
 import android.app.AlertDialog
+import android.app.ProgressDialog.show
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.TextView
+import android.widget.*
 import kotlinx.android.synthetic.main.activity_main.*
 import com.jaredrummler.android.colorpicker.ColorPickerDialog
+import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
 
 
-class Game : AppCompatActivity() {
+class Game : AppCompatActivity(), ColorPickerDialogListener {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,13 +42,11 @@ class Game : AppCompatActivity() {
 
     private fun changeTeamColors(team: TextView) {
         ColorPickerDialog.newBuilder()
-                .setDialogType(ColorPickerDialog.TYPE_PRESETS)
-                .setDialogId(0)
-                .setDialogTitle(R.string.app_name) //TODO change this
-                .setColor(team.getCurrentTextColor())
-                .setShowAlphaSlider(false)
-                .setAllowCustom(false)
-                .setSelectedButtonText(android.R.string.ok)
+                .setDialogType(ColorPickerDialog.STYLE_NORMAL)
+                .setAllowPresets(false)
+                .setDialogId(team.id)
+                .setColor(Color.BLACK)
+                .setShowAlphaSlider(true)
                 .show(this)
     }
 
@@ -57,6 +57,11 @@ class Game : AppCompatActivity() {
         })
     }
 
+    override fun onColorSelected(dialogId: Int, color: Int) {
+        var view = findViewById<TextView>(dialogId)
+        view.setTextColor(color)
+    }
+
     private fun configListener(button: ImageButton, mode: String, counter: TextView){
         button.setOnClickListener({
             updateCounter(counter, mode)
@@ -64,24 +69,21 @@ class Game : AppCompatActivity() {
     }
 
     private fun showAlertDialog(teamName: TextView){
-
-        teamName.setOnClickListener {
-            val alertDialog = AlertDialog.Builder(this)
+        teamName.setOnClickListener{
+            val alertDialog = AlertDialog.Builder(this).create()
             val editText = EditText(this)
-            val dialog = alertDialog.create()
+            alertDialog.setView(editText)
+            alertDialog.setTitle("Change name of ${teamName.text}")
 
-            with(alertDialog){
-                setTitle("Change name")
-                setPositiveButton("Change"){ _, _ ->
-                    teamName.text = editText.text.toString()
-                }
-                setNegativeButton("Cancel"){
-                    dialog, _ ->
-                    dialog.dismiss()
-                }
-            }
-            dialog.setView(editText)
-            dialog.show()
+            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", {
+                _, _ ->
+                teamName.text = editText.text.toString()
+            })
+            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", {
+                _, _ ->
+                alertDialog.cancel()
+            })
+            alertDialog.show()
         }
     }
 
@@ -92,5 +94,9 @@ class Game : AppCompatActivity() {
             "minus" -> if(actualValue != 0) actualValue -= 1
         }
         counter.text = actualValue.toString()
+    }
+
+    override fun onDialogDismissed(dialogId: Int) {
+
     }
 }
