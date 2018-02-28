@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- languages -->
+    <string name="language">Sprache</string>
+    <string name="language_english">Englisch</string>
+    <string name="language_spanish">Spanisch</string>
+    <string name="language_catalan">Katalanisch</string>
+    <string name="language_german">Deutsch</string>
+    <string name="language_french">Französisch</string>
+    <string name="language_portuguese">Portugiesisch</string>
+
+    <!-- colors -->
+    <string name="color_gray">Grau</string>
+    <string name="color_green">Grün</string>
+    <string name="color_red">Rot</string>
+    <string name="color_yellow">Gelb</string>
+
+    <!-- error -->
+    <string name="error">Fehler</string>
+    <string name="error_version_loading_failed">Version konnte nicht geladen werden.</string>
+
+    <!-- other -->
+    <string name="reset">Zurücksetzen</string>
+    <string name="up_improvements">Die nächsten Verbesserungen: Kann hinzuzufügen und notieren individuelle sounds</string>
+</resources>

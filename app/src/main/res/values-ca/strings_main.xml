@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zero">0</string>
+    <string name="team1">Equip 1</string>
+    <string name="team2">Equip 2</string>
+    <string name="editTeams">Editeu equips</string>
+    <string name="renameTeams">Canvia el nom dels equips</string>
+    <string name="renameTeams_1">Canvia el nom de l\'equip 1</string>
+    <string name="renameTeams_2">Canvia el nom de l\'equip 2</string>
+    <string name="changeColor">Canvia el color</string>
+    <string name="changeColor_1">Equip 1 Canvi de Color</string>
+    <string name="changeColor_2">Equip 2 Canvi de Color</string>
+    <string name="setStones">Establir pedres</string>
+    <string name="support">Ajuda i contancte</string>
+    <string name="settings">Configuració</string>
+
+    <string name="toast_teamLength">Per conveniència usar només les inicials de cadascun dels equips, per favor (%1$d MAX)</string>
+    <string name="toast_infinity">ADVERTIMENT: el mode d\'infinit està seleccionat</string>
+</resources>

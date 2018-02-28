@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><!-- files were in 'values-pt-rPT' -->
+    <!-- languages -->
+    <string name="language">Língua</string>
+    <string name="language_english">Inglês</string>
+    <string name="language_spanish">Espanhol</string>
+    <string name="language_catalan">Catalão</string>
+    <string name="language_german">Alemão</string>
+    <string name="language_french">Francês</string>
+    <string name="language_portuguese">Português</string>
+
+    <!-- colors -->
+    <string name="color_gray">Cinza</string>
+    <string name="color_green">Verde</string>
+    <string name="color_red">Vermelho</string>
+    <string name="color_yellow">Amarelo</string>
+
+    <!-- error -->
+    <string name="error">Erro</string>
+    <string name="error_version_loading_failed">A versão não pôde ser carregada.</string>
+
+    <!-- other -->
+    <string name="reset">Restabelecer</string>
+    <string name="up_improvements">Próximas melhorias: -É possível adicionar e gravar sons personalizados</string>
+</resources>

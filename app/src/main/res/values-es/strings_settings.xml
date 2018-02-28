@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- settings: game -->
+    <string name="settings_category_game">Juego</string>
+    <string name="stoneInterval">Intervalo entre piedras</string>
+    <string name="mode">Modo de juego</string>
+    <string name="mode_normal">Normalmente (100 piezas por sección)</string>
+    <string name="mode_extension">Extendido (50 fichas por sección)</string>
+    <string name="mode_infinite">Infinitamente (Solo piedras)</string>
+    <string name="mode_custom">Modo personalizado</string>
+    <string name="interval_custom">Intervalo personalizado</string>
+    <string name="reverse">La cuenta atrás</string>
+    <string name="reverse_summary">Nota: no funciona en infinity modo</string>
+    <string name="immediateStart">Comenzar de inmediato</string>
+    <string name="pause_after_point">Pausa después del punto</string>
+    <string name="pause_after_gong">Hacer una pausa después gong</string>
+
+    <!-- settings: sounds -->
+    <string name="settings_category_sound">Sonidos</string>
+    <string name="sounds_stones">Piedras</string>
+    <string name="achievement">Logro</string>
+    <string name="cash_reg">Caja registradora</string>
+    <string name="censure">Censura</string>
+    <string name="crow">Cuervo</string>
+    <string name="doh">D\'oh de Homer</string>
+    <string name="drum">Tambor</string>
+    <string name="duck">pato</string>
+    <string name="fb_notification">Noticiacion de Facebook</string>
+    <string name="metal_gear">Metal gear</string>
+    <string name="pan">Sarten</string>
+    <string name="stone">Piedra</string>
+
+    <string name="sounds_gong">Gong</string>
+    <string name="gong">Gong</string>
+    <string name="vuvuzela">Vuvucela</string>
+
+    <!-- settings: others -->
+    <string name="settings_category_others">Otro</string>
+    <string name="contact_title">Contacto</string>
+    <string name="contact_description">Enviar un correo electrónico al desarrollador</string>
+    <string name="playStore_description">Califica la aplicación</string>
+</resources>

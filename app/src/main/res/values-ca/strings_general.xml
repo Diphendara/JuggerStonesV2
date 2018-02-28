@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- languages -->
+    <string name="language">Idioma</string>
+    <string name="language_english">Ingles</string>
+    <string name="language_spanish">Espanyol</string>
+    <string name="language_catalan">Català</string>
+    <string name="language_german">Alemany</string>
+    <string name="language_french">Frances</string>
+    <string name="language_portuguese">Portuguès</string>
+
+    <!-- colors -->
+    <string name="color_gray">Gris</string>
+    <string name="color_green">Verd</string>
+    <string name="color_red">Vermell</string>
+    <string name="color_yellow">Groc</string>
+
+    <!-- error -->
+    <string name="error">Error</string>
+    <string name="error_version_loading_failed">No s\'ha pogut carregar la versió.</string>
+
+    <!-- other -->
+    <string name="reset">Restablir</string>
+    <string name="up_improvements">Millores en procés: \n-Poder afegir i gravar sons personalitzats</string>
+</resources>

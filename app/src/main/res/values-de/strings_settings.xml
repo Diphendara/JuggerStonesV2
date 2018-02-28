@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- settings: game -->
+    <string name="settings_category_game">Spiel</string>
+    <string name="stoneInterval">Steinintervall</string>
+    <string name="mode">Spielmodus</string>
+    <string name="mode_normal">Normal (100 Steine je Abschnitt)</string>
+    <string name="mode_extension">Erweitert (50 Steine je Abschnitt)</string>
+    <string name="mode_infinite">Unendlich (nur Steine)</string>
+    <string name="mode_custom">Benutzerdefinierter Modus</string>
+    <string name="interval_custom">Benutzerdefiniertes Intervall</string>
+    <string name="reverse">Rückwärts zählen</string>
+    <string name="reverse_summary">Achtung: funktioniert nicht im Unendlich-Modus</string>
+    <string name="immediateStart">Sofort starten</string>
+    <string name="pause_after_point">Pausiere nach Punkt</string>
+    <string name="pause_after_gong">Pausiere nach Gong</string>
+
+    <!-- settings: sounds -->
+    <string name="settings_category_sound">Klänge</string>
+    <string name="sounds_stones">Steine</string>
+    <string name="achievement">Errungenschaft</string>
+    <string name="cash_reg">Kasse</string>
+    <string name="censure">Zensur</string>
+    <string name="crow">Krähe</string>
+    <string name="doh">Homers D\'oh</string>
+    <string name="drum">Drum</string>
+    <string name="duck">Ente</string>
+    <string name="fb_notification">Facebook Benachrichtigung</string>
+    <string name="metal_gear">Metal Gear</string>
+    <string name="pan">Pan</string>
+    <string name="stone">Stein</string>
+
+    <string name="sounds_gong">Gong</string>
+    <string name="gong">Gong</string>
+    <string name="vuvuzela">Vuvucela</string>
+
+    <!-- settings: others -->
+    <string name="settings_category_others">Anderes</string>
+    <string name="contact_title">Kontakt</string>
+    <string name="contact_description">E-Mail an Entwickler senden</string>
+    <string name="playStore_description">Bewerte die App</string>
+</resources>

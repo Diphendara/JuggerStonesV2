@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- settings: game -->
+    <string name="settings_category_game">Jeu</string>
+    <string name="stoneInterval">D\'intervalle pierre</string>
+    <string name="mode">Mode de jeu</string>
+    <string name="mode_normal">Normalement (100 pièces par section)</string>
+    <string name="mode_extension">Prolongé (50 tuiles par section)</string>
+    <string name="mode_infinite">Infiniment (Seuls les pierres)</string>
+    <string name="mode_custom">Mode personnalisé</string>
+    <string name="interval_custom">Intervalle personnalisé</string>
+    <string name="reverse">Compte à rebours</string>
+    <string name="reverse_summary">Remarque: ne fonctionne pas dans l\'infini</string>
+    <string name="immediateStart">Commencer immédiatement</string>
+    <string name="pause_after_point">Pause après le point</string>
+    <string name="pause_after_gong">Pause après gong</string>
+
+    <!-- settings: sounds -->
+    <string name="settings_category_sound">Sons</string>
+    <string name="sounds_stones">Des pierres</string>
+    <string name="achievement">Réalisation</string>
+    <string name="cash_reg">Caisse</string>
+    <string name="censure">Censure</string>
+    <string name="crow">Corneille</string>
+    <string name="doh">Homere D\'oh</string>
+    <string name="drum">Tambour</string>
+    <string name="duck">Canard</string>
+    <string name="fb_notification">Facebook notification</string>
+    <string name="metal_gear">Metal gear</string>
+    <string name="pan">Pan</string>
+    <string name="stone">Pierre</string>
+
+    <string name="sounds_gong">Des sons de gongs</string>
+    <string name="gong">Gong</string>
+    <string name="vuvuzela">Vuvucela</string>
+
+    <!-- settings: others -->
+    <string name="settings_category_others">Autre</string>
+    <string name="contact_title">Contact</string>
+    <string name="contact_description">Envoyer un e-mail au développeur</string>
+    <string name="playStore_description">Noter l\'application</string>
+</resources>

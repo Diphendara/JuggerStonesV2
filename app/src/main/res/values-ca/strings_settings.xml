@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- settings: game -->
+    <string name="settings_category_game">Joc</string>
+    <string name="stoneInterval">Interval de pedres</string>
+    <string name="mode">Mode de joc</string>
+    <string name="mode_normal">Normalment (100 peces per secció)</string>
+    <string name="mode_extension">Estès (50 fitxes per secció)</string>
+    <string name="mode_infinite">Infinitament (Solament pedres)</string>
+    <string name="mode_custom">Mode personalitzat</string>
+    <string name="interval_custom">Interval personalitzat</string>
+    <string name="reverse">El compte enrere</string>
+    <string name="reverse_summary">Nota: no funciona a infinity mode</string>
+    <string name="immediateStart">Començar immediatament</string>
+    <string name="pause_after_point">Pausa després del punt</string>
+    <string name="pause_after_gong">Fer una pausa després gong</string>
+
+    <!-- settings: sounds -->
+    <string name="settings_category_sound">Sons</string>
+    <string name="sounds_stones">Pedres</string>
+    <string name="achievement">Èxit</string>
+    <string name="cash_reg">Registrador d\'efectiu</string>
+    <string name="censure">Censura</string>
+    <string name="crow">Corb</string>
+    <string name="doh">D\'oh d\'Homer</string>
+    <string name="drum">Tambor</string>
+    <string name="duck">Ànec</string>
+    <string name="fb_notification">Notificació Facebook</string>
+    <string name="metal_gear">Engranatge de metal</string>
+    <string name="pan">Cassola</string>
+    <string name="stone">Pedra</string>
+
+    <string name="sounds_gong">Gong</string>
+    <string name="gong">Gong</string>
+    <string name="vuvuzela">Vuvucela</string>
+
+    <!-- settings: others -->
+    <string name="settings_category_others">Altre</string>
+    <string name="contact_title">Contacte</string>
+    <string name="contact_description">Enviar correu electrònic al desenvolupador</string>
+    <string name="playStore_description">Valoreu l\'aplicació</string>
+</resources>

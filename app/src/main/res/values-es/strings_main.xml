@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zero">0</string>
+    <string name="team1">Equipo 1</string>
+    <string name="team2">Equipo 2</string>
+    <string name="editTeams">Editar equipos</string>
+    <string name="renameTeams">Renombrar equipos</string>
+    <string name="renameTeams_1">Cambiar el nombre del equipo 1</string>
+    <string name="renameTeams_2">Cambiar el nombre del equipo 2</string>
+    <string name="changeColor">Cambiar el color</string>
+    <string name="changeColor_1">Cambiar el color del equipo 1</string>
+    <string name="changeColor_2">Cambiar el color del equipo 2</string>
+    <string name="setStones">Establecer piedras</string>
+    <string name="support">Soporte y contacto</string>
+    <string name="settings">Ajustes</string>
+
+    <string name="toast_teamLength">Por comodidad solo las iniciales (MAX %1$d)</string>
+    <string name="toast_infinity">ADVERTENCIA: se selecciona el modo infinito</string>
+</resources>

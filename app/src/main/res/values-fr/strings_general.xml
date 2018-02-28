@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- languages -->
+    <string name="language">Langue</string>
+    <string name="language_english">Anglais</string>
+    <string name="language_spanish">Espagnol</string>
+    <string name="language_catalan">Catalan</string>
+    <string name="language_german">Allemand</string>
+    <string name="language_french">Français</string>
+    <string name="language_portuguese">Portugais</string>
+
+    <!-- colors -->
+    <string name="color_gray">Gris</string>
+    <string name="color_green">Vert</string>
+    <string name="color_red">Rouge</string>
+    <string name="color_yellow">Jaune</string>
+
+    <!-- error -->
+    <string name="error">Erreur</string>
+    <string name="error_version_loading_failed">La version n\'a pas pu être chargée.</string>
+
+    <!-- other -->
+    <string name="reset">Réinitialiser</string>
+    <string name="up_improvements">Améliorations à venir: -Pouvez ajouter et enregistrer des sons personnalisés</string>
+</resources>

@@ -1,3 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">JuggerStonesV2</string>
+    <string name="app_name" translatable="false">JuggerStones+</string>
+
+    <!-- email: see also pref (move to activity?) -->
+    <string name="email_current" translatable="false">cristiancvacas@gmail.com</string>
+    <string name="email_original" translatable="false">cristiancvacas@gmail.com</string>
+    <string name="email_mailto" translatable="false">mailto:cristiancvacas@gmail.com</string>
+    <string name="playStore" translatable="false">Play Store</string>
+    <string name="playStore_original" translatable="false">https://play.google.com/store/apps/details?id=contador.piedras.jugger</string>
+
+    <string name="increase" translatable="false">+</string>
+    <string name="decrease" translatable="false">-</string>
+
 </resources>

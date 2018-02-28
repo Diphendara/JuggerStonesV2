@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- languages -->
+    <string name="language">Language</string>
+    <string name="language_catalan">Catalan</string>
+    <string name="language_german">German</string>
+    <string name="language_english">English</string>
+    <string name="language_spanish">Spanish</string>
+    <string name="language_french">French</string>
+    <string name="language_portuguese">Portuguese</string>
+
+    <!-- colors -->
+    <string name="color_gray">Gray</string>
+    <string name="color_green">Green</string>
+    <string name="color_red">Red</string>
+    <string name="color_yellow">Yellow</string>
+
+    <!-- error -->
+    <string name="error">Error</string>
+    <string name="error_version_loading_failed">Version could not be loaded.</string>
+
+    <!-- other -->
+    <string name="reset">Reset</string>
+    <string name="up_improvements">Upcoming improvements: \n-Can add and record custom sounds</string>
+</resources>
