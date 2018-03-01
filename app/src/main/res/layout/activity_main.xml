@@ -37,7 +37,7 @@
         android:layout_marginLeft="64dp"
         android:layout_marginTop="16dp"
         android:text="Team1"
-        android:textColor="@android:color/white"
+        android:textColor="@color/default_team1"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,7 +50,7 @@
         android:layout_marginRight="64dp"
         android:layout_marginTop="16dp"
         android:text="Team2"
-        android:textColor="@android:color/white"
+        android:textColor="@color/default_team2"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,6 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="220dp"
         android:layout_marginStart="172dp"
+        android:layout_marginLeft="172dp"
         android:text="0"
         android:textColor="@android:color/white"
         android:textSize="70sp"

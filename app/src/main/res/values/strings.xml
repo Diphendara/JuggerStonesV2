@@ -11,5 +11,5 @@
 
     <string name="increase" translatable="false">+</string>
     <string name="decrease" translatable="false">-</string>
-
+    <string name="name_too_long">Too long name</string>
 </resources>

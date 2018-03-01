@@ -1,19 +1,21 @@
 package contador.piedras.jugger
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
-import android.app.ProgressDialog.show
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
+import android.os.Message
 import android.support.v7.app.AppCompatActivity
 import android.widget.*
 import kotlinx.android.synthetic.main.activity_main.*
 import com.jaredrummler.android.colorpicker.ColorPickerDialog
 import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
-
+import java.util.*
 
 class Game : AppCompatActivity(), ColorPickerDialogListener {
-
-
+    private var timer: Timer = Timer()
+    private var isTimerRunning: Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,27 +24,53 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
 
     }
 
+    private fun startTimer() {
+        if(isTimerRunning) return
+        isTimerRunning = true
+        timer.scheduleAtFixedRate(object : TimerTask() {
+            override fun run() {
+                mHandler.obtainMessage(1).sendToTarget()
+            }
+        }, 0, 1500)
+    }
+
+    private fun stopTimer(){
+        timer.cancel()
+        isTimerRunning = false
+        timer = Timer()
+    }
+
+    var mHandler: Handler = @SuppressLint("HandlerLeak")
+    object : Handler() {
+        override fun handleMessage(msg: Message) {
+            tv_counter.text = (Integer.parseInt(tv_counter.text.toString()) + 1).toString()
+        }
+    }
+
     private fun setListeners(){
-        configListener(b_plus_counter, "plus", tv_counter)
-        configListener(b_minus_counter, "minus", tv_counter)
+        setUpdateCounterListener(b_plus_counter, "plus", tv_counter)
+        setUpdateCounterListener(b_minus_counter, "minus", tv_counter)
 
-        configListener(b_plus_t1, "plus", tv_counter_t1)
-        configListener(b_minus_t1, "minus", tv_counter_t1)
+        setUpdateCounterListener(b_plus_t1, "plus", tv_counter_t1)
+        setUpdateCounterListener(b_minus_t1, "minus", tv_counter_t1)
 
-        configListener(b_plus_t2, "plus", tv_counter_t2)
-        configListener(b_minus_t2, "minus", tv_counter_t2)
+        setUpdateCounterListener(b_plus_t2, "plus", tv_counter_t2)
+        setUpdateCounterListener(b_minus_t2, "minus", tv_counter_t2)
 
         showAlertDialog(tv_t1)
         showAlertDialog(tv_t2)
 
-        congifLongListener(tv_t1)
-        congifLongListener(tv_t2)
+        setLongClickListener(tv_t1)
+        setLongClickListener(tv_t2)
+
+        b_play.setOnClickListener { startTimer() }
+        b_stop.setOnClickListener { stopTimer() }
 
     }
 
     private fun changeTeamColors(team: TextView) {
         ColorPickerDialog.newBuilder()
-                .setDialogType(ColorPickerDialog.STYLE_NORMAL)
+                .setDialogType(ColorPickerDialog.TYPE_PRESETS)
                 .setAllowPresets(false)
                 .setDialogId(team.id)
                 .setColor(Color.BLACK)
@@ -50,7 +78,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 .show(this)
     }
 
-    private fun congifLongListener(textView: TextView){
+    private fun setLongClickListener(textView: TextView){
         textView.setOnLongClickListener({
             changeTeamColors(textView)
             true
@@ -62,7 +90,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         view.setTextColor(color)
     }
 
-    private fun configListener(button: ImageButton, mode: String, counter: TextView){
+    private fun setUpdateCounterListener(button: ImageButton, mode: String, counter: TextView){
         button.setOnClickListener({
             updateCounter(counter, mode)
         })
