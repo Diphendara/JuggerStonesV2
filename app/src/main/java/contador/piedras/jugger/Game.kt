@@ -11,6 +11,8 @@ import android.widget.*
 import kotlinx.android.synthetic.main.activity_main.*
 import com.jaredrummler.android.colorpicker.ColorPickerDialog
 import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
+import contador.piedras.jugger.R.id.*
+import org.jetbrains.anko.toast
 import java.util.*
 
 class Game : AppCompatActivity(), ColorPickerDialogListener {
@@ -25,24 +27,29 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
     }
 
     private fun startTimer() {
-        if(isTimerRunning) return
+        if(isTimerRunning) {
+            stopTimer()
+            //TODO Change to pause icon
+            return
+        }
         isTimerRunning = true
-        timer.scheduleAtFixedRate(object : TimerTask() {
-            override fun run() {
-                mHandler.obtainMessage(1).sendToTarget()
-            }
-        }, 0, 1500)
+        timer.scheduleAtFixedRate(
+                CounterTask(this, Integer.parseInt(tv_counter.text.toString()),
+                        Sound("censure","gong"),100, tv_counter),
+                1500, 1500) //TODO Change to global value
     }
 
     private fun stopTimer(){
         timer.cancel()
         isTimerRunning = false
         timer = Timer()
+        //TODO Change pause to play icon
     }
 
     var mHandler: Handler = @SuppressLint("HandlerLeak")
     object : Handler() {
         override fun handleMessage(msg: Message) {
+            //TODO add the detect of STONES, 100, Custom or infinite
             tv_counter.text = (Integer.parseInt(tv_counter.text.toString()) + 1).toString()
         }
     }
@@ -105,7 +112,11 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
 
             alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", {
                 _, _ ->
-                teamName.text = editText.text.toString()
+                if(editText.text.toString().length > 10){
+                    toast(R.string.name_too_long)
+                }else{
+                    teamName.text = editText.text.toString()
+                }
             })
             alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", {
                 _, _ ->
