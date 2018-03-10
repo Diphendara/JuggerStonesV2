@@ -1,9 +1,12 @@
 package contador.piedras.jugger
 
+import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 
-class Prefs (context: Context) {
+
+class Prefs (context: Context){
+
     private val PREFS_FILENAME = "contador.piedras.jugger.prefs"
     private val MAX_VALUE = "max_counter"
     private val STONE_SOUND = "stone_sound"
@@ -11,11 +14,12 @@ class Prefs (context: Context) {
     private val COUNTER_DELAY = "counter_delay"
     private val COUNTER_INTERVAL = "counter_interval"
     private val IS_ON = "is_counter_on"
+    private val LANGUAGE = "languague"
 
     private val prefs: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, Context.MODE_PRIVATE)
 
     var maxValue: Long
-        get() = prefs.getLong(MAX_VALUE, 2)
+        get() = prefs.getLong(MAX_VALUE, 100)
         set(value) = prefs.edit().putLong(MAX_VALUE,value).apply()
 
     var stoneSound: String
@@ -37,5 +41,9 @@ class Prefs (context: Context) {
     var isTimerRunning: Boolean
         get() = prefs.getBoolean(IS_ON, false)
         set(value) = prefs.edit().putBoolean(IS_ON,value).apply()
+
+    var language: String
+        get() = prefs.getString(LANGUAGE, "en")
+        set(value) = prefs.edit().putString(LANGUAGE,value).apply()
 
 }

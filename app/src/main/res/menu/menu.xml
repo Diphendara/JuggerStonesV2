@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/editTeams"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/teams_rename"
+                android:title="@string/renameTeams"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/teams_changeColor_1"
+                android:title="@string/changeColor_1"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/teams_changeColor_2"
+                android:title="@string/changeColor_2"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/teams_reset"
+                android:title="@string/reset"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/editStones"
+        android:title="@string/setStones"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings"
+        app:showAsAction="never" />
+
+</menu>

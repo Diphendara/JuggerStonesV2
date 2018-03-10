@@ -20,6 +20,6 @@
     <string name="error_version_loading_failed">La versión no se pudo cargar.</string>
 
     <!-- other -->
-    <string name="reset">Reiniciar</string>
+    <string name="reset">Reiniciar nombres y contadores</string>
     <string name="up_improvements">Proximas mejoras: \n -Poder añadir sonidos y grabar personalizados</string>
 </resources>

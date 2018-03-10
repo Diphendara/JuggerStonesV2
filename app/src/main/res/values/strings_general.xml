@@ -20,6 +20,6 @@
     <string name="error_version_loading_failed">Version could not be loaded.</string>
 
     <!-- other -->
-    <string name="reset">Reset</string>
+    <string name="reset">Reset name and counters</string>
     <string name="up_improvements">Upcoming improvements: \n-Can add and record custom sounds</string>
 </resources>

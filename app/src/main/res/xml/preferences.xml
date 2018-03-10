@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/settings_category_game">
+        <ListPreference
+            android:defaultValue="100"
+            android:entries="@array/array_mode_game"
+            android:entryValues="@array/array_mode_game_values"
+            android:key="mode"
+            android:title="@string/mode" />
+        <EditTextPreference
+            android:defaultValue="100"
+            android:inputType="number"
+            android:key="mode_custom"
+            android:title="@string/mode_custom" />
+        <ListPreference
+            android:defaultValue="1500"
+            android:entries="@array/array_interval_count"
+            android:entryValues="@array/array_interval_count_values"
+            android:key="interval"
+            android:title="@string/stoneInterval" />
+        <EditTextPreference
+            android:defaultValue="1.5"
+            android:inputType="number|numberDecimal"
+            android:key="interval_custom"
+            android:title="@string/interval_custom" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="reverse"
+            android:summary="@string/reverse_summary"
+            android:title="@string/reverse" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="immediateStart"
+            android:title="@string/immediateStart" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="stop_after_point"
+            android:title="@string/pause_after_point" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="stop_after_gong"
+            android:title="@string/pause_after_gong" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_sound">
+         <ListPreference
+            android:defaultValue="stone"
+            android:entries="@array/array_sounds_stone"
+            android:entryValues="@array/array_sounds_stone_values"
+            android:key="sound_stone"
+            android:title="@string/sounds_stones" />
+        <ListPreference
+            android:defaultValue="gong"
+            android:entries="@array/array_sounds_gong"
+            android:entryValues="@array/array_sounds_gong_values"
+            android:key="sound_gong"
+            android:title="@string/sounds_gong" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_others">
+        <ListPreference
+            android:entries="@array/array_languages_array"
+            android:entryValues="@array/array_languages_array_values"
+            android:key="language"
+            android:title="@string/language" />
+        <Preference
+            android:key="contact"
+            android:summary="@string/contact_description"
+            android:title="@string/contact_title" />
+        <Preference
+            android:key="playStore"
+            android:summary="@string/playStore_description"
+            android:title="@string/playStore_title" />
+    </PreferenceCategory>
+</PreferenceScreen>
