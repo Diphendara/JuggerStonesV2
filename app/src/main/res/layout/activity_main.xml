@@ -116,9 +116,8 @@
         android:id="@+id/b_plus_counter"
         android:layout_width="52dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="220dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="96dp"
+        android:layout_marginBottom="228dp"
+        android:layout_marginEnd="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/radiobutton_on_background" />
@@ -127,9 +126,8 @@
         android:id="@+id/b_minus_counter"
         android:layout_width="52dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="220dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginLeft="96dp"
+        android:layout_marginBottom="216dp"
+        android:layout_marginStart="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/radiobutton_off_background" />

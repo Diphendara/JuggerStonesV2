@@ -1,60 +1,49 @@
 package contador.piedras.jugger
 
-import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.graphics.Color
 import android.os.Bundle
-import android.os.Handler
-import android.os.Message
 import android.support.v7.app.AppCompatActivity
 import android.widget.*
 import kotlinx.android.synthetic.main.activity_main.*
 import com.jaredrummler.android.colorpicker.ColorPickerDialog
 import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
-import contador.piedras.jugger.R.id.*
 import org.jetbrains.anko.toast
 import java.util.*
 
 class Game : AppCompatActivity(), ColorPickerDialogListener {
     private var timer: Timer = Timer()
-    private var isTimerRunning: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setListeners()
+        setListeners(Prefs(this))
 
     }
 
-    private fun startTimer() {
-        if(isTimerRunning) {
-            stopTimer()
+    private fun startTimer(preferences: Prefs) {
+        if(preferences.isTimerRunning) {
+            stopTimer(preferences)
             //TODO Change to pause icon
             return
         }
-        isTimerRunning = true
+        preferences.isTimerRunning = true
         timer.scheduleAtFixedRate(
-                CounterTask(this, Integer.parseInt(tv_counter.text.toString()),
-                        Sound("censure","gong"),100, tv_counter),
-                1500, 1500) //TODO Change to global value
+                CounterTask(this, tv_counter.text.toString().toLong(),
+                        Sound(preferences.stoneSound,preferences.gongSound),
+                        preferences.maxValue, tv_counter), preferences.counterDelay,
+                        preferences.counterInterval)
     }
 
-    private fun stopTimer(){
+    private fun stopTimer(prefs: Prefs){
         timer.cancel()
-        isTimerRunning = false
+        prefs.isTimerRunning = false
         timer = Timer()
         //TODO Change pause to play icon
     }
 
-    var mHandler: Handler = @SuppressLint("HandlerLeak")
-    object : Handler() {
-        override fun handleMessage(msg: Message) {
-            //TODO add the detect of STONES, 100, Custom or infinite
-            tv_counter.text = (Integer.parseInt(tv_counter.text.toString()) + 1).toString()
-        }
-    }
-
-    private fun setListeners(){
+    private fun setListeners(preferences: Prefs){
         setUpdateCounterListener(b_plus_counter, "plus", tv_counter)
         setUpdateCounterListener(b_minus_counter, "minus", tv_counter)
 
@@ -70,8 +59,8 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         setLongClickListener(tv_t1)
         setLongClickListener(tv_t2)
 
-        b_play.setOnClickListener { startTimer() }
-        b_stop.setOnClickListener { stopTimer() }
+        b_play.setOnClickListener { startTimer(preferences) }
+        b_stop.setOnClickListener { stopTimer(preferences) }
 
     }
 
@@ -93,8 +82,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
     }
 
     override fun onColorSelected(dialogId: Int, color: Int) {
-        var view = findViewById<TextView>(dialogId)
-        view.setTextColor(color)
+        findViewById<TextView>(dialogId).setTextColor(color)
     }
 
     private fun setUpdateCounterListener(button: ImageButton, mode: String, counter: TextView){
