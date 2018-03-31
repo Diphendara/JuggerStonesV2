@@ -5,12 +5,12 @@
             android:defaultValue="100"
             android:entries="@array/array_mode_game"
             android:entryValues="@array/array_mode_game_values"
-            android:key="mode"
+            android:key="maxValue"
             android:title="@string/mode" />
         <EditTextPreference
             android:defaultValue="100"
             android:inputType="number"
-            android:key="mode_custom"
+            android:key="maxValue"
             android:title="@string/mode_custom" />
         <ListPreference
             android:defaultValue="1500"

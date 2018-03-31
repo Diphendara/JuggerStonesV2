@@ -1,22 +1,21 @@
 package contador.piedras.jugger
 
-import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 
 
-class Prefs (context: Context){
+data class Prefs (val context: Context){
 
-    private val PREFS_FILENAME = "contador.piedras.jugger.prefs"
-    private val MAX_VALUE = "max_counter"
-    private val STONE_SOUND = "stone_sound"
-    private val GONG_SOUND = "gong_sound"
-    private val COUNTER_DELAY = "counter_delay"
-    private val COUNTER_INTERVAL = "counter_interval"
-    private val IS_ON = "is_counter_on"
-    private val LANGUAGE = "languague"
+    val PREFS_FILENAME = "contador.piedras.jugger.prefs"
+    val MAX_VALUE = "max_counter"
+    val STONE_SOUND = "stone_sound"
+    val GONG_SOUND = "gong_sound"
+    val COUNTER_DELAY = "counter_delay"
+    val COUNTER_INTERVAL = "counter_interval"
+    val IS_ON = "is_counter_on"
+    val LANGUAGE = "languague"
 
-    private val prefs: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, Context.MODE_PRIVATE)
+    val prefs: SharedPreferences = context.getSharedPreferences(PREFS_FILENAME, 0)
 
     var maxValue: Long
         get() = prefs.getLong(MAX_VALUE, 100)

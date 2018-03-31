@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.text.TextUtils.isEmpty
 import android.util.TypedValue
 import android.view.Menu
 import android.view.MenuItem
@@ -35,6 +36,8 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
     }
 
     private fun startTimer(preferences: Prefs) {
+        var a = preferences!!.maxValue.toString()
+        System.err.print(preferences!!.maxValue.toString())
         if (preferences.isTimerRunning) {
             stopTimer(preferences)
             //TODO Change to pause icon
@@ -189,10 +192,8 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         alertDialog.setTitle("Set stones")
 
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", { _, _ ->
-            if (checkNameEditText(editText)) {
+            if (!isEmpty(editText.text.trim())) {
                 tv_stones.text = editText.text.toString()
-            } else {
-                toast(R.string.name_warning)
             }
         })
         alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", { _, _ ->

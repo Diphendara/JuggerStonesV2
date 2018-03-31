@@ -16,9 +16,9 @@ class CounterTask(private val context: Context, private var stones: Long, privat
         }
         if(stones == maxValue) {
             sound.playGong(context)
+            this.cancel()
         } else{
             sound.playStone(context)
-            this.cancel()
         }
     }
 }
