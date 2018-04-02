@@ -29,7 +29,7 @@
             android:key="stop_after_point"
             android:title="@string/pause_after_point" />
         <CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="stop_after_gong"
             android:title="@string/pause_after_gong" />
     </PreferenceCategory>
@@ -49,6 +49,7 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/settings_category_others">
         <ListPreference
+            android:defaultValue="es"
             android:entries="@array/array_languages_array"
             android:entryValues="@array/array_languages_array_values"
             android:key="language"

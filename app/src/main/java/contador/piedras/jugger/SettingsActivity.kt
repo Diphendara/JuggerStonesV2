@@ -1,13 +1,16 @@
 package contador.piedras.jugger
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.preference.*
+import java.util.*
+import android.content.Intent
+
 
 class SettingsActivity : PreferenceActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         //Load setting fragment
         fragmentManager.beginTransaction().replace(android.R.id.content,
                 MainSettingsFragment()).commit()
@@ -21,37 +24,21 @@ class SettingsActivity : PreferenceActivity() {
             bindSummaryValue(findPreference("counter_interval"))
             bindSummaryValue(findPreference("stone_sound"))
             bindSummaryValue(findPreference("gong_sound"))
-
-            /*
-            bindSummaryValue(findPreference("reverse"))
             bindSummaryValue(findPreference("immediateStart"))
-            bindSummaryValue(findPreference("stop_after_point"))
             bindSummaryValue(findPreference("stop_after_gong"))
-            */
-
-
+            bindSummaryValue(findPreference("reverse"))
             bindSummaryValue(findPreference("language"))
         }
 
         private fun bindSummaryValue(preference: Preference) {
-            /* if(preference.key.contains("stones") or preference.key.contains("interval")){
-                 preference.onPreferenceChangeListener = listOrEditTextListener
-                 listOrEditTextListener.onPreferenceChange(preference, PreferenceManager.getDefaultSharedPreferences(preference.context).
-                         getString(preference.key, ""))
-                 return
-             }
-             */
             preference.onPreferenceChangeListener = listener
-
             when (preference) {
                 is EditTextPreference, is ListPreference -> {
                     listener.onPreferenceChange(preference,
                             PreferenceManager.getDefaultSharedPreferences(preference.context)
                                     .getString(preference.key, ""))
                 }
-
-            //is CheckBoxPreference -> listener.onPreferenceChange(preference, PreferenceManager.getDefaultSharedPreferences(preference.context).
-            //      getBoolean(preference.key, false))
+                is CheckBoxPreference -> listener.onPreferenceChange(preference, PreferenceManager.getDefaultSharedPreferences(preference.context).getBoolean(preference.key, false))
             }
         }
 
@@ -62,10 +49,15 @@ class SettingsActivity : PreferenceActivity() {
                     val index = listPreference.findIndexOfValue(newValue.toString())
                     if (index > 0) {
                         preference.setSummary(listPreference.entries[index])
+                        val sharedPreference = PreferenceManager.getDefaultSharedPreferences(preference.context)
+                        val actualLanguage = sharedPreference.getString("language", "en")
+                        if (preference.key == "language" &&
+                                newValue != actualLanguage) {
+                            changeLanguage(preference, newValue.toString())
+                        }
                     } else {
                         preference.setSummary(null)
                     }
-                    //https://youtu.be/KshhMCuxnHs?t=211
                 }
                 is EditTextPreference -> preference.setSummary(newValue.toString())
                 is CheckBoxPreference -> {
@@ -75,22 +67,17 @@ class SettingsActivity : PreferenceActivity() {
             true
         }
 
-    }
-
-    fun Boolean.toInt() = if (this) 1 else 0
-
-    private val listOrEditTextListener = Preference.OnPreferenceChangeListener { preference: Preference, newValue ->
-        if (preference is EditTextPreference) {
-            preference.setSummary(newValue.toString())
-        } else if (preference is ListPreference) {
-            val index = preference.findIndexOfValue(newValue.toString())
-            if (index > 0) {
-                preference.setSummary(preference.entries[index])
-            } else {
-                preference.setSummary(null)
-            }
+        @SuppressLint("NewApi")
+        private fun changeLanguage(preference: Preference, languageCode: String) {
+            val res = preference.context.resources
+            val dm = res.displayMetrics
+            val conf = res.configuration
+            conf.setLocale(Locale(languageCode))
+            res.updateConfiguration(conf, dm)
+            var intent = Intent(preference.context, SettingsActivity::class.java)
+            startActivity(intent)
+            activity.finish()
         }
-        false
-    }
 
+    }
 }

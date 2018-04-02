@@ -28,10 +28,31 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         preferences = Prefs(this)
         setListeners(preferences!!)
 
-        button.setOnClickListener({
-            var a: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(applicationContext)
-            tv_stones.text = a.getString("stonesMaxValue_custom","")
-        })
+        val extras = intent.extras
+        if (extras != null) {
+            tv_t1.text = intent.getStringExtra("nameTeamOne")
+            tv_t2.text = intent.getStringExtra("nameTeamTwo")
+            tv_counter_t1.text = intent.getStringExtra("counterTeamOne")
+            tv_counter_t2.text = intent.getStringExtra("counterTeamTwo")
+            tv_stones.text = intent.getStringExtra("stones")
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        stopTimer(Prefs(this))
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        val intent = Intent(baseContext, Game::class.java)
+        intent.putExtra("nameTeamOne", tv_t1.text.toString())
+        intent.putExtra("nameTeamTwo", tv_t2.text.toString())
+        intent.putExtra("counterTeamOne", tv_counter_t1.text.toString())
+        intent.putExtra("counterTeamTwo", tv_counter_t2.text.toString())
+        intent.putExtra("stones", tv_stones.text.toString())
+        startActivity(intent)
+        finish()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -46,11 +67,14 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             //TODO Change to pause icon
             return
         }
+        if (tv_stones.text == "0") {
+            tv_stones.text = preferences.startCounter
+        }
         preferences.isTimerRunning = true
         timer.scheduleAtFixedRate(
                 CounterTask(this, tv_stones.text.toString().toLong(),
-                        Sound(preferences.stoneSound, preferences.gongSound),
-                        preferences.maxValue, tv_stones), preferences.counterDelay,
+                        Sound(preferences.stoneSound, preferences.gongSound), preferences,
+                        tv_stones), preferences.counterDelay,
                 preferences.counterInterval)
     }
 
@@ -62,14 +86,14 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
     }
 
     private fun setListeners(preferences: Prefs) {
-        setUpdateCounterListener(b_plus_counter, "plus", tv_stones)
-        setUpdateCounterListener(b_minus_counter, "minus", tv_stones)
+        setUpdateCounterListener(b_plus_counter, "plus", tv_stones, preferences)
+        setUpdateCounterListener(b_minus_counter, "minus", tv_stones, preferences)
 
-        setUpdateCounterListener(b_plus_t1, "plus", tv_counter_t1)
-        setUpdateCounterListener(b_minus_t1, "minus", tv_counter_t1)
+        setUpdateCounterListener(b_plus_t1, "plus", tv_counter_t1, preferences)
+        setUpdateCounterListener(b_minus_t1, "minus", tv_counter_t1, preferences)
 
-        setUpdateCounterListener(b_plus_t2, "plus", tv_counter_t2)
-        setUpdateCounterListener(b_minus_t2, "minus", tv_counter_t2)
+        setUpdateCounterListener(b_plus_t2, "plus", tv_counter_t2, preferences)
+        setUpdateCounterListener(b_minus_t2, "minus", tv_counter_t2, preferences)
 
         renameOneTeam(tv_t1)
         renameOneTeam(tv_t2)
@@ -103,9 +127,12 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         findViewById<TextView>(dialogId).setTextColor(color)
     }
 
-    private fun setUpdateCounterListener(button: ImageButton, mode: String, counter: TextView) {
+    private fun setUpdateCounterListener(button: ImageButton, mode: String, counter: TextView, preferences: Prefs) {
         button.setOnClickListener({
             updateCounter(counter, mode)
+            if (preferences.stopAfterPoint) {
+                stopTimer(preferences)
+            }
         })
     }
 
@@ -139,7 +166,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         alertDialog.setTitle(getString(R.string.change_team_names))
 
         val marginDP = 25
-        val marginPX= TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, marginDP.toFloat(), resources.displayMetrics).toInt()
+        val marginPX = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, marginDP.toFloat(), resources.displayMetrics).toInt()
         val layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
         layoutParams.setMargins(marginPX, 0, marginPX, 0)
 
@@ -181,14 +208,14 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         counter.text = actualValue.toString()
     }
 
-    private fun resetTeams(){
+    private fun resetTeams() {
         tv_t1.text = getString(R.string.team1)
         tv_counter_t1.text = 0.toString()
         tv_t2.text = getString(R.string.team2)
         tv_counter_t2.text = 0.toString()
     }
 
-    private fun setStones(){
+    private fun setStones() {
         val alertDialog = AlertDialog.Builder(this).create()
         val editText = EditText(this)
         alertDialog.setView(editText)
@@ -233,13 +260,12 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 setStones()
                 return true
             }
-        R.id.action_settings -> {
-            stopTimer(preferences!!)
-            intent = Intent(this, SettingsActivity::class.java)
-
-            startActivity(intent)
-            return true
-         }
+            R.id.action_settings -> {
+                stopTimer(preferences!!)
+                intent = Intent(this, SettingsActivity::class.java)
+                startActivity(intent)
+                return true
+            }
             else -> return super.onOptionsItemSelected(item)
         }
     }

@@ -12,7 +12,6 @@
     <string name="reverse">La cuenta atrás</string>
     <string name="reverse_summary">Nota: no funciona en infinity modo</string>
     <string name="immediateStart">Comenzar de inmediato</string>
-    <string name="pause_after_point">Pausa después del punto</string>
     <string name="pause_after_gong">Hacer una pausa después gong</string>
 
     <!-- settings: sounds -->
@@ -24,7 +23,7 @@
     <string name="crow">Cuervo</string>
     <string name="doh">D\'oh de Homer</string>
     <string name="drum">Tambor</string>
-    <string name="duck">pato</string>
+    <string name="duck">Pato</string>
     <string name="fb_notification">Noticiacion de Facebook</string>
     <string name="metal_gear">Metal gear</string>
     <string name="pan">Sarten</string>
