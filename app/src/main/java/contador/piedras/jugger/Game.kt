@@ -2,8 +2,10 @@ package contador.piedras.jugger
 
 import android.app.AlertDialog
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
 import android.text.TextUtils.isEmpty
 import android.util.TypedValue
@@ -26,9 +28,12 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         preferences = Prefs(this)
         setListeners(preferences!!)
 
+        button.setOnClickListener({
+            var a: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(applicationContext)
+            tv_stones.text = a.getString("stonesMaxValue_custom","")
+        })
     }
 
-    @Override
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.menu, menu)
@@ -36,8 +41,6 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
     }
 
     private fun startTimer(preferences: Prefs) {
-        var a = preferences!!.maxValue.toString()
-        System.err.print(preferences!!.maxValue.toString())
         if (preferences.isTimerRunning) {
             stopTimer(preferences)
             //TODO Change to pause icon
@@ -232,8 +235,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             }
         R.id.action_settings -> {
             stopTimer(preferences!!)
-            intent = Intent(this, MyPreferenceActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent = Intent(this, SettingsActivity::class.java)
 
             startActivity(intent)
             return true
