@@ -74,7 +74,7 @@ class SettingsActivity : PreferenceActivity() {
             val conf = res.configuration
             conf.setLocale(Locale(languageCode))
             res.updateConfiguration(conf, dm)
-            var intent = Intent(preference.context, SettingsActivity::class.java)
+            val intent = Intent(preference.context, SettingsActivity::class.java)
             startActivity(intent)
             activity.finish()
         }

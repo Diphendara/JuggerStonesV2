@@ -1,11 +1,11 @@
 package contador.piedras.jugger
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
 import android.text.TextUtils.isEmpty
 import android.util.TypedValue
@@ -24,12 +24,13 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         preferences = Prefs(this)
+        changeLanguage(this, preferences!!.language)
+        setContentView(R.layout.activity_main)
         setListeners(preferences!!)
 
-        val extras = intent.extras
-        if (extras != null) {
+        val isRestart = intent.getBooleanExtra("restart",false)
+        if (isRestart) {
             tv_t1.text = intent.getStringExtra("nameTeamOne")
             tv_t2.text = intent.getStringExtra("nameTeamTwo")
             tv_counter_t1.text = intent.getStringExtra("counterTeamOne")
@@ -43,6 +44,15 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         stopTimer(Prefs(this))
     }
 
+    @SuppressLint("NewApi")
+    private fun changeLanguage(context: Context, languageCode: String) {
+        val res = context.resources
+        val dm = res.displayMetrics
+        val conf = res.configuration
+        conf.setLocale(Locale(languageCode))
+        res.updateConfiguration(conf, dm)
+    }
+
     override fun onRestart() {
         super.onRestart()
         val intent = Intent(baseContext, Game::class.java)
@@ -51,6 +61,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         intent.putExtra("counterTeamOne", tv_counter_t1.text.toString())
         intent.putExtra("counterTeamTwo", tv_counter_t2.text.toString())
         intent.putExtra("stones", tv_stones.text.toString())
+        intent.putExtra("restart",true)
         startActivity(intent)
         finish()
     }

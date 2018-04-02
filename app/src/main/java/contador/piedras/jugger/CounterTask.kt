@@ -1,7 +1,6 @@
 package contador.piedras.jugger
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.widget.TextView
 import org.jetbrains.anko.runOnUiThread
 

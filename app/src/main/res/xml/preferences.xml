@@ -49,7 +49,6 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/settings_category_others">
         <ListPreference
-            android:defaultValue="es"
             android:entries="@array/array_languages_array"
             android:entryValues="@array/array_languages_array_values"
             android:key="language"

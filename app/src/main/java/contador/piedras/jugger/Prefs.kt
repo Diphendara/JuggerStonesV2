@@ -3,6 +3,7 @@ package contador.piedras.jugger
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
+import java.util.*
 
 
 data class Prefs(private val context: Context) {
@@ -17,7 +18,7 @@ data class Prefs(private val context: Context) {
     val STOP_AFTER_POINT = "stop_after_point"
     val START_VALUE = "start_value"
     val ON_REVERSE ="reverse"
-    val LANGUAGE = "languague"
+    val LANGUAGE = "language"
 
     private val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
@@ -62,7 +63,7 @@ data class Prefs(private val context: Context) {
         set(value) = prefs.edit().putBoolean(IS_ON, value).apply()
 
     var language: String
-        get() = prefs.getString(LANGUAGE, "en")
+        get() = prefs.getString(LANGUAGE, Locale.getDefault().toString().substring(0..1))
         set(value) = prefs.edit().putString(LANGUAGE, value).apply()
 
 }
