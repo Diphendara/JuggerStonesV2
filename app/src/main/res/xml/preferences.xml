@@ -61,6 +61,8 @@
         <PreferenceScreen
             android:key="playStore"
             android:summary="@string/playStore_description"
-            android:title="@string/playStore_title" />
+            android:title="@string/playStore_title">
+        <intent android:action="android.intent.action.VIEW" android:data="https://play.google.com/store/apps/details?id=contador.piedras.jugger" />
+        </PreferenceScreen>
     </PreferenceCategory>
 </PreferenceScreen>
