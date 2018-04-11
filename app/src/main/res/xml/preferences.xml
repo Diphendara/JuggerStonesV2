@@ -53,11 +53,12 @@
             android:entryValues="@array/array_languages_array_values"
             android:key="language"
             android:title="@string/language" />
-        <Preference
-            android:key="contact"
-            android:summary="@string/contact_description"
-            android:title="@string/contact_title" />
-        <Preference
+        <PreferenceScreen
+            android:title="@string/contact_title"
+            android:summary="@string/contact_description">
+            <intent android:action="myapp.action.SHARE_APP" />
+        </PreferenceScreen>
+        <PreferenceScreen
             android:key="playStore"
             android:summary="@string/playStore_description"
             android:title="@string/playStore_title" />

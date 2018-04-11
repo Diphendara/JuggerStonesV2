@@ -6,7 +6,6 @@ import android.preference.*
 import java.util.*
 import android.content.Intent
 
-
 class SettingsActivity : PreferenceActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +27,7 @@ class SettingsActivity : PreferenceActivity() {
             bindSummaryValue(findPreference("stop_after_gong"))
             bindSummaryValue(findPreference("reverse"))
             bindSummaryValue(findPreference("language"))
+
         }
 
         private fun bindSummaryValue(preference: Preference) {
