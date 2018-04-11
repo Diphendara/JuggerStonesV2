@@ -159,7 +159,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             val alertDialog = AlertDialog.Builder(this).create()
             val editText = EditText(this)
             alertDialog.setView(editText)
-            alertDialog.setTitle("Change name of ${teamName.text}")
+            alertDialog.setTitle("Change name of ${teamName.text}")  // TODO to string xml
 
             alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", { _, _ ->
                 if (checkNameEditText(editText)) {
@@ -195,7 +195,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
 
         alertDialog.setView(linearLayout)
 
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", { _, _ ->
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", { _, _ ->  // TODO to string xml
             if (checkNameEditText(editTextTeam1) || checkNameEditText(editTextTeam2)) {
                 tv_t1.text = editTextTeam1.text.toString()
                 tv_t2.text = editTextTeam2.text.toString()
@@ -203,7 +203,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 toast(R.string.name_warning)
             }
         })
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", { _, _ ->
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", { _, _ ->  // TODO to string xml
             alertDialog.cancel()
         })
 
@@ -238,11 +238,13 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         val editText = EditText(this)
         editText.inputType = InputType.TYPE_CLASS_NUMBER
         alertDialog.setView(editText)
-        alertDialog.setTitle("Set stones")
+        alertDialog.setTitle("Set stones")  // TODO to string xml
 
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", { _, _ ->
-            if (!isEmpty(editText.text.trim())) {
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", { _, _ ->  // TODO to string xml
+            if (!isEmpty(editText.text.trim()) && 1000 > editText.text.trim().toString().toInt() ) {
                 tv_stones.text = editText.text.toString()
+            }else{
+                toast("Can't be greater than 999").show() // TODO to string xml
             }
         })
         alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", { _, _ ->
@@ -292,7 +294,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 shareText += tv_t1.text.toString() + " "+tv_counter_t1.text.toString()
                 shareText += " - "
                 shareText += tv_counter_t2.text.toString() +" "+ tv_t2.text.toString()
-                shareText += " https://tinyurl.com/y89g5t4s "
+                shareText += " https://tinyurl.com/y89g5t4s "  // TODO to string xml
                 shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,shareText)
                 startActivity(Intent.createChooser(shareIntent, "Share via")) // TODO Change to string
                 return true
