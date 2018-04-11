@@ -19,6 +19,7 @@ import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
 import org.jetbrains.anko.toast
 import java.util.*
 import android.support.v4.content.ContextCompat.startActivity
+import android.text.InputType
 import org.jetbrains.anko.share
 
 
@@ -78,8 +79,8 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
 
     private fun startTimer(preferences: Prefs) {
         if (preferences.isTimerRunning) {
+            b_play.setImageResource(R.drawable.ic_play)
             stopTimer(preferences)
-            //TODO Change to pause icon
             return
         }
         if (tv_stones.text == "0") {
@@ -91,13 +92,15 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                         Sound(preferences.stoneSound, preferences.gongSound), preferences,
                         tv_stones), preferences.counterDelay,
                 preferences.counterInterval)
+        b_play.setImageResource(R.drawable.ic_pause)
+
     }
 
     private fun stopTimer(prefs: Prefs) {
         timer.cancel()
         prefs.isTimerRunning = false
         timer = Timer()
-        //TODO Change pause to play icon
+        b_play.setImageResource(R.drawable.ic_play)
     }
 
     private fun setListeners(preferences: Prefs) {
@@ -233,6 +236,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
     private fun setStones() {
         val alertDialog = AlertDialog.Builder(this).create()
         val editText = EditText(this)
+        editText.inputType = InputType.TYPE_CLASS_NUMBER
         alertDialog.setView(editText)
         alertDialog.setTitle("Set stones")
 
@@ -290,7 +294,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 shareText += tv_counter_t2.text.toString() +" "+ tv_t2.text.toString()
                 shareText += " https://tinyurl.com/y89g5t4s "
                 shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,shareText)
-                startActivity(Intent.createChooser(shareIntent, "Share via"))
+                startActivity(Intent.createChooser(shareIntent, "Share via")) // TODO Change to string
                 return true
             }
             else -> return super.onOptionsItemSelected(item)
