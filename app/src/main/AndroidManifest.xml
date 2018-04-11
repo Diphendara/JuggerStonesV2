@@ -20,7 +20,7 @@
 
         <activity android:name=".SendEmail">
             <intent-filter>
-                <action android:name="myapp.action.SHARE_APP" />
+                <action android:name="contador.piedras.jugger.SEND_EMAIL" />
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>

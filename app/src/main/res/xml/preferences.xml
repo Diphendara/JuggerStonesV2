@@ -56,7 +56,7 @@
         <PreferenceScreen
             android:title="@string/contact_title"
             android:summary="@string/contact_description">
-            <intent android:action="myapp.action.SHARE_APP" />
+            <intent android:action="contador.piedras.jugger.SEND_EMAIL" />
         </PreferenceScreen>
         <PreferenceScreen
             android:key="playStore"
