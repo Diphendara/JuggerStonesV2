@@ -1,6 +1,7 @@
 package contador.piedras.jugger
 
 import android.annotation.SuppressLint
+import android.app.ActionBar
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
@@ -17,6 +18,9 @@ import com.jaredrummler.android.colorpicker.ColorPickerDialog
 import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
 import org.jetbrains.anko.toast
 import java.util.*
+import android.support.v4.content.ContextCompat.startActivity
+import org.jetbrains.anko.share
+
 
 class Game : AppCompatActivity(), ColorPickerDialogListener {
     private var timer: Timer = Timer()
@@ -275,6 +279,18 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 stopTimer(preferences!!)
                 intent = Intent(this, SettingsActivity::class.java)
                 startActivity(intent)
+                return true
+            }
+            R.id.menu_item_share ->{
+                val shareIntent = Intent(android.content.Intent.ACTION_SEND)
+                shareIntent.type = "text/plain"
+                var shareText = getString(R.string.tweet_text) + " "
+                shareText += tv_t1.text.toString() + " "+tv_counter_t1.text.toString()
+                shareText += " - "
+                shareText += tv_counter_t2.text.toString() +" "+ tv_t2.text.toString()
+                shareText += " https://tinyurl.com/y89g5t4s "
+                shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,shareText)
+                startActivity(Intent.createChooser(shareIntent, "Share via"))
                 return true
             }
             else -> return super.onOptionsItemSelected(item)

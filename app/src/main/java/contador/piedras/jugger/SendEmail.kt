@@ -22,8 +22,7 @@ class SendEmail: PreferenceActivity(){
         val emailIntent = Intent(Intent.ACTION_SEND)
         emailIntent.data = Uri.parse("mailto:")
         emailIntent.type = "text/plain"
-
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("cristiancvacas@gmail.com"))
+        emailIntent.putExtra(Intent.EXTRA_TEXT, arrayOf("cristiancvacas@gmail.com"))
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "JuggerStones V2 Report")
 
         try {

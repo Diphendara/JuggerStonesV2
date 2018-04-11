@@ -13,4 +13,5 @@
     <string name="decrease" translatable="false">-</string>
     <string name="name_warning">The team name should be between 3 and 10 characters</string>
     <string name="change_team_names">Change team names</string>
+    <string name="tweet_text">I\'m using JuggerStones to follow this game, </string>
 </resources>
