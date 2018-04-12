@@ -30,7 +30,6 @@
     <string name="pan">Pan</string>
     <string name="stone">Pierre</string>
 
-    <string name="sounds_gong">Des sons de gongs</string>
     <string name="gong">Gong</string>
     <string name="vuvuzela">Vuvucela</string>
 
@@ -39,4 +38,11 @@
     <string name="contact_title">Contact</string>
     <string name="contact_description">Envoyer un e-mail au développeur</string>
     <string name="playStore_description">Noter l\'application</string>
+    <string name="game_mode_title">Mode de jeu</string>
+    <string name="hint_warning_stones">Le nombre par défaut est 100</string>
+    <string name="hint_warning_interval">Le nombre par défaut est 1.5s</string>
+    <string name="title_warning_stones">Nombre de pierres avant la pause</string>
+    <string name="timer_title">Configuration de la minuterie</string>
+    <string name="interval_title">Intervalle entre les pierres</string>
+
 </resources>

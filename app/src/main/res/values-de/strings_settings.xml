@@ -30,7 +30,6 @@
     <string name="pan">Pan</string>
     <string name="stone">Stein</string>
 
-    <string name="sounds_gong">Gong</string>
     <string name="gong">Gong</string>
     <string name="vuvuzela">Vuvucela</string>
 
@@ -39,4 +38,11 @@
     <string name="contact_title">Kontakt</string>
     <string name="contact_description">E-Mail an Entwickler senden</string>
     <string name="playStore_description">Bewerte die App</string>
+    <string name="game_mode_title">Spielmodus</string>
+    <string name="hint_warning_stones">Die Standardnummer ist 100</string>
+    <string name="hint_warning_interval">Die Standardnummer ist 1.5s</string>
+    <string name="title_warning_stones">Anzahl der Steine vor der Pause</string>
+    <string name="timer_title">Timer-Konfiguration</string>
+    <string name="interval_title">Intervall zwischen Steinen</string>
+
 </resources>

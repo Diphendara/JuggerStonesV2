@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Game mode">
+    <PreferenceCategory android:title="@string/game_mode_title">
         <EditTextPreference
-            android:hint="Default number is 100"
+            android:hint="@string/hint_warning_stones"
             android:inputType="number"
             android:key="stonesMaxValue"
-            android:title="Number of stones before break" />
+            android:title="@string/title_warning_stones" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Interval between stones">
+    <PreferenceCategory android:title="@string/interval_title">
         <EditTextPreference
-            android:hint="Default number is 1.5s"
+            android:hint="@string/hint_warning_interval"
             android:inputType="numberDecimal"
             android:key="counter_interval"
             android:title="@string/interval_custom" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Timer configuration">
+    <PreferenceCategory android:title="@string/timer_title">
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="reverse"
@@ -45,7 +45,7 @@
             android:entryValues="@array/array_sounds_gong_values"
             android:key="gong_sound"
             android:summary="Default is gong sound"
-            android:title="@string/sounds_gong" />
+            android:title="@string/gong" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/settings_category_others">
         <ListPreference
@@ -62,7 +62,7 @@
             android:key="playStore"
             android:summary="@string/playStore_description"
             android:title="@string/playStore_title">
-        <intent android:action="android.intent.action.VIEW" android:data="https://play.google.com/store/apps/details?id=contador.piedras.jugger" />
+        <intent android:action="android.intent.action.VIEW" android:data="@string/playStore_link" />
         </PreferenceScreen>
     </PreferenceCategory>
 </PreferenceScreen>

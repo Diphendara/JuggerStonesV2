@@ -29,7 +29,6 @@
     <string name="metal_gear">Metal gear</string>
     <string name="pan">Pan</string>
 
-    <string name="sounds_gong">Gong</string>
     <string name="gong">Gong</string>
     <string name="vuvuzela">Vuvucela</string>
 
@@ -39,4 +38,10 @@
     <string name="contact_description">Send e-mail to developer</string>
     <string name="playStore_title" translatable="false">@string/playStore</string>
     <string name="playStore_description">Rate the app</string>
+    <string name="game_mode_title">Game mode</string>
+    <string name="hint_warning_stones">Default number is 100</string>
+    <string name="hint_warning_interval">Default number is 1.5s</string>
+    <string name="title_warning_stones">Number of stones before break</string>
+    <string name="timer_title">Timer configuration</string>
+    <string name="interval_title">Interval between stones</string>
 </resources>

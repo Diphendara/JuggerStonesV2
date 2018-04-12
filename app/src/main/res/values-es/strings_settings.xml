@@ -12,6 +12,7 @@
     <string name="reverse">La cuenta atrás</string>
     <string name="reverse_summary">Nota: no funciona en infinity modo</string>
     <string name="immediateStart">Comenzar de inmediato</string>
+    <string name="pause_after_point">Pausa despues de punto</string>
     <string name="pause_after_gong">Hacer una pausa después gong</string>
 
     <!-- settings: sounds -->
@@ -29,7 +30,6 @@
     <string name="pan">Sarten</string>
     <string name="stone">Piedra</string>
 
-    <string name="sounds_gong">Gong</string>
     <string name="gong">Gong</string>
     <string name="vuvuzela">Vuvucela</string>
 
@@ -38,4 +38,11 @@
     <string name="contact_title">Contacto</string>
     <string name="contact_description">Enviar un correo electrónico al desarrollador</string>
     <string name="playStore_description">Califica la aplicación</string>
+    <string name="game_mode_title">Modo de juego</string>
+    <string name="hint_warning_stones">Por defecto es 100</string>
+    <string name="hint_warning_interval">Por defecto es 1.5s</string>
+    <string name="title_warning_stones">Numero de piedras antes de la pausa</string>
+    <string name="timer_title">Configuración del timer</string>
+    <string name="interval_title">Intervalo entre piedras</string>
+
 </resources>

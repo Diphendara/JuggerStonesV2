@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- TO DO [onHold]: make team number as parameter? -->
     <string name="zero">0</string>
     <string name="team1">Team 1</string>
     <string name="team2">Team 2</string>

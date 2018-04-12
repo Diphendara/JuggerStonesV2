@@ -30,7 +30,6 @@
     <string name="pan">Cassola</string>
     <string name="stone">Pedra</string>
 
-    <string name="sounds_gong">Gong</string>
     <string name="gong">Gong</string>
     <string name="vuvuzela">Vuvucela</string>
 
@@ -39,4 +38,11 @@
     <string name="contact_title">Contacte</string>
     <string name="contact_description">Enviar correu electrònic al desenvolupador</string>
     <string name="playStore_description">Valoreu l\'aplicació</string>
+    <string name="game_mode_title">Mode de joc</string>
+    <string name="hint_warning_stones">El número per defecte és de 100</string>
+    <string name="hint_warning_interval">El número per defecte és de 1,5 segons</string>
+    <string name="title_warning_stones">Nombre de pedres abans del descans</string>
+    <string name="timer_title">Configuració del temporitzador</string>
+    <string name="interval_title">Interval entre pedres</string>
+
 </resources>

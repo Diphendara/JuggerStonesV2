@@ -22,4 +22,14 @@
     <!-- other -->
     <string name="reset">Restablir</string>
     <string name="up_improvements">Millores en procés: \n-Poder afegir i gravar sons personalitzats</string>
+    <string name="name_warning">El nom de l\'equip ha d\'estar entre 3 i 10 caràcters</string>
+    <string name="change_team_names">Canvieu noms d\'equip</string>
+    <string name="tweet_text">Estic utilitzant JuggerStones per seguir aquest partit, </string>
+    <string name="email_send_message">Envia un correu&#8230;</string>
+    <string name="email_client_warning">No hi ha cap client de correu electrònic instal·lat</string>
+    <string name="change_team_name">Canvieu el nom de </string>
+    <string name="cancel">Cancel·lar</string>
+    <string name="set_stones">Establir pedres</string>
+    <string name="stones_warning">No pot ser superior a 999</string>
+    <string name="share_title">Compartir a través de</string>
 </resources>

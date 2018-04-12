@@ -159,16 +159,16 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             val alertDialog = AlertDialog.Builder(this).create()
             val editText = EditText(this)
             alertDialog.setView(editText)
-            alertDialog.setTitle("Change name of ${teamName.text}")  // TODO to string xml
+            alertDialog.setTitle(getString(R.string.change_team_name)+ " ${teamName.text}")
 
-            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", { _, _ ->
+            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok), { _, _ ->
                 if (checkNameEditText(editText)) {
                     teamName.text = editText.text.toString()
                 } else {
                     toast(R.string.name_warning)
                 }
             })
-            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", { _, _ ->
+            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel), { _, _ ->
                 alertDialog.cancel()
             })
             alertDialog.show()
@@ -195,7 +195,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
 
         alertDialog.setView(linearLayout)
 
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", { _, _ ->  // TODO to string xml
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok), { _, _ ->
             if (checkNameEditText(editTextTeam1) || checkNameEditText(editTextTeam2)) {
                 tv_t1.text = editTextTeam1.text.toString()
                 tv_t2.text = editTextTeam2.text.toString()
@@ -203,7 +203,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 toast(R.string.name_warning)
             }
         })
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", { _, _ ->  // TODO to string xml
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel), { _, _ ->
             alertDialog.cancel()
         })
 
@@ -238,16 +238,16 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         val editText = EditText(this)
         editText.inputType = InputType.TYPE_CLASS_NUMBER
         alertDialog.setView(editText)
-        alertDialog.setTitle("Set stones")  // TODO to string xml
+        alertDialog.setTitle(getString(R.string.set_stones))
 
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", { _, _ ->  // TODO to string xml
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok), { _, _ ->
             if (!isEmpty(editText.text.trim()) && 1000 > editText.text.trim().toString().toInt() ) {
                 tv_stones.text = editText.text.toString()
             }else{
-                toast("Can't be greater than 999").show() // TODO to string xml
+                toast(getString(R.string.stones_warning)).show()
             }
         })
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", { _, _ ->
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel), { _, _ ->
             alertDialog.cancel()
         })
         alertDialog.show()
@@ -294,9 +294,9 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 shareText += tv_t1.text.toString() + " "+tv_counter_t1.text.toString()
                 shareText += " - "
                 shareText += tv_counter_t2.text.toString() +" "+ tv_t2.text.toString()
-                shareText += " https://tinyurl.com/y89g5t4s "  // TODO to string xml
+                shareText += getString(R.string.playStore_link)
                 shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,shareText)
-                startActivity(Intent.createChooser(shareIntent, "Share via")) // TODO Change to string
+                startActivity(Intent.createChooser(shareIntent,getString(R.string.share_title)))
                 return true
             }
             else -> return super.onOptionsItemSelected(item)

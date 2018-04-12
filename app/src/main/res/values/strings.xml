@@ -4,14 +4,8 @@
 
     <!-- email: see also pref (move to activity?) -->
     <string name="email_current" translatable="false">cristiancvacas@gmail.com</string>
-    <string name="email_original" translatable="false">cristiancvacas@gmail.com</string>
-    <string name="email_mailto" translatable="false">mailto:cristiancvacas@gmail.com</string>
+    <string name="email_subject">JuggerStones V2 Report</string>
     <string name="playStore" translatable="false">Play Store</string>
-    <string name="playStore_original" translatable="false">https://play.google.com/store/apps/details?id=contador.piedras.jugger</string>
-
-    <string name="increase" translatable="false">+</string>
-    <string name="decrease" translatable="false">-</string>
-    <string name="name_warning">The team name should be between 3 and 10 characters</string>
-    <string name="change_team_names">Change team names</string>
-    <string name="tweet_text">I\'m using JuggerStones to follow this game, </string>
+    <string name="playStore_link" translatable="false">https://play.google.com/store/apps/details?id=contador.piedras.jugger</string>
+    <string name="ok">OK</string>
 </resources>

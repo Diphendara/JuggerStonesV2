@@ -22,4 +22,15 @@
     <!-- other -->
     <string name="reset">Réinitialiser</string>
     <string name="up_improvements">Améliorations à venir: -Pouvez ajouter et enregistrer des sons personnalisés</string>
+    <string name="name_warning">Le nom de l\'équipe doit comporter entre 3 et 10 caractères</string>
+    <string name="change_team_names">Modifier les noms d\'équipe</string>
+    <string name="tweet_text">J\'utilise JuggerStones pour suivre ce jeu, </string>
+    <string name="email_send_message">Envoyer un mail&#8230;</string>
+    <string name="email_client_warning">Il n\'y a pas de client de messagerie installé</string>
+    <string name="change_team_name">Changer le nom de </string>
+    <string name="cancel">Annuler</string>
+    <string name="set_stones">Mettre des pierres</string>
+    <string name="stones_warning">Ne peut pas être supérieur à 999</string>
+    <string name="share_title">Partage via</string>
+
 </resources>

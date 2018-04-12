@@ -29,7 +29,6 @@
     <string name="pan">Panela</string>
     <string name="stone">Pedra</string>
 
-    <string name="sounds_gong">Gongo</string>
     <string name="gong">Gong</string>
     <string name="vuvuzela">Vuvucela</string>
 
@@ -38,4 +37,11 @@
     <string name="contact_title">Contato</string>
     <string name="contact_description">Enviar e-mail ao desenvolvedor</string>
     <string name="playStore_description">Avalie o aplicativo</string>
+    <string name="game_mode_title">Modo de jogo</string>
+    <string name="hint_warning_stones">O número padrão é 100</string>
+    <string name="hint_warning_interval">O número padrão é de 1,5s</string>
+    <string name="title_warning_stones">Número de pedras antes de quebrar    </string>
+    <string name="timer_title">Configuração do temporizador</string>
+    <string name="interval_title">Intervalo entre pedras</string>
+
 </resources>
