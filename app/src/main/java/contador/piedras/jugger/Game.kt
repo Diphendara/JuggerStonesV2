@@ -78,6 +78,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
     }
 
     private fun startTimer(preferences: Prefs) {
+        b_change_mode.isEnabled = false
         if (preferences.isTimerRunning) {
             b_play.setImageResource(R.drawable.ic_play)
             stopTimer(preferences)
@@ -101,6 +102,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         prefs.isTimerRunning = false
         timer = Timer()
         b_play.setImageResource(R.drawable.ic_play)
+        b_change_mode.isEnabled = true
     }
 
     private fun setListeners(preferences: Prefs) {
@@ -121,6 +123,16 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
 
         b_play.setOnClickListener { startTimer(preferences) }
         b_stop.setOnClickListener { stopTimer(preferences) }
+
+        b_change_mode.setOnClickListener({
+            if(!preferences.onReverse){
+                preferences.onReverse = true
+                b_change_mode.setImageResource(R.drawable.timer_plus)
+            }else{
+                preferences.onReverse = false
+                b_change_mode.setImageResource(R.drawable.timer_minus)
+            }
+        })
 
     }
 
