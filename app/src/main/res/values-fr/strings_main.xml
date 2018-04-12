@@ -13,6 +13,7 @@
     <string name="setStones">Mettre des pierres</string>
     <string name="support">Support et contact</string>
     <string name="settings">Paramètres</string>
+    <string name="resetStones">Réinitialiser les pierres</string>
 
     <string name="toast_teamLength">Pour plus de commodité seulement les initiales de chaque équipe s\'il vous plaît (%1$d max)</string>
     <string name="toast_infinity">ATTENTION: le mode infini est sélectionné</string>

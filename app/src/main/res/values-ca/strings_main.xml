@@ -13,6 +13,7 @@
     <string name="setStones">Establir pedres</string>
     <string name="support">Ajuda i contancte</string>
     <string name="settings">Configuració</string>
+    <string name="resetStones">Restablir pedres</string>
 
     <string name="toast_teamLength">Per conveniència usar només les inicials de cadascun dels equips, per favor (%1$d MAX)</string>
     <string name="toast_infinity">ADVERTIMENT: el mode d\'infinit està seleccionat</string>

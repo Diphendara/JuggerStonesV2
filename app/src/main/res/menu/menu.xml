@@ -37,6 +37,10 @@
         android:title="@string/setStones"
         app:showAsAction="never" />
     <item
+        android:id="@+id/resetStones"
+        android:title="@string/resetStones"
+        app:showAsAction="never"/>
+    <item
         android:id="@+id/action_settings"
         android:title="@string/settings"
         app:showAsAction="never" />

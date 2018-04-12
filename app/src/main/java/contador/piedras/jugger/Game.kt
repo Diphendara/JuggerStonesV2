@@ -293,6 +293,10 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 setStones()
                 return true
             }
+            R.id.resetStones -> {
+                tv_stones.text = "0"
+                return true
+            }
             R.id.action_settings -> {
                 stopTimer(preferences!!)
                 intent = Intent(this, SettingsActivity::class.java)
@@ -306,7 +310,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 shareText += tv_t1.text.toString() + " "+tv_counter_t1.text.toString()
                 shareText += " - "
                 shareText += tv_counter_t2.text.toString() +" "+ tv_t2.text.toString()
-                shareText += getString(R.string.playStore_link)
+                shareText += " " + getString(R.string.playStore_link)
                 shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,shareText)
                 startActivity(Intent.createChooser(shareIntent,getString(R.string.share_title)))
                 return true

@@ -13,6 +13,7 @@
     <string name="setStones">Set stones</string>
     <string name="support">Support and contact</string>
     <string name="settings">Settings</string>
+    <string name="resetStones">Reset stones</string>
 
     <string name="toast_teamLength">For convenience only the initials of each team please (%1$d MAX)</string>
     <string name="toast_infinity">WARNING: infinity mode is selected</string>
