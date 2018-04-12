@@ -6,6 +6,6 @@
     <string name="email_current" translatable="false">cristiancvacas@gmail.com</string>
     <string name="email_subject">JuggerStones V2 Report</string>
     <string name="playStore" translatable="false">Play Store</string>
-    <string name="playStore_link" translatable="false">https://play.google.com/store/apps/details?id=contador.piedras.jugger</string>
+    <string name="playStore_link" translatable="false">https://play.google.com/store/apps/details?id=contador.piedras.juggerStonesV2</string>
     <string name="ok">OK</string>
 </resources>
