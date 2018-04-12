@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "contador.piedras.jugger"
+        applicationId "contador.piedras.juggerStonesV2"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
