@@ -1,4 +1,4 @@
-package contador.piedras.jugger
+package contador.piedras.juggerStonesV2
 
 import android.content.Context
 import android.widget.TextView

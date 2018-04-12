@@ -1,7 +1,6 @@
-package contador.piedras.jugger
+package contador.piedras.juggerStonesV2
 
 import android.annotation.SuppressLint
-import android.app.ActionBar
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
@@ -18,9 +17,7 @@ import com.jaredrummler.android.colorpicker.ColorPickerDialog
 import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
 import org.jetbrains.anko.toast
 import java.util.*
-import android.support.v4.content.ContextCompat.startActivity
 import android.text.InputType
-import org.jetbrains.anko.share
 
 
 class Game : AppCompatActivity(), ColorPickerDialogListener {
@@ -127,10 +124,10 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         b_change_mode.setOnClickListener({
             if(!preferences.onReverse){
                 preferences.onReverse = true
-                b_change_mode.setImageResource(R.drawable.timer_plus)
+                b_change_mode.setImageResource(R.drawable.timer_minus)
             }else{
                 preferences.onReverse = false
-                b_change_mode.setImageResource(R.drawable.timer_minus)
+                b_change_mode.setImageResource(R.drawable.timer_plus)
             }
         })
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">JuggerStones+</string>
+    <string name="app_name" translatable="false">JuggerStones V2</string>
 
     <!-- email: see also pref (move to activity?) -->
     <string name="email_current" translatable="false">cristiancvacas@gmail.com</string>
