@@ -20,7 +20,8 @@ import java.util.*
 import android.text.InputType
 
 
-class Game : AppCompatActivity(), ColorPickerDialogListener {
+class Game : AppCompatActivity(), ColorPickerDialogListener{
+
     private var timer: Timer = Timer()
     private var preferences: Prefs? = null
 
@@ -130,6 +131,20 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 b_change_mode.setImageResource(R.drawable.timer_plus)
             }
         })
+
+        share.setOnClickListener({
+            val shareIntent = Intent(android.content.Intent.ACTION_SEND)
+            shareIntent.type = "text/plain"
+            var shareText = getString(R.string.tweet_text) + " "
+            shareText += tv_t1.text.toString() + " "+tv_counter_t1.text.toString()
+            shareText += " - "
+            shareText += tv_counter_t2.text.toString() +" "+ tv_t2.text.toString()
+            shareText += " " + getString(R.string.playStore_link)
+            shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,shareText)
+            startActivity(Intent.createChooser(shareIntent,getString(R.string.share_title)))
+        })
+
+
 
     }
 
@@ -300,19 +315,32 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 startActivity(intent)
                 return true
             }
-            R.id.menu_item_share ->{
-                val shareIntent = Intent(android.content.Intent.ACTION_SEND)
-                shareIntent.type = "text/plain"
-                var shareText = getString(R.string.tweet_text) + " "
-                shareText += tv_t1.text.toString() + " "+tv_counter_t1.text.toString()
-                shareText += " - "
-                shareText += tv_counter_t2.text.toString() +" "+ tv_t2.text.toString()
-                shareText += " " + getString(R.string.playStore_link)
-                shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,shareText)
-                startActivity(Intent.createChooser(shareIntent,getString(R.string.share_title)))
+            R.id.menu_regulation -> {
+
+                val alertDialog = AlertDialog.Builder(this).create()
+                alertDialog.setTitle(getString(R.string.regulation))
+
+                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.language_spanish), { _, _ ->
+                    openRegulation("es")
+                })
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.language_german), { _, _ ->
+                    openRegulation("de")
+                })
+                alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.language_english), {_,_ ->
+                    openRegulation("en")
+                })
+                alertDialog.show()
+
+                alertDialog.show()
                 return true
             }
             else -> return super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun openRegulation(language:String){
+        val intent = Intent(applicationContext, RegulationView::class.java)
+        intent.putExtra("document", "regulation_$language.pdf")
+        startActivity(intent)
     }
 }

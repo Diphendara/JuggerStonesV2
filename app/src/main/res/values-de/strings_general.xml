@@ -32,4 +32,7 @@
     <string name="set_stones">Setze Steine</string>
     <string name="stones_warning">Kann nicht größer als 999 sein</string>
     <string name="share_title">Teilen per</string>
+    <string name="pdf_client_warning">Es ist kein pdf-Client installiert</string>
+    <string name="regulation">Vorschrift</string>
+
 </resources>

@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="contador.piedras.juggerStonesV2"
     android:installLocation="preferExternal"
-    android:versionCode="35"
-    android:versionName="5.0">
+    >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,8 +16,8 @@
         <activity android:name="contador.piedras.juggerStonesV2.Game">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
         <activity android:name="contador.piedras.juggerStonesV2.SettingsActivity"/>
@@ -27,6 +28,10 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:name="contador.piedras.juggerStonesV2.RegulationView">
+
+        </activity>
+
     </application>
 
 </manifest>

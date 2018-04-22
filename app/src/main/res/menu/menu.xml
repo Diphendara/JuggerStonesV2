@@ -2,12 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/menu_item_share"
+        android:id="@+id/menu_regulation"
         android:title="Share"
-        android:icon="@drawable/ic_share_24dp"
+        android:icon="@drawable/ic_regulation"
         app:showAsAction="always"
-        >
-    </item>
+        />
 
     <item
         android:title="@string/editTeams"

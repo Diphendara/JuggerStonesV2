@@ -32,4 +32,7 @@
     <string name="set_stones">Cambiar piedras</string>
     <string name="stones_warning">No puede ser mayor que 999</string>
     <string name="share_title">Compartir por</string>
+    <string name="pdf_client_warning">No hay cliente de pdf instalado</string>
+    <string name="regulation">Reglamento</string>
+
 </resources>
