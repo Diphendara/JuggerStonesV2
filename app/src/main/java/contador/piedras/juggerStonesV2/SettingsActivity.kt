@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.preference.*
 import java.util.*
 import android.content.Intent
+import org.jetbrains.anko.toast
 
 class SettingsActivity : PreferenceActivity() {
 
@@ -47,16 +48,32 @@ class SettingsActivity : PreferenceActivity() {
                 is ListPreference -> {
                     val listPreference: ListPreference = preference
                     val index = listPreference.findIndexOfValue(newValue.toString())
-                    if (index > 0) {
+                    if (index >= 0) {
                         preference.setSummary(listPreference.entries[index])
                         val sharedPreference = PreferenceManager.getDefaultSharedPreferences(preference.context)
-                        val actualLanguage = sharedPreference.getString("language", "en")
-                        if (preference.key == "language" &&
-                                newValue != actualLanguage) {
-                            changeLanguage(preference, newValue.toString())
+                        if (preference.key == "language"){
+                            val actualLanguage = sharedPreference.getString("language", "en")
+                            if( newValue != actualLanguage){
+                                changeLanguage(preference, newValue.toString())
+                            }
+                        }
+                        if(preference.key == "stone_sound" || preference.key == "gong_sound" ){
+                            val actualStone = sharedPreference.getString("stone_sound", "stone")
+                            val actualGong = sharedPreference.getString("gong_sound", "gong")
+                            toast("stone: $actualStone and gong: $actualGong").show()
+                            if(preference.key == "stone_sound" && newValue != actualStone){
+                                val soundPlayer = Sound(newValue.toString(),actualGong)
+                                soundPlayer.playStone(preference.context)
+                            }
+                            if(preference.key == "gong_sound" && newValue != actualGong){
+                                val soundPlayer = Sound(actualStone,newValue.toString())
+                                soundPlayer.playGong(preference.context)
+                            }
                         }
                     } else {
-                        preference.setSummary(null)
+                        val index = listPreference.entryValues.indexOf(Locale.getDefault().toString().substring(0..1))
+                        preference.setSummary(listPreference.entries[index])
+                        preference.setValueIndex(index)
                     }
                 }
                 is EditTextPreference -> preference.setSummary(newValue.toString())

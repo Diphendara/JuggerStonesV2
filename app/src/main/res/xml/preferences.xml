@@ -38,12 +38,14 @@
             android:entries="@array/array_sounds_stone"
             android:entryValues="@array/array_sounds_stone_values"
             android:key="stone_sound"
+            android:defaultValue="stone"
             android:summary="Default is stone sound"
             android:title="@string/sounds_stones" />
         <ListPreference
             android:entries="@array/array_sounds_gong"
             android:entryValues="@array/array_sounds_gong_values"
             android:key="gong_sound"
+            android:defaultValue="gong"
             android:summary="Default is gong sound"
             android:title="@string/gong" />
     </PreferenceCategory>
