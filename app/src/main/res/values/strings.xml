@@ -8,4 +8,5 @@
     <string name="playStore" translatable="false">Play Store</string>
     <string name="playStore_link" translatable="false">https://play.google.com/store/apps/details?id=contador.piedras.juggerStonesV2</string>
     <string name="ok">OK</string>
+    <string name="jugger_link">www.jugger.org</string>
 </resources>

@@ -319,6 +319,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
 
                 val alertDialog = AlertDialog.Builder(this).create()
                 alertDialog.setTitle(getString(R.string.regulation))
+                alertDialog.setMessage(getString(R.string.jugger_link))
 
                 alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.language_spanish), { _, _ ->
                     openRegulation("es")
