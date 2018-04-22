@@ -44,5 +44,6 @@
     <string name="title_warning_stones">Nombre de pedres abans del descans</string>
     <string name="timer_title">Configuració del temporitzador</string>
     <string name="interval_title">Interval entre pedres</string>
+    <string name="app_version">Versió: 1.10</string>
 
 </resources>

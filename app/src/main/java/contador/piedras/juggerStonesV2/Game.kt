@@ -256,8 +256,12 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 toast(getString(R.string.stones_warning)).show()
             }
         })
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel), { _, _ ->
+
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.cancel), { _, _ ->
             alertDialog.cancel()
+        })
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.resetStones), {_,_ ->
+            tv_stones.text = "0"
         })
         alertDialog.show()
 
@@ -288,10 +292,6 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             }
             R.id.editStones -> {
                 setStones()
-                return true
-            }
-            R.id.resetStones -> {
-                tv_stones.text = "0"
                 return true
             }
             R.id.action_settings -> {
