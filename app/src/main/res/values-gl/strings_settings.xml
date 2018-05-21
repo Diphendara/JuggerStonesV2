@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- settings: game -->
+    <string name="settings_category_game">Xogo</string>
+    <string name="stoneInterval">Intervalo entre pedras</string>
+    <string name="mode">Modo de xogo</string>
+    <string name="mode_normal">Normalmente (100 pezas por sección)</string>
+    <string name="mode_extension">Estendido (50 fichas por sección)</string>
+    <string name="mode_infinite">Infinitamente (So pedras)</string>
+    <string name="mode_custom">Modo personalizado</string>
+    <string name="interval_custom">Intervalo personalizado</string>
+    <string name="reverse">A conta atrás</string>
+    <string name="reverse_summary">Nota: non funciona en modo infinito</string>
+    <string name="immediateStart">Comezar axiña</string>
+    <string name="pause_after_point">Pausa despois de punto</string>
+    <string name="pause_after_gong">Facer unha pausa despois do gong</string>
+
+    <!-- settings: sounds -->
+    <string name="settings_category_sound">Sons</string>
+    <string name="sounds_stones">Pedras</string>
+    <string name="achievement">Logro</string>
+    <string name="cash_reg">Caixa rexistradora</string>
+    <string name="censure">Censura</string>
+    <string name="crow">Corvo</string>
+    <string name="doh">D\'oh de Homer</string>
+    <string name="drum">Tambor</string>
+    <string name="duck">Parrulo</string>
+    <string name="fb_notification">Noticiación de Facebook</string>
+    <string name="metal_gear">Metal gear</string>
+    <string name="pan">Tixola</string>
+    <string name="stone">Pedra</string>
+
+    <string name="gong">Gong</string>
+    <string name="vuvuzela">Vuvucela</string>
+
+    <!-- settings: others -->
+    <string name="settings_category_others">Outro</string>
+    <string name="contact_title">Contacto</string>
+    <string name="contact_description">Enviar un correo electrónico ao desenvolvedor</string>
+    <string name="playStore_description">Califica a aplicación</string>
+    <string name="game_mode_title">Modo de xgo</string>
+    <string name="hint_warning_stones">Por defecto é 100</string>
+    <string name="hint_warning_interval">Por defecto é 1.5s</string>
+    <string name="title_warning_stones">Número de pedras antes da pausa</string>
+    <string name="timer_title">Configuración do timer</string>
+    <string name="interval_title">Intervalo entre pedras</string>
+    <string name="app_version">Versión: 1.10</string>
+
+</resources>

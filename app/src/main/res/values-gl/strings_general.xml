@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- languages -->
+    <string name="language">Idioma</string>
+    <string name="language_english">Inglés</string>
+    <string name="language_spanish">Español</string>
+    <string name="language_catalan">Catalán</string>
+    <string name="language_german">Alemán</string>
+    <string name="language_french">Francés</string>
+    <string name="language_portuguese">Portugués</string>
+    <string name="language_galician">Galego</string>
+
+    <!-- colors -->
+    <string name="color_gray">Gris</string>
+    <string name="color_green">Verde</string>
+    <string name="color_red">Vermello</string>
+    <string name="color_yellow">Amarelo</string>
+
+    <!-- error -->
+    <string name="error">Erro</string>
+    <string name="error_version_loading_failed">A versión non se puido cargar.</string>
+
+    <!-- other -->
+    <string name="reset">Reiniciar nomes e contadores</string>
+    <string name="up_improvements">Proximas mejoras: \n -Poder engadir sons e grabar personalizados</string>
+    <string name="name_warning">O nome do equipo debe ser de entre 3 e 10 caracteres</string>
+    <string name="change_team_names">Editar nome dos equipos</string>
+    <string name="tweet_text">Estou usando JuggerStones para seguir este partido, </string>
+    <string name="email_send_message">Enviar email&#8230;</string>
+    <string name="email_client_warning">Non hai cliente de email instalado</string>
+    <string name="change_team_name">Cambiar o nome de </string>
+    <string name="cancel">Cancelar</string>
+    <string name="set_stones">Cambiar pedras</string>
+    <string name="stones_warning">Non pode ser maior que 999</string>
+    <string name="share_title">Partillar por</string>
+    <string name="pdf_client_warning">Non hai cliente de pdf instalado</string>
+    <string name="regulation">Regulamento</string>
+
+</resources>
