@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zero">0</string>
+    <string name="team1">Команда 1</string>
+    <string name="team2">Команда 2</string>
+    <string name="editTeams">Редактировать команды</string>
+    <string name="renameTeams">Переименовать команды</string>
+    <string name="renameTeams_1">Переименовать команду 1</string>
+    <string name="renameTeams_2">Переименовать команду 2</string>
+    <string name="changeColor">Изменить цвет</string>
+    <string name="changeColor_1">Изменить цвет команды 1</string>
+    <string name="changeColor_2">Изменить цвет команды 2</string>
+    <string name="setStones">Установить камни</string>
+    <string name="support">Поддержка и контакт</string>
+    <string name="settings">Настройки</string>
+    <string name="resetStones">Перезапустить камни</string>
+
+    <string name="toast_teamLength">Для удобства только инициалы (MAX %1$d)</string>
+    <string name="toast_infinity">ВНИМАНИЕ!: выбирается бесконечный режим</string>
+</resources>

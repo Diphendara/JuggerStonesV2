@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- settings: game -->
+    <string name="settings_category_game">Игра</string>
+    <string name="stoneInterval">Интервал между камнями</string>
+    <string name="mode">Игровой режим</string>
+    <string name="mode_normal">Обычно (100 штук на секцию)</string>
+    <string name="mode_extension">Расширенные (50 фишек на раздел)</string>
+    <string name="mode_infinite">Бесконечно (только камни)</string>
+    <string name="mode_custom">Персонализированный режим</string>
+    <string name="interval_custom">Персонализированный интервал</string>
+    <string name="reverse">Обратный отсчет</string>
+    <string name="reverse_summary">Примечание: он не работает в режиме бесконечности</string>
+    <string name="immediateStart">Начать немедленно</string>
+    <string name="pause_after_point">Пауза после точки</string>
+    <string name="pause_after_gong">Пауза после (гонг) gong</string>
+
+    <!-- settings: sounds -->
+    <string name="settings_category_sound">Звуки</string>
+    <string name="sounds_stones">Камни</string>
+    <string name="achievement">Достижение</string>
+    <string name="cash_reg">Кассовый аппарат</string>
+    <string name="censure">Цензура</string>
+    <string name="crow">Ворона</string>
+    <string name="doh">D\'о Гомера</string>
+    <string name="drum">Барабан</string>
+    <string name="duck">Утка</string>
+    <string name="fb_notification">Новости в Facebook</string>
+    <string name="metal_gear">(Металлическая передача) Metal gear</string>
+    <string name="pan">Сковорода</string>
+    <string name="stone">Камень</string>
+
+    <string name="gong">(Гонг)Gong</string>
+    <string name="vuvuzela"> (Вувузела) Vuvucela</string>
+
+    <!-- settings: others -->
+    <string name="settings_category_others">Другой</string>
+    <string name="contact_title">Контакт</string>
+    <string name="contact_description">Отправить письмо разработчику</string>
+    <string name="playStore_description">Оцени приложение</string>
+    <string name="game_mode_title">Игровой режим</string>
+    <string name="hint_warning_stones">По умолчанию это 100</string>
+    <string name="hint_warning_interval">По умолчанию это 1,5сек</string>
+    <string name="title_warning_stones">Количество камней до перерыва</string>
+    <string name="timer_title">Конфигурация таймера</string>
+    <string name="interval_title">Интервал между камнями</string>
+    <string name="app_version">Версия: 1.10</string>
+
+</resources>

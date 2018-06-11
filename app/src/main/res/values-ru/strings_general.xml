@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- languages -->
+    <string name="language">Язык</string>
+    <string name="language_english">Aнглийский</string>
+    <string name="language_spanish">Испанский</string>
+    <string name="language_catalan">Kаталонский</string>
+    <string name="language_german">Hемецкий</string>
+    <string name="language_french">французский</string>
+    <string name="language_portuguese">Португальский</string>
+    <string name="language_galician">Галицкая</string>
+    <string name="language_russian">русский</string>
+
+    <!-- colors -->
+    <string name="color_gray">Cерый</string>
+    <string name="color_green">Зеленый</string>
+    <string name="color_red">Красный</string>
+    <string name="color_yellow">Желтый</string>
+
+    <!-- error -->
+    <string name="error">Ошибка</string>
+    <string name="error_version_loading_failed">Не удалось загрузить версию.</string>
+
+    <!-- other -->
+    <string name="reset">Перезапустить имена и счетчики</string>
+    <string name="up_improvements">Следующие улучшения: \ n - Могти добавлять звуки и записывать</string>
+    <string name="name_warning">Название команды должно быть от 3 до 10 символов</string>
+    <string name="change_team_names">Редактировать название команды</string>
+    <string name="tweet_text">Я использую JuggerStones для продолжения этой игры, </string>
+    <string name="email_send_message">Отправить электронное письмо&#8230;</string>
+    <string name="email_client_warning">
+		Не установлен клиент электронной почты</string>
+    <string name="change_team_name">Измените имя </string>
+    <string name="cancel">Отменить</string>
+    <string name="set_stones">Изменить камни</string>
+    <string name="stones_warning">Он не может превышать 999</string>
+    <string name="share_title">Поделиться по</string>
+    <string name="pdf_client_warning">Нет установленного клиента PDF</string>
+    <string name="regulation">Регламент</string>
+
+</resources>
