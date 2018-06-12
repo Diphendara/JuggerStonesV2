@@ -10,6 +10,7 @@
         <item>@string/language_portuguese</item>
         <item>@string/language_galician</item>
         <item>@string/language_russian</item>
+        <item>@string/language_ukrainian</item>
     </string-array>
     <string-array name="array_languages_array_values" translatable="false">
         <item>en</item>
@@ -20,6 +21,7 @@
         <item>pt</item>
         <item>gl</item>
         <item>ru</item>
+        <item>uk</item>
     </string-array>
 
     <string-array name="array_colors" translateable="false">

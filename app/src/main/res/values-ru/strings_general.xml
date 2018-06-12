@@ -10,6 +10,7 @@
     <string name="language_portuguese">Португальский</string>
     <string name="language_galician">Галицкая</string>
     <string name="language_russian">русский</string>
+    <string name="language_ukrainian">украинец</string>
 
     <!-- colors -->
     <string name="color_gray">Cерый</string>

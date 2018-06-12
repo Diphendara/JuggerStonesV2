@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- languages -->
+    <string name="language">Мова</string>
+    <string name="language_english">Aнглійська</string>
+    <string name="language_spanish">Іспанська</string>
+    <string name="language_catalan">Kаталонська</string>
+    <string name="language_german">Hімецька</string>
+    <string name="language_french">французська</string>
+    <string name="language_portuguese">Португальська</string>
+    <string name="language_galician">галицька</string>
+    <string name="language_russian">російська</string>
+    <string name="language_ukrainian">українська</string>
+
+    <!-- colors -->
+    <string name="color_gray">Сірий</string>
+    <string name="color_green">Зелений</string>
+    <string name="color_red">Червоний</string>
+    <string name="color_yellow">Жовтий</string>
+
+    <!-- error -->
+    <string name="error">Помилка</string>
+    <string name="error_version_loading_failed">Не вдалося завантажити версію.</string>
+
+    <!-- other -->
+    <string name="reset">Перезапустити імена і лічильники</string>
+    <string name="up_improvements">Наступні поліпшення: \ n - Могти додавати звуки і записувати</string>
+    <string name="name_warning">Назва команди повинна бути від 3 до 10 символів</string>
+    <string name="change_team_names">Редагувати назву команди</string>
+    <string name="tweet_text">Я використовую JuggerStones для продовження цієї гри, </string>
+    <string name="email_send_message">Надіслати електронного листа&#8230;</string>
+    <string name="email_client_warning">
+		Не встановлений клієнт електронної пошти</string>
+    <string name="change_team_name">Змініть ім'я </string>
+    <string name="cancel">Скасувати</string>
+    <string name="set_stones">Змінити камені</string>
+    <string name="stones_warning">Він не може перевищувати 999</string>
+    <string name="share_title">Поділитися з</string>
+    <string name="pdf_client_warning">Немає встановленого клієнта PDF</string>
+    <string name="regulation">Регламент</string>
+
+</resources>
