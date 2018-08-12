@@ -1,28 +1,32 @@
 package contador.piedras.juggerStonesV2
 
 import android.annotation.SuppressLint
-import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.text.InputType
 import android.text.TextUtils.isEmpty
 import android.util.TypedValue
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.*
-import kotlinx.android.synthetic.main.activity_main.*
+import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.LinearLayout
+import android.widget.TextView
+import com.crashlytics.android.Crashlytics
 import com.jaredrummler.android.colorpicker.ColorPickerDialog
 import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
+import io.fabric.sdk.android.Fabric
+import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 import java.util.*
-import android.text.InputType
-import com.crashlytics.android.Crashlytics
-import io.fabric.sdk.android.Fabric
 
 
-class Game : AppCompatActivity(), ColorPickerDialogListener{
+
+class Game : AppCompatActivity(), ColorPickerDialogListener {
 
     private var timer: Timer = Timer()
     private var preferences: Prefs? = null
@@ -131,8 +135,19 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
         b_share.setOnClickListener{ share() }
 
         b_reset_all.setOnClickListener{
-            resetTeams()
-            tv_stones.text = "0"
+            val alertDialog = AlertDialog.Builder(this).create()
+            alertDialog.setTitle(getString(R.string.reset_all))
+
+            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok)) { _, _ ->
+                resetTeams()
+                tv_stones.text = "0"
+            }
+            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel)) { _, _ ->
+                alertDialog.cancel()
+            }
+            alertDialog.show()
+
+
         }
 
     }

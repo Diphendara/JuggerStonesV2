@@ -29,8 +29,7 @@
     <string name="change_team_names">Редагувати назву команди</string>
     <string name="tweet_text">Я використовую JuggerStones для продовження цієї гри, </string>
     <string name="email_send_message">Надіслати електронного листа&#8230;</string>
-    <string name="email_client_warning">
-		Не встановлений клієнт електронної пошти</string>
+    <string name="email_client_warning">Не встановлений клієнт електронної пошти</string>
     <string name="change_team_name">Змініть ім'я </string>
     <string name="cancel">Скасувати</string>
     <string name="set_stones">Змінити камені</string>
@@ -38,5 +37,6 @@
     <string name="share_title">Поділитися з</string>
     <string name="pdf_client_warning">Немає встановленого клієнта PDF</string>
     <string name="regulation">Регламент</string>
+    <string name = "reset_all">Перезапустити всі дані</string>
 
 </resources>

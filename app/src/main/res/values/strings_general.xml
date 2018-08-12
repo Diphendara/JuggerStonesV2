@@ -37,5 +37,5 @@
     <string name="share_title">Share via</string>
     <string name="pdf_client_warning">There is no pdf client installed</string>
     <string name="regulation">Regulation</string>
-
+    <string name="reset_all">Reset all the data</string>
 </resources>

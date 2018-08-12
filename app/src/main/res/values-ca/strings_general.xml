@@ -37,5 +37,6 @@
     <string name="share_title">Compartir a través de</string>
     <string name="pdf_client_warning">No hi ha cap client de pdf instal·lat</string>
     <string name="regulation">Reglament</string>
+    <string name="reset_all">Restableix totes les dades</string>
 
 </resources>
