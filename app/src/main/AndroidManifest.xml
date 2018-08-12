@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="contador.piedras.juggerStonesV2"
-    android:installLocation="preferExternal"
-    >
+    android:installLocation="preferExternal">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -31,7 +31,10 @@
         <activity android:name="contador.piedras.juggerStonesV2.RegulationView">
 
         </activity>
-
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="33b9dc66e140ebf407f97905f3aaa1a3d1524401"
+            />
     </application>
 
 </manifest>

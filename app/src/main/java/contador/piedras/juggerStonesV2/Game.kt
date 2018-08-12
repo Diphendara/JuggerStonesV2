@@ -18,6 +18,8 @@ import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
 import org.jetbrains.anko.toast
 import java.util.*
 import android.text.InputType
+import com.crashlytics.android.Crashlytics
+import io.fabric.sdk.android.Fabric
 
 
 class Game : AppCompatActivity(), ColorPickerDialogListener{
@@ -27,6 +29,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Fabric.with(this, Crashlytics())
         preferences = Prefs(this)
         changeLanguage(this, preferences!!.language)
         setContentView(R.layout.activity_main)
@@ -44,7 +47,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
 
     override fun onPause() {
         super.onPause()
-        stopTimer(Prefs(this))
+        stopTimer(Prefs(this), "pause")
     }
 
     @SuppressLint("NewApi")
@@ -79,7 +82,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
         b_change_mode.isEnabled = false
         if (preferences.isTimerRunning) {
             b_play.setImageResource(R.drawable.ic_play)
-            stopTimer(preferences)
+            stopTimer(preferences, "pause")
             return
         }
         if (tv_stones.text == "0") {
@@ -95,12 +98,13 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
 
     }
 
-    private fun stopTimer(prefs: Prefs) {
+    private fun stopTimer(prefs: Prefs, mode: String) {
         timer.cancel()
         prefs.isTimerRunning = false
         timer = Timer()
         b_play.setImageResource(R.drawable.ic_play)
         b_change_mode.isEnabled = true
+        if(mode == "stop"){ tv_stones.text = "0" }
     }
 
     private fun setListeners(preferences: Prefs) {
@@ -116,36 +120,43 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
         renameOneTeam(tv_t1)
         renameOneTeam(tv_t2)
 
-        setLongClickListener(tv_t1)
-        setLongClickListener(tv_t2)
+        changeTeamListener(tv_t1)
+        changeTeamListener(tv_t2)
 
         b_play.setOnClickListener { startTimer(preferences) }
-        b_stop.setOnClickListener { stopTimer(preferences) }
+        b_stop.setOnClickListener { stopTimer(preferences, "stop") }
 
-        b_change_mode.setOnClickListener({
-            if(!preferences.onReverse){
-                preferences.onReverse = true
-                b_change_mode.setImageResource(R.drawable.timer_minus)
-            }else{
-                preferences.onReverse = false
-                b_change_mode.setImageResource(R.drawable.timer_plus)
-            }
-        })
+        b_change_mode.setOnClickListener{changeMode(preferences)}
 
-        share.setOnClickListener({
-            val shareIntent = Intent(android.content.Intent.ACTION_SEND)
-            shareIntent.type = "text/plain"
-            var shareText = getString(R.string.tweet_text) + " "
-            shareText += tv_t1.text.toString() + " "+tv_counter_t1.text.toString()
-            shareText += " - "
-            shareText += tv_counter_t2.text.toString() +" "+ tv_t2.text.toString()
-            shareText += " " + getString(R.string.playStore_link)
-            shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,shareText)
-            startActivity(Intent.createChooser(shareIntent,getString(R.string.share_title)))
-        })
+        b_share.setOnClickListener{ share() }
 
+        b_reset_all.setOnClickListener{
+            resetTeams()
+            tv_stones.text = "0"
+        }
 
+    }
 
+    private fun share(){
+        val shareIntent = Intent(android.content.Intent.ACTION_SEND)
+        shareIntent.type = "text/plain"
+        var shareText = getString(R.string.tweet_text) + " "
+        shareText += tv_t1.text.toString() + " "+tv_counter_t1.text.toString()
+        shareText += " - "
+        shareText += tv_counter_t2.text.toString() +" "+ tv_t2.text.toString()
+        shareText += " " + getString(R.string.playStore_link)
+        shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,shareText)
+        startActivity(Intent.createChooser(shareIntent,getString(R.string.share_title)))
+    }
+
+    private fun changeMode(preferences: Prefs){
+        if(!preferences.onReverse){
+            preferences.onReverse = true
+            b_change_mode.setImageResource(R.drawable.timer_minus)
+        }else{
+            preferences.onReverse = false
+            b_change_mode.setImageResource(R.drawable.timer_plus)
+        }
     }
 
     private fun changeTeamColors(team: TextView) {
@@ -158,11 +169,11 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
                 .show(this)
     }
 
-    private fun setLongClickListener(textView: TextView) {
-        textView.setOnLongClickListener({
+    private fun changeTeamListener(textView: TextView) {
+        textView.setOnLongClickListener{
             changeTeamColors(textView)
             true
-        })
+        }
     }
 
     override fun onColorSelected(dialogId: Int, color: Int) {
@@ -170,12 +181,12 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
     }
 
     private fun setUpdateCounterListener(button: ImageButton, mode: String, counter: TextView, preferences: Prefs) {
-        button.setOnClickListener({
+        button.setOnClickListener{
             updateCounter(counter, mode)
             if (preferences.stopAfterPoint) {
-                stopTimer(preferences)
+                stopTimer(preferences, "pause")
             }
-        })
+        }
     }
 
     private fun renameOneTeam(teamName: TextView) {
@@ -185,16 +196,16 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
             alertDialog.setView(editText)
             alertDialog.setTitle(getString(R.string.change_team_name)+ " ${teamName.text}")
 
-            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok), { _, _ ->
+            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok)) { _, _ ->
                 if (checkNameEditText(editText)) {
                     teamName.text = editText.text.toString()
                 } else {
                     toast(R.string.name_warning)
                 }
-            })
-            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel), { _, _ ->
+            }
+            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel)) { _, _ ->
                 alertDialog.cancel()
-            })
+            }
             alertDialog.show()
         }
     }
@@ -219,17 +230,17 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
 
         alertDialog.setView(linearLayout)
 
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok), { _, _ ->
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok)) { _, _ ->
             if (checkNameEditText(editTextTeam1) || checkNameEditText(editTextTeam2)) {
                 tv_t1.text = editTextTeam1.text.toString()
                 tv_t2.text = editTextTeam2.text.toString()
             } else {
                 toast(R.string.name_warning)
             }
-        })
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel), { _, _ ->
+        }
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel)) { _, _ ->
             alertDialog.cancel()
-        })
+        }
 
         alertDialog.show()
     }
@@ -264,20 +275,20 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
         alertDialog.setView(editText)
         alertDialog.setTitle(getString(R.string.set_stones))
 
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok), { _, _ ->
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok)) { _, _ ->
             if (!isEmpty(editText.text.trim()) && 1000 > editText.text.trim().toString().toInt() ) {
                 tv_stones.text = editText.text.toString()
             }else{
                 toast(getString(R.string.stones_warning)).show()
             }
-        })
+        }
 
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.cancel), { _, _ ->
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.cancel)) { _, _ ->
             alertDialog.cancel()
-        })
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.resetStones), {_,_ ->
+        }
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.resetStones)) {_,_ ->
             tv_stones.text = "0"
-        })
+        }
         alertDialog.show()
 
     }
@@ -310,27 +321,25 @@ class Game : AppCompatActivity(), ColorPickerDialogListener{
                 return true
             }
             R.id.action_settings -> {
-                stopTimer(preferences!!)
+                stopTimer(preferences!!, "pause")
                 intent = Intent(this, SettingsActivity::class.java)
                 startActivity(intent)
                 return true
             }
             R.id.menu_regulation -> {
-
                 val alertDialog = AlertDialog.Builder(this).create()
                 alertDialog.setTitle(getString(R.string.regulation))
                 alertDialog.setMessage(getString(R.string.jugger_link))
 
-                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.language_spanish), { _, _ ->
+                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.language_spanish)) { _, _ ->
                     openRegulation("es")
-                })
-                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.language_german), { _, _ ->
+                }
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.language_german)) { _, _ ->
                     openRegulation("de")
-                })
-                alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.language_english), {_,_ ->
+                }
+                alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.language_english)) { _, _ ->
                     openRegulation("en")
-                })
-                alertDialog.show()
+                }
 
                 alertDialog.show()
                 return true

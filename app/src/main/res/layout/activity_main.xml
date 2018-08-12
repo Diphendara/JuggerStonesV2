@@ -204,7 +204,7 @@
         app:srcCompat="@drawable/timer_plus" />
 
     <ImageView
-        android:id="@+id/share"
+        android:id="@+id/b_share"
         android:layout_width="42dp"
         android:layout_height="43dp"
         android:layout_marginBottom="8dp"
@@ -219,5 +219,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.017"
         app:srcCompat="@drawable/ic_share_24dp" />
+
+    <ImageView
+        android:id="@+id/b_reset_all"
+        android:layout_width="42dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/b_minus_t2"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toEndOf="@+id/b_plus_t1"
+        app:layout_constraintTop_toBottomOf="@+id/b_share"
+        app:srcCompat="@android:drawable/stat_notify_sync_noanim" />
 
 </android.support.constraint.ConstraintLayout>
