@@ -70,7 +70,8 @@ class SettingsActivity : PreferenceActivity() {
                             }
                         }
                     } else {
-                        val index = listPreference.entryValues.indexOf(Locale.getDefault().toString().substring(0..1))
+                        var index = listPreference.entryValues.indexOf(Locale.getDefault().toString().substring(0..1))
+                        if (index == -1) index = 0
                         preference.setSummary(listPreference.entries[index])
                         preference.setValueIndex(index)
                     }
