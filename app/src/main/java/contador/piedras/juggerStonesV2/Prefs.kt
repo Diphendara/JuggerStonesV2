@@ -23,7 +23,10 @@ data class Prefs(private val context: Context) {
     private val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
     var maxValue: Long
-        get() = prefs.getString(MAX_VALUE, "100").toLong()
+        get(){
+            val actualValue = prefs.getString(MAX_VALUE, "100")
+            return if ( actualValue == "") 100 else actualValue.toLong()
+        }
         set(value) = prefs.edit().putLong(MAX_VALUE, value).apply()
 
     var onReverse: Boolean
@@ -43,7 +46,11 @@ data class Prefs(private val context: Context) {
         set(value) = prefs.edit().putBoolean(STOP_AFTER_POINT, value).apply()
 
     var counterInterval: Long
-        get() = (prefs.getString(COUNTER_INTERVAL, "1.5").toFloat() * 1000).toLong()
+        get()
+        {
+            val actualValue = prefs.getString(COUNTER_INTERVAL, "1.5")
+            return if ( actualValue == "")  1500 else (actualValue.toFloat() * 1000).toLong()
+        }
         set(value) = prefs.edit().putLong(COUNTER_INTERVAL, value).apply()
 
     var stoneSound: String

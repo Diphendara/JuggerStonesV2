@@ -76,7 +76,9 @@ class SettingsActivity : PreferenceActivity() {
                         preference.setValueIndex(index)
                     }
                 }
-                is EditTextPreference -> preference.setSummary(newValue.toString())
+                is EditTextPreference -> {
+                    if (newValue != "") preference.setSummary(newValue.toString())
+                }
                 is CheckBoxPreference -> {
                     preference.isChecked = newValue as Boolean
                 }
