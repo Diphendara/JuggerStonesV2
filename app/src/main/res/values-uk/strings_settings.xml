@@ -44,6 +44,5 @@
     <string name="title_warning_stones">Кількість каменів до перерви</string>
     <string name="timer_title">Конфігурація таймера</string>
     <string name="interval_title">Інтервал між камінням</string>
-    <string name="app_version">Версія: 1.10</string>
 
 </resources>

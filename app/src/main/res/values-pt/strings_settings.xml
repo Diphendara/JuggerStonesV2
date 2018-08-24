@@ -43,7 +43,6 @@
     <string name="title_warning_stones">Número de pedras antes de quebrar    </string>
     <string name="timer_title">Configuração do temporizador</string>
     <string name="interval_title">Intervalo entre pedras</string>
-    <string name="app_version">Versão: 1.10</string>
 
 
 </resources>

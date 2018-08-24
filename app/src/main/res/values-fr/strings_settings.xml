@@ -44,6 +44,5 @@
     <string name="title_warning_stones">Nombre de pierres avant la pause</string>
     <string name="timer_title">Configuration de la minuterie</string>
     <string name="interval_title">Intervalle entre les pierres</string>
-    <string name="app_version">Version: 1.10</string>
 
 </resources>

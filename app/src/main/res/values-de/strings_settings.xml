@@ -44,6 +44,5 @@
     <string name="title_warning_stones">Anzahl der Steine vor der Pause</string>
     <string name="timer_title">Timer-Konfiguration</string>
     <string name="interval_title">Intervall zwischen Steinen</string>
-    <string name="app_version">Version: 1.10</string>
 
 </resources>

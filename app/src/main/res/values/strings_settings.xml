@@ -44,6 +44,5 @@
     <string name="title_warning_stones">Number of stones before break</string>
     <string name="timer_title">Timer configuration</string>
     <string name="interval_title">Interval between stones</string>
-    <string name="app_version">Version: 1.10</string>
 
 </resources>
