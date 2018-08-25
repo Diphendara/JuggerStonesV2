@@ -21,6 +21,10 @@
     <!-- error -->
     <string name="error">Помилка</string>
     <string name="error_version_loading_failed">Не вдалося завантажити версію.</string>
+    <string name="error_values">Якщо ви отримаєте цю помилку, це пов\'язано з вашим оновленням з
+        попередньої версії (1.9 або менше), перейдіть до налаштувань і змініть параметр "Кількість
+        каменів перед паузою" до 100 і "Custom interval" до 1.5.
+    </string>
 
     <!-- other -->
     <string name="reset">Перезапустити імена і лічильники</string>
@@ -30,7 +34,7 @@
     <string name="tweet_text">Я використовую JuggerStones для продовження цієї гри, </string>
     <string name="email_send_message">Надіслати електронного листа&#8230;</string>
     <string name="email_client_warning">Не встановлений клієнт електронної пошти</string>
-    <string name="change_team_name">Змініть ім'я </string>
+    <string name="change_team_name">Змініть ім\'я </string>
     <string name="cancel">Скасувати</string>
     <string name="set_stones">Змінити камені</string>
     <string name="stones_warning">Він не може перевищувати 999</string>

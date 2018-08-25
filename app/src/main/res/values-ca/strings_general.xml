@@ -21,6 +21,10 @@
     <!-- error -->
     <string name="error">Error</string>
     <string name="error_version_loading_failed">No s\'ha pogut carregar la versió.</string>
+    <string name="error_values">Si obteniu aquest error, és a causa de la vostra actualització des
+        d\'una versió anterior (1,9 o menys), aneu a la configuració i canvieu l\'opció "Nombre de
+        pedres abans de fer una pausa" a 100 i "Interval personalitzat" a 1.5.
+    </string>
 
     <!-- other -->
     <string name="reset">Restablir</string>

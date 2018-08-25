@@ -21,6 +21,10 @@
     <!-- error -->
     <string name="error">Fehler</string>
     <string name="error_version_loading_failed">Version konnte nicht geladen werden.</string>
+    <string name="error_values">Wenn du diesen Fehler bekommst, ist es wegen deiner Aktualisierung
+        von einer früheren Version (1.9 oder weniger), gehe zu den Einstellungen und ändere die
+        Option "Anzahl der Steine vor der Pause" auf 100 und "Benutzerdefiniertes Intervall" auf 1.5.
+    </string>
 
     <!-- other -->
     <string name="reset">Zurücksetzen</string>

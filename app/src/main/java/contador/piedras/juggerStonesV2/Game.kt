@@ -35,6 +35,8 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         super.onCreate(savedInstanceState)
         Fabric.with(this, Crashlytics())
         preferences = Prefs(this)
+
+
         changeLanguage(this, preferences!!.language)
         setContentView(R.layout.activity_main)
         setListeners(preferences!!)
@@ -93,13 +95,22 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             tv_stones.text = preferences.startCounter
         }
         preferences.isTimerRunning = true
-        timer.scheduleAtFixedRate(
-                CounterTask(this, tv_stones.text.toString().toLong(),
-                        Sound(preferences.stoneSound, preferences.gongSound), preferences,
-                        tv_stones), preferences.counterDelay,
-                preferences.counterInterval)
-        b_play.setImageResource(R.drawable.ic_pause)
+        try{
+            timer.scheduleAtFixedRate(
+                    CounterTask(this, tv_stones.text.toString().toLong(),
+                            Sound(preferences.stoneSound, preferences.gongSound), preferences,
+                            tv_stones), preferences.counterDelay,
+                    preferences.counterInterval)
+            b_play.setImageResource(R.drawable.ic_pause)
+        }catch (e: NumberFormatException){
+            val alertDialog = AlertDialog.Builder(this).create()
+            alertDialog.setTitle(getString(R.string.error))
+            alertDialog.setMessage(getString(R.string.error_values))
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.ok)) { _, _ ->
 
+            }
+            alertDialog.show()
+        }
     }
 
     private fun stopTimer(prefs: Prefs, mode: String) {

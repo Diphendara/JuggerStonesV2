@@ -21,6 +21,9 @@
     <!-- error -->
     <string name="error">Error</string>
     <string name="error_version_loading_failed">La versión no se pudo cargar.</string>
+    <string name="error_values">Si obtiene este error es porque actualiza desde una versión anterior
+        (1.9 o menor), ves a ajustes y cambia la opcion "Numero de piedras antes de la pausa" a 100
+        y "Intervalo personalizado" a 1.5.</string>
 
     <!-- other -->
     <string name="reset">Reiniciar nombres y contadores</string>

@@ -10,8 +10,8 @@ android {
         applicationId "contador.piedras.juggerStonesV2"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 9
-        versionName "1.9"
+        versionCode 10
+        versionName "1.10"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 

@@ -21,6 +21,10 @@
     <!-- error -->
     <string name="error">Erro</string>
     <string name="error_version_loading_failed">A versão não pôde ser carregada.</string>
+    <string name="error_values">Se você receber este erro é por causa de sua atualização de uma
+        versão anterior (1.9 ou menos), vá para configurações e altere a opção "Número de pedras
+        antes de pausa" para 100 e "Intervalo personalizado" para 1,5.
+    </string>
 
     <!-- other -->
     <string name="reset">Restabelecer</string>
