@@ -157,10 +157,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 alertDialog.cancel()
             }
             alertDialog.show()
-
-
         }
-
     }
 
     private fun share(){
@@ -267,7 +264,6 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel)) { _, _ ->
             alertDialog.cancel()
         }
-
         alertDialog.show()
     }
 
@@ -308,7 +304,6 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 toast(getString(R.string.stones_warning)).show()
             }
         }
-
         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.cancel)) { _, _ ->
             alertDialog.cancel()
         }
@@ -316,7 +311,6 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             tv_stones.text = "0"
         }
         alertDialog.show()
-
     }
 
     override fun onDialogDismissed(dialogId: Int) {
@@ -324,7 +318,6 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val intent: Intent
         when (item.itemId) {
             R.id.teams_rename -> {
                 renameTeams()
@@ -343,37 +336,41 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 return true
             }
             R.id.editStones -> {
+                stopTimer(preferences!!, "pause")
                 setStones()
                 return true
             }
             R.id.action_settings -> {
                 stopTimer(preferences!!, "pause")
-                intent = Intent(this, SettingsActivity::class.java)
+                val intent = Intent(this, SettingsActivity::class.java)
                 startActivity(intent)
                 return true
             }
             R.id.menu_regulation -> {
-                val alertDialog = AlertDialog.Builder(this).create()
-                alertDialog.setTitle(getString(R.string.regulation))
-                alertDialog.setMessage(getString(R.string.jugger_link))
-
-                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.language_spanish)) { _, _ ->
-                    openRegulation("es")
-                }
-                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.language_german)) { _, _ ->
-                    openRegulation("de")
-                }
-                alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.language_english)) { _, _ ->
-                    openRegulation("en")
-                }
-
-                alertDialog.show()
+                stopTimer(preferences!!, "pause")
+                showAlertRegulation()
                 return true
             }
             else -> return super.onOptionsItemSelected(item)
         }
     }
 
+    private fun showAlertRegulation(){
+        val alertDialog = AlertDialog.Builder(this).create()
+        alertDialog.setTitle(getString(R.string.regulation))
+        alertDialog.setMessage(getString(R.string.jugger_link))
+
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.language_spanish)) { _, _ ->
+            openRegulation("es")
+        }
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.language_german)) { _, _ ->
+            openRegulation("de")
+        }
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.language_english)) { _, _ ->
+            openRegulation("en")
+        }
+        alertDialog.show()
+    }
     private fun openRegulation(language:String){
         val intent = Intent(applicationContext, RegulationView::class.java)
         intent.putExtra("document", "regulation_$language.pdf")
