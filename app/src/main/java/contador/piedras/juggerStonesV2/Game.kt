@@ -24,7 +24,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 import java.util.*
 
-
 class Game : AppCompatActivity(), ColorPickerDialogListener {
 
     private var timer: Timer = Timer()
@@ -89,9 +88,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             stopTimer(preferences, "pause")
             return
         }
-        if (tv_stones.text == "0") {
-            tv_stones.text = preferences.startCounter
-        }
+        if (tv_stones.text == "0") { tv_stones.text = preferences.startCounter }
         preferences.isTimerRunning = true
         try{
             timer.scheduleAtFixedRate(
@@ -224,9 +221,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                     toast(R.string.name_warning)
                 }
             }
-            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel)) { _, _ ->
-                alertDialog.cancel()
-            }
+            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel)) { _, _ -> alertDialog.cancel() }
             alertDialog.show()
         }
     }
@@ -239,8 +234,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         editTextTeam2.hint = tv_t2.text.toString()
         alertDialog.setTitle(getString(R.string.change_team_names))
 
-        val marginDP = 25
-        val marginPX = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, marginDP.toFloat(), resources.displayMetrics).toInt()
+        val marginPX = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25.toFloat(), resources.displayMetrics).toInt()
         val layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
         layoutParams.setMargins(marginPX, 0, marginPX, 0)
 
@@ -259,9 +253,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 toast(R.string.name_warning)
             }
         }
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel)) { _, _ ->
-            alertDialog.cancel()
-        }
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel)) { _, _ ->  alertDialog.cancel() }
         alertDialog.show()
     }
 
