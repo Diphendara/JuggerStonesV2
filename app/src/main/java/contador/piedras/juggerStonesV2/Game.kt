@@ -25,7 +25,6 @@ import org.jetbrains.anko.toast
 import java.util.*
 
 
-
 class Game : AppCompatActivity(), ColorPickerDialogListener {
 
     private var timer: Timer = Timer()
@@ -35,7 +34,6 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         super.onCreate(savedInstanceState)
         Fabric.with(this, Crashlytics())
         preferences = Prefs(this)
-
 
         changeLanguage(this, preferences!!.language)
         setContentView(R.layout.activity_main)
@@ -106,9 +104,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             val alertDialog = AlertDialog.Builder(this).create()
             alertDialog.setTitle(getString(R.string.error))
             alertDialog.setMessage(getString(R.string.error_values))
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.ok)) { _, _ ->
-
-            }
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.ok)) { _, _ -> }
             alertDialog.show()
         }
     }
@@ -145,19 +141,21 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
 
         b_share.setOnClickListener{ share() }
 
-        b_reset_all.setOnClickListener{
-            val alertDialog = AlertDialog.Builder(this).create()
-            alertDialog.setTitle(getString(R.string.reset_all))
+        b_reset_all.setOnClickListener{ resetAllViews() }
+    }
 
-            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok)) { _, _ ->
-                resetTeams()
-                tv_stones.text = "0"
-            }
-            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel)) { _, _ ->
-                alertDialog.cancel()
-            }
-            alertDialog.show()
+    private fun resetAllViews(){
+        val alertDialog = AlertDialog.Builder(this).create()
+        alertDialog.setTitle(getString(R.string.reset_all))
+
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.ok)) { _, _ ->
+            resetTeams()
+            tv_stones.text = "0"
         }
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.cancel)) { _, _ ->
+            alertDialog.cancel()
+        }
+        alertDialog.show()
     }
 
     private fun share(){
