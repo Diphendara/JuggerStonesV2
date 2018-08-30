@@ -21,14 +21,25 @@ import com.jaredrummler.android.colorpicker.ColorPickerDialog
 import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
 import io.fabric.sdk.android.Fabric
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.share
 import org.jetbrains.anko.toast
 import java.util.*
 
+/**
+ * This class has the necessary for the basic application function
+ */
 class Game : AppCompatActivity(), ColorPickerDialogListener {
 
     private var timer: Timer = Timer()
     private var preferences: Prefs? = null
 
+    /**
+     * Starts Crashlytics
+     * It initialize the preferences object
+     * It change the language of the app to the preferences one
+     * It Call the function who set all the listeners
+     * If the app restarts in a controlled way sets the data of the view at the same before the restarts
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Fabric.with(this, Crashlytics())
@@ -48,11 +59,19 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         }
     }
 
+    /**
+     * Stop the timer if the app goes to onPause
+     */
     override fun onPause() {
         super.onPause()
         stopTimer(Prefs(this), "pause")
     }
 
+    /**
+     * It change the language of the entire app
+     * @param context the actual context of the app
+     * @param languageCode the code of the language selected
+     */
     @SuppressLint("NewApi")
     private fun changeLanguage(context: Context, languageCode: String) {
         val res = context.resources
@@ -62,6 +81,10 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         res.updateConfiguration(conf, dm)
     }
 
+    /**
+     * On a restart this will restart the app from 0 but save the data, this method usually is used
+     * for the language change
+     */
     override fun onRestart() {
         super.onRestart()
         val intent = Intent(baseContext, Game::class.java)
@@ -75,12 +98,21 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         finish()
     }
 
+    /**
+     * It set the menu options
+     */
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
+    /**
+     * Manage the timer
+     * If it is already started it will stop it
+     * @throws NumberFormatException for try use the empty string as counter
+     * @param preferences the preferences of the app
+     */
     private fun startTimer(preferences: Prefs) {
         b_change_mode.isEnabled = false
         if (preferences.isTimerRunning) {
@@ -88,7 +120,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             stopTimer(preferences, "pause")
             return
         }
-        if (tv_stones.text == "0") { tv_stones.text = preferences.startCounter }
+        if (tv_stones.text == "0") { tv_stones.text = preferences.startCounter } //For the reverse option
         preferences.isTimerRunning = true
         try{
             timer.scheduleAtFixedRate(
@@ -101,20 +133,29 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             val alertDialog = AlertDialog.Builder(this).create()
             alertDialog.setTitle(getString(R.string.error))
             alertDialog.setMessage(getString(R.string.error_values))
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.ok)) { _, _ -> }
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.ok)) { _, _ -> alertDialog.cancel()}
             alertDialog.show()
         }
     }
 
-    private fun stopTimer(prefs: Prefs, mode: String) {
+    /**
+     * It stop the Timer
+     * @param preferences the preferences of the app
+     * @param mode the mode how stop the timer, set the text stones to 0 (stop) or not (just pause)
+     */
+    private fun stopTimer(preferences: Prefs, mode: String) {
         timer.cancel()
-        prefs.isTimerRunning = false
+        preferences.isTimerRunning = false
         timer = Timer()
         b_play.setImageResource(R.drawable.ic_play)
         b_change_mode.isEnabled = true
         if(mode == "stop"){ tv_stones.text = "0" }
     }
 
+    /**
+     * Set the listeners of all buttons
+     * @param preferences the preferences of the app
+     */
     private fun setListeners(preferences: Prefs) {
         setUpdateCounterListener(b_plus_counter, "plus", tv_stones, preferences)
         setUpdateCounterListener(b_minus_counter, "minus", tv_stones, preferences)
@@ -141,6 +182,9 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         b_reset_all.setOnClickListener{ resetAllViews() }
     }
 
+    /**
+     * Reset all the textView objects, but first shows a warning
+     */
     private fun resetAllViews(){
         val alertDialog = AlertDialog.Builder(this).create()
         alertDialog.setTitle(getString(R.string.reset_all))
@@ -155,6 +199,9 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         alertDialog.show()
     }
 
+    /**
+     * It open the share option showing the name of the teams and the points of each
+     */
     private fun share(){
         val shareIntent = Intent(android.content.Intent.ACTION_SEND)
         shareIntent.type = "text/plain"
@@ -167,6 +214,10 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         startActivity(Intent.createChooser(shareIntent,getString(R.string.share_title)))
     }
 
+    /**
+     * It changes the mode of the timer by changing the preference of the app
+     * @param preferences the preferences of the app
+     */
     private fun changeMode(preferences: Prefs){
         if(!preferences.onReverse){
             preferences.onReverse = true
@@ -177,6 +228,10 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         }
     }
 
+    /**
+     * It invoque the library for the change the color of a textView
+     * @param team TextView who color will be changeded
+     */
     private fun changeTeamColors(team: TextView) {
         ColorPickerDialog.newBuilder()
                 .setDialogType(ColorPickerDialog.TYPE_PRESETS)
@@ -187,6 +242,9 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 .show(this)
     }
 
+    /**
+     * @param textView TextView who color will be changeded
+     */
     private fun changeTeamListener(textView: TextView) {
         textView.setOnLongClickListener{
             changeTeamColors(textView)
@@ -198,6 +256,13 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         findViewById<TextView>(dialogId).setTextColor(color)
     }
 
+    /**
+     * It update the counter
+     * @param button the button who will be have the listener
+     * @param mode the mode of the listener, can be "plus" or "min" to increase or decrease by one a textView
+     * @param counter the TextView who will be modified
+     * @param preferences the preferences of the app
+     */
     private fun setUpdateCounterListener(button: ImageButton, mode: String, counter: TextView, preferences: Prefs) {
         button.setOnClickListener{
             updateCounter(counter, mode)
@@ -207,6 +272,10 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         }
     }
 
+    /**
+     * Shows a alertDialog for rename one team
+     * @param teamName TextView who will be changed
+     */
     private fun renameOneTeam(teamName: TextView) {
         teamName.setOnClickListener {
             val alertDialog = AlertDialog.Builder(this).create()
@@ -225,7 +294,9 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             alertDialog.show()
         }
     }
-
+    /**
+     * Shows a alertDialog for rename the two teams
+     */
     private fun renameTeams() {
         val alertDialog = AlertDialog.Builder(this).create()
         val editTextTeam1 = EditText(this)
@@ -257,6 +328,10 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         alertDialog.show()
     }
 
+    /**
+     * It checks if the string used when renamed a team has between 3 and 10 characters
+     * @param editText editText who have the string to check
+     */
     private fun checkNameEditText(editText: EditText): Boolean {
         if (editText.text.toString().length > 10 || editText.text.toString().length < 3) {
             return false
@@ -264,6 +339,11 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         return true
     }
 
+    /**
+     * It update the TextView
+     * @param counter TextView to update
+     * @param mode mode to update, increase or decrease the value
+     */
     private fun updateCounter(counter: TextView, mode: String) {
         var actualValue = Integer.parseInt(counter.text.toString())
         when (mode) {
@@ -273,6 +353,9 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         counter.text = actualValue.toString()
     }
 
+    /**
+     * It reset the name of the teams to the default ones
+     */
     private fun resetTeams() {
         tv_t1.text = getString(R.string.team1)
         tv_counter_t1.text = 0.toString()
@@ -280,6 +363,9 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         tv_counter_t2.text = 0.toString()
     }
 
+    /**
+     * It shows a alertdialog who can change the currents stones
+     */
     private fun setStones() {
         val alertDialog = AlertDialog.Builder(this).create()
         val editText = EditText(this)
@@ -307,8 +393,13 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
 
     }
 
+    /**
+     * A simple when to the option menu
+     */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        stopTimer(preferences!!, "pause")
         when (item.itemId) {
+
             R.id.teams_rename -> {
                 renameTeams()
                 return true
@@ -326,18 +417,15 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
                 return true
             }
             R.id.editStones -> {
-                stopTimer(preferences!!, "pause")
                 setStones()
                 return true
             }
             R.id.action_settings -> {
-                stopTimer(preferences!!, "pause")
                 val intent = Intent(this, SettingsActivity::class.java)
                 startActivity(intent)
                 return true
             }
             R.id.menu_regulation -> {
-                stopTimer(preferences!!, "pause")
                 showAlertRegulation()
                 return true
             }
@@ -345,6 +433,9 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         }
     }
 
+    /**
+     * It show a alert to open the pdf in english, german or spanish
+     */
     private fun showAlertRegulation(){
         val alertDialog = AlertDialog.Builder(this).create()
         alertDialog.setTitle(getString(R.string.regulation))
@@ -361,6 +452,10 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         }
         alertDialog.show()
     }
+
+    /**
+     * It open the activity to read the regulation
+     */
     private fun openRegulation(language:String){
         val intent = Intent(applicationContext, RegulationView::class.java)
         intent.putExtra("document", "regulation_$language.pdf")
