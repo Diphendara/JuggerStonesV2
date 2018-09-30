@@ -2,11 +2,11 @@
 <resources>
     <!-- languages -->
     <string name="language">Idioma</string>
-    <string name="language_english">Ingles</string>
+    <string name="language_english">Inglés</string>
     <string name="language_spanish">Español</string>
-    <string name="language_catalan">Catalan</string>
+    <string name="language_catalan">Catalán</string>
     <string name="language_german">Alemán</string>
-    <string name="language_french">Frances</string>
+    <string name="language_french">Francés</string>
     <string name="language_portuguese">Portugués</string>
     <string name="language_galician">Gallego</string>
     <string name="language_russian">Ruso</string>
@@ -22,13 +22,13 @@
     <string name="error">Error</string>
     <string name="error_version_loading_failed">La versión no se pudo cargar.</string>
     <string name="error_values">Si obtiene este error es porque actualiza desde una versión anterior
-        (1.9 o menor), ves a ajustes y cambia la opcion "Numero de piedras antes de la pausa" a 100
-        y "Intervalo personalizado" a 1.5.</string>
+        (1.9 o menor), ve a ajustes y cambia la opción "Número de piedras antes de la pausa" a 100
+        e "Intervalo personalizado" a 1.5.</string>
 
     <!-- other -->
     <string name="reset">Reiniciar nombres y contadores</string>
-    <string name="up_improvements">Proximas mejoras: \n -Poder añadir sonidos y grabar personalizados</string>
-    <string name="name_warning">El nombre del equipo debe ser de entre 3 y 10 carácteres</string>
+    <string name="up_improvements">Próximas mejoras: \n -Poder añadir sonidos y grabar personalizados</string>
+    <string name="name_warning">El nombre del equipo debe ser de entre 3 y 10 caracteres</string>
     <string name="change_team_names">Editar nombre de los equipos</string>
     <string name="tweet_text">Estoy usando JuggerStones para seguir este partido, </string>
     <string name="email_send_message">Enviar email&#8230;</string>
