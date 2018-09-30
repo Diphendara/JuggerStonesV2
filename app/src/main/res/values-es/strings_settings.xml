@@ -4,15 +4,15 @@
     <string name="settings_category_game">Juego</string>
     <string name="stoneInterval">Intervalo entre piedras</string>
     <string name="mode">Modo de juego</string>
-    <string name="mode_normal">Normalmente (100 piezas por sección)</string>
+    <string name="mode_normal">Normal (100 piezas por sección)</string>
     <string name="mode_extension">Extendido (50 fichas por sección)</string>
-    <string name="mode_infinite">Infinitamente (Solo piedras)</string>
+    <string name="mode_infinite">Infinito (Solo piedras)</string>
     <string name="mode_custom">Modo personalizado</string>
     <string name="interval_custom">Intervalo personalizado</string>
-    <string name="reverse">La cuenta atrás</string>
-    <string name="reverse_summary">Nota: no funciona en infinity modo</string>
+    <string name="reverse">Cuenta hacia atrás</string>
+    <string name="reverse_summary">Nota: no funciona en modo infinito</string>
     <string name="immediateStart">Comenzar de inmediato</string>
-    <string name="pause_after_point">Pausa despues de punto</string>
+    <string name="pause_after_point">Pausa después de punto</string>
     <string name="pause_after_gong">Hacer una pausa después gong</string>
 
     <!-- settings: sounds -->
@@ -25,9 +25,9 @@
     <string name="doh">D\'oh de Homer</string>
     <string name="drum">Tambor</string>
     <string name="duck">Pato</string>
-    <string name="fb_notification">Noticiacion de Facebook</string>
+    <string name="fb_notification">Notificación de Facebook</string>
     <string name="metal_gear">Metal gear</string>
-    <string name="pan">Sarten</string>
+    <string name="pan">Sartén</string>
     <string name="stone">Piedra</string>
 
     <string name="gong">Gong</string>
