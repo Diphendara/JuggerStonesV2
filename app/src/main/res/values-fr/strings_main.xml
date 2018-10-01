@@ -8,8 +8,8 @@
     <string name="renameTeams_1">Renommer l\'équipe 1</string>
     <string name="renameTeams_2">Renommer l\'équipe 2</string>
     <string name="changeColor">Changer la couleur</string>
-    <string name="changeColor_1">Changer l\'équipe 1 couleur</string>
-    <string name="changeColor_2">Changer l\'équipe 2 couleur</string>
+    <string name="changeColor_1">Changer la couleur de l\'équipe 1</string>
+    <string name="changeColor_2">Changer la couleur de l\'équipe 2</string>
     <string name="setStones">Mettre des pierres</string>
     <string name="support">Support et contact</string>
     <string name="settings">Paramètres</string>
