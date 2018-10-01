@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- settings: game -->
+    <string name="settings_category_game">Гра</string>
+    <string name="stoneInterval">Інтервал між камінням</string>
+    <string name="mode">Ігровий режим</string>
+    <string name="mode_normal">Зазвичай (100 штук на секцію)</string>
+    <string name="mode_extension">Розширення (50 фішок на розділ)</string>
+    <string name="mode_infinite">Нескінченно (тільки камені)</string>
+    <string name="mode_custom">Персоналізований режим</string>
+    <string name="interval_custom">Персоналізований інтервал</string>
+    <string name="reverse">Зворотній відлік</string>
+    <string name="reverse_summary">Примітка: він не працює в режимі нескінченності</string>
+    <string name="immediateStart">Почати негайно</string>
+    <string name="pause_after_point">Пауза після точки</string>
+    <string name="pause_after_gong">Пауза після (гонг) gong</string>
+
+    <!-- settings: sounds -->
+    <string name="settings_category_sound">Звуки</string>
+    <string name="sounds_stones">Камені</string>
+    <string name="achievement">Досягнення</string>
+    <string name="cash_reg">Касовий апарат</string>
+    <string name="censure">Цензура</string>
+    <string name="crow">Гава</string>
+    <string name="doh">D\'о Гомера</string>
+    <string name="drum">Барабан</string>
+    <string name="duck">Kачка</string>
+    <string name="fb_notification">Новини в Facebook</string>
+    <string name="metal_gear">(Металева передача) Metal gear</string>
+    <string name="pan">Пательня</string>
+    <string name="stone">Камінь</string>
+
+    <string name="gong">(Гонг)Gong</string>
+    <string name="vuvuzela"> (Вувузела) Vuvucela</string>
+
+    <!-- settings: others -->
+    <string name="settings_category_others">Інший</string>
+    <string name="contact_title">Контакт</string>
+    <string name="contact_description">Надіслати лист розробнику</string>
+    <string name="playStore_description">Оціни APP</string>
+    <string name="game_mode_title">Ігровий режим</string>
+    <string name="hint_warning_stones">За замовчуванням це 100</string>
+    <string name="hint_warning_interval">За замовчуванням це 1,5сек</string>
+    <string name="title_warning_stones">Кількість каменів до перерви</string>
+    <string name="timer_title">Конфігурація таймера</string>
+    <string name="interval_title">Інтервал між камінням</string>
+
+</resources>
