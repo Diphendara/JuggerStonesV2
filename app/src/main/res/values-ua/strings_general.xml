@@ -33,13 +33,13 @@
     <string name="tweet_text">Я використовую JuggerStones для продовження цієї гри </string>
     <string name="email_send_message">Надіслати електронного листа&#8230;</string>
     <string name="email_client_warning">Не встановлений клієнт електронної пошти</string>
-    <string name="change_team_name">Измените имя </string>
-    <string name="cancel">Отменить</string>
-    <string name="set_stones">Изменить камни</string>
-    <string name="stones_warning">Он не может превышать 999</string>
-    <string name="share_title">Поделиться по</string>
-    <string name="pdf_client_warning">Нет установленного клиента PDF</string>
+    <string name="change_team_name">Змінити ім'я</string>
+    <string name="cancel">Скасувати</string>
+    <string name="set_stones">Змінити камені</string>
+    <string name="stones_warning">Він не може перевищувати 999</string>
+    <string name="share_title">Поділитися з</string>
+    <string name="pdf_client_warning">Немає встановленого клієнта PDF</string>
     <string name="regulation">Регламент</string>
-    <string name = "reset_all">Перезапустить все данные</string>
+    <string name = "reset_all">Перезапустити всі дані</string>
 
 </resources>
