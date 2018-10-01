@@ -6,15 +6,15 @@
     <string name="language_spanish">Испанский</string>
     <string name="language_catalan">Kаталонский</string>
     <string name="language_german">Hемецкий</string>
-    <string name="language_french">французский</string>
+    <string name="language_french">Французский</string>
     <string name="language_portuguese">Португальский</string>
-    <string name="language_galician">Галицкая</string>
-    <string name="language_russian">русский</string>
-    <string name="language_ukrainian">украинец</string>
+    <string name="language_galician">Галицкий</string>
+    <string name="language_russian">Русский</string>
+    <string name="language_ukrainian">Украинский</string>
 
     <!-- colors -->
     <string name="color_gray">Cерый</string>
-    <string name="color_green">Зеленый</string>
+    <string name="color_green">Зелёный</string>
     <string name="color_red">Красный</string>
     <string name="color_yellow">Желтый</string>
 
