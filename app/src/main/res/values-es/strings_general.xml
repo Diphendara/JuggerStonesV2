@@ -21,8 +21,8 @@
     <!-- error -->
     <string name="error">Error</string>
     <string name="error_version_loading_failed">La versión no se pudo cargar.</string>
-    <string name="error_values">Si obtiene este error es porque actualiza desde una versión anterior
-        (1.9 o menor), ve a ajustes y cambia la opción "Número de piedras antes de la pausa" a 100
+    <string name="error_values">Si obtiene este error es porque se actualiza desde una versión anterior
+        (1.9 o menor), dirígete a ajustes y cambia la opción "Número de piedras antes de la pausa" a 100
         e "Intervalo personalizado" a 1.5.</string>
 
     <!-- other -->
@@ -30,13 +30,13 @@
     <string name="up_improvements">Próximas mejoras: \n -Poder añadir sonidos y grabar personalizados</string>
     <string name="name_warning">El nombre del equipo debe ser de entre 3 y 10 caracteres</string>
     <string name="change_team_names">Editar nombre de los equipos</string>
-    <string name="tweet_text">Estoy usando JuggerStones para seguir este partido, </string>
-    <string name="email_send_message">Enviar email&#8230;</string>
-    <string name="email_client_warning">No hay cliente de email instalado</string>
+    <string name="tweet_text">Estoy usando JuggerStones para seguir esta partida, </string>
+    <string name="email_send_message">Enviar correo electrónico&#8230;</string>
+    <string name="email_client_warning">No hay cliente de correo electrónico instalado</string>
     <string name="change_team_name">Cambiar el nombre de </string>
     <string name="cancel">Cancelar</string>
     <string name="set_stones">Cambiar piedras</string>
-    <string name="stones_warning">No puede ser mayor que 999</string>
+    <string name="stones_warning">No puede ser mayor a 999</string>
     <string name="share_title">Compartir por</string>
     <string name="pdf_client_warning">No hay cliente de pdf instalado</string>
     <string name="regulation">Reglamento</string>
