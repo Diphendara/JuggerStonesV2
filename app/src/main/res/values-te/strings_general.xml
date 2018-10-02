@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- languages -->
+    <string name="language">భాషా</string>
+    <string name="language_catalan">కాటలాన్</string>
+    <string name="language_german">జర్మన్</string>
+    <string name="language_english">ఇంగ్లీష్</string>
+    <string name="language_spanish">స్పానిష్</string>
+    <string name="language_french">ఫ్రెంచ్</string>
+    <string name="language_portuguese">పోర్చుగీస్</string>
+    <string name="language_galician">గెలీసియన్</string>
+    <string name="language_russian">రష్యన్</string>
+    <string name="language_ukrainian">యుక్రేయిన్</string>
+
+    <!-- colors -->
+    <string name="color_gray">బూడిద</string>
+    <string name="color_green">అక్కు పచ్చ</string>
+    <string name="color_red">ఎరుపు</string>
+    <string name="color_yellow">పసుపు</string>
+
+    <!-- error -->
+    <string name="error">తప్పు</string>
+    <string name="error_version_loading_failed">సంస్కరణ లోడ్ చేయబడలేదు.</string>
+    <string name="error_values">మీరు ఈ లోపాన్ని ఎదుర్కొన్నట్లయితే, ఇది మునుపటి నుండి మీరు అప్డేట్ చేస్తే సరిపోతుంది
+        వెర్షన్ (1.9 లేదా తక్కువ), సెట్టింగులకు వెళ్ళి ఎంపికను మార్చడానికి "విరామం ముందు రాళ్ల సంఖ్య"
+        కు 100 మరియు "కస్టమ్ విరామం" కు 1.5 కు.</string>
+
+    <!-- other -->
+    <string name="reset">పేరు మరియు కౌంటర్లు రీసెట్ చేయండి</string>
+    <string name="up_improvements">రాబోయే మెరుగుదలలు: \ n- అనుకూల శబ్ధాలను జోడించవచ్చు మరియు రికార్డ్ చేయవచ్చు</string>
+    <string name="name_warning">జట్టు పేరు 3 మరియు 10 అక్షరాల మధ్య ఉండాలి</string>
+    <string name="change_team_names">జట్టు పేర్లను మార్చండి</string>
+    <string name="tweet_text">నేను ఈ గేమ్ను అనుసరించడానికి జగ్గర్స్టోన్స్ని ఉపయోగిస్తాను, </string>
+    <string name="email_send_message">మెయిల్ పంపండి&#8230;</string>
+    <string name="email_client_warning">ఇమెయిల్ క్లయింట్ ఇన్స్టాల్ చేయబడలేదు</string>
+    <string name="change_team_name">పేరు మార్చండి </string>
+    <string name="cancel">రద్దు చేయు</string>
+    <string name="set_stones">రాళ్లను సెట్ చెయ్యండి</string>
+    <string name="stones_warning">999 కంటే ఎక్కువ కాదు</string>
+    <string name="share_title">ద్వారా భాగస్వామ్యం చేయండి</string>
+    <string name="pdf_client_warning">పిడిఎఫ్ క్లయింట్ ఇన్స్టాల్ చేయబడలేదు</string>
+    <string name="regulation">నియంత్రణ</string>
+    <string name="reset_all">మొత్తం డేటాను రీసెట్ చేయండి</string>
+</resources>

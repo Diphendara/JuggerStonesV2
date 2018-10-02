@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zero">0</string>
+    <string name="team1">టీం 1</string>
+    <string name="team2">టీం 2</string>
+    <string name="editTeams">జట్లను సవరించండి</string>
+    <string name="renameTeams">జట్లు పేరు మార్చండి</string>
+    <string name="renameTeams_1">టీం 1 కు పేరు మార్చండి</string>
+    <string name="renameTeams_2">టీం 2 కు పేరు మార్చండి</string>
+    <string name="changeColor">రంగు మార్చండి</string>
+    <string name="changeColor_1">జట్టు 1 రంగుని మార్చండి</string>
+    <string name="changeColor_2">జట్టు 2 రంగుని మార్చండి</string>
+    <string name="setStones">రాళ్లను సెట్ చెయ్యండి</string>
+    <string name="support">మద్దతు మరియు పరిచయం</string>
+    <string name="settings">సెట్టింగులు</string>
+    <string name="resetStones">రాళ్ళు రీసెట్ చేయండి</string>
+
+    <string name="toast_teamLength">సౌలభ్యం కోసం ప్రతి జట్టు యొక్క మొదటి అక్షరాలు దయచేసి (%1$d MAX)</string>
+    <string name="toast_infinity">హెచ్చరిక: ఇన్ఫినిటీ మోడ్ ఎంపిక చేయబడింది</string>
+</resources>
