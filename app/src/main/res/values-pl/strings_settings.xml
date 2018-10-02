@@ -2,7 +2,7 @@
 <resources>
     <!-- settings: game -->
     <string name="settings_category_game">Gra</string>
-    <string name="stoneInterval">Stone\'s interval</string>
+    <string name="stoneInterval">Interwał Kamienia</string>
     <string name="mode">Game mode</string>
     <string name="mode_normal">Normal (100 stones per section)</string>
     <string name="mode_extension">Expended (50 tiles per section)</string>
