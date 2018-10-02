@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- languages -->
+    <string name="language">Język</string>
+    <string name="language_catalan">Kataloński</string>
+    <string name="language_german">Niemiecki</string>
+    <string name="language_english">język angielski</string>
+    <string name="language_spanish">hiszpański</string>
+    <string name="language_french">Francuz</string>
+    <string name="language_portuguese">język portugalski</string>
+    <string name="language_galician">Galicyjski</string>
+    <string name="language_russian">język rosyjski</string>
+    <string name="language_ukrainian">język ukraiński</string>
+
+    <!-- colors -->
+    <string name="color_gray">szarość</string>
+    <string name="color_green">zieleń</string>
+    <string name="color_red">czerwień</string>
+    <string name="color_yellow">żółtko</string>
+
+    <!-- error -->
+    <string name="error">Błąd</string>
+    <string name="error_version_loading_failed">Nie można załadować wersji.</string>
+    <string name="error_values">Jeśli pojawi się ten błąd, to dlatego, że aktualizujesz z poprzedniego
+        wersja (1,9 lub mniej), przejdź do ustawień i zmień opcję "Liczba kamieni przed pauzą"
+        do 100 i "Częstotliwość niestandardowa" do 1,5.</string>
+
+    <!-- other -->
+    <string name="reset">Zresetuj nazwę i liczniki</string>
+    <string name="up_improvements">Nadchodzące ulepszenia: \ n-Dodadzą i nagrają niestandardowe dźwięki</string>
+    <string name="name_warning">Nazwa zespołu powinna zawierać od 3 do 10 znaków</string>
+    <string name="change_team_names">Zmień nazwy drużyn</string>
+    <string name="tweet_text">Używam JuggerStones do śledzenia tej gry,</string>
+    <string name="email_send_message">Wyślij maila&#8230;</string>
+    <string name="email_client_warning">Nie ma zainstalowanego klienta poczty e-mail</string>
+    <string name="change_team_name">Zmień nazwę</string>
+    <string name="cancel">Anuluj</string>
+    <string name="set_stones">Ustaw kamienie</string>
+    <string name="stones_warning">Nie może być większa niż 999</string>
+    <string name="share_title">Podziel się przez</string>
+    <string name="pdf_client_warning">Nie ma zainstalowanego klienta PDF</string>
+    <string name="regulation">Regulacja</string>
+    <string name="reset_all">Zresetuj wszystkie dane</string>
+</resources>
