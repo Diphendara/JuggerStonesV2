@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- settings: game -->
-    <string name="settings_category_game">Game</string>
+    <string name="settings_category_game">Gra</string>
     <string name="stoneInterval">Stone\'s interval</string>
     <string name="mode">Game mode</string>
     <string name="mode_normal">Normal (100 stones per section)</string>
