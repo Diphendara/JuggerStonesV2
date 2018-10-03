@@ -11,6 +11,8 @@
         <item>@string/language_galician</item>
         <item>@string/language_russian</item>
         <item>@string/language_ukrainian</item>
+        <item>@string/language_polish</item>
+        <item>@string/language_telegu</item>
     </string-array>
     <string-array name="array_languages_array_values" translatable="false">
         <item>en</item>
@@ -22,6 +24,8 @@
         <item>gl</item>
         <item>ru</item>
         <item>uk</item>
+        <item>pl</item>
+        <item>te</item>
     </string-array>
 
     <string-array name="array_colors" translateable="false">
