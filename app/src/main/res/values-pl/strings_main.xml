@@ -14,7 +14,6 @@
     <string name="support">Wsparcie i kontakt</string>
     <string name="settings">Ustawienia</string>
     <string name="resetStones">Zresetuj kamienie</string>
-
     <string name="toast_teamLength">Dla wygody proszę podać tylko inicjały każdego zespołu (%1$d MAX)</string>
     <string name="toast_infinity">OSTRZEŻENIE: wybrano tryb nieskończoności</string>
 </resources>
