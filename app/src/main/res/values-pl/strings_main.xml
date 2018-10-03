@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zero">0</string>
+    <string name="team1">Zespół 1</string>
+    <string name="team2">Zespół 1</string>
+    <string name="editTeams">Edytuj drużyny</string>
+    <string name="renameTeams">Zmień nazwy zespołów</string>
+    <string name="renameTeams_1">Zmień nazwę drużyny 1</string>
+    <string name="renameTeams_2">Zmień nazwę drużyny 2</string>
+    <string name="changeColor">Zmień kolor</string>
+    <string name="changeColor_1">Zmień kolor drużyny 1</string>
+    <string name="changeColor_2">Zmień kolor drużyny 2</string>
+    <string name="setStones">Ustaw kamienie</string>
+    <string name="support">Wsparcie i kontakt</string>
+    <string name="settings">Ustawienia</string>
+    <string name="resetStones">Zresetuj kamienie</string>
+    <string name="toast_teamLength">Dla wygody proszę podać tylko inicjały każdego zespołu (%1$d MAX)</string>
+    <string name="toast_infinity">OSTRZEŻENIE: wybrano tryb nieskończoności</string>
+</resources>
