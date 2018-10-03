@@ -22,12 +22,13 @@
     <string name="cash_reg">Kasa</string>
     <string name="censure">Cenzura</string>
     <string name="crow">Wrona</string>
-    <string name="doh">Homer \ 'oh</string>
+    <string name="doh">Homer \'oh</string>
     <string name="drum">Bęben</string>
     <string name="duck">kaczka</string>
     <string name="fb_notification">Powiadomienie na Facebooku</string>
     <string name="metal_gear">Metalowy sprzęt</string>
     <string name="pan">Patelnia</string>
+    <string name="stone">Kamień</string>
 
     <string name="gong">Gong</string>
     <string name="vuvuzela">Vuvuzela</string>
