@@ -1,17 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- languages -->
-    <string name="language">Idioma</string>
-    <string name="language_english">Inglés</string>
-    <string name="language_spanish">Español</string>
-    <string name="language_catalan">Catalán</string>
-    <string name="language_german">Alemán</string>
-    <string name="language_french">Francés</string>
-    <string name="language_portuguese">Portugués</string>
-    <string name="language_galician">Galego</string>
-    <string name="language_russian">Ruso</string>
-    <string name="language_ukrainian">Ucraniano</string>
-
     <!-- colors -->
     <string name="color_gray">Gris</string>
     <string name="color_green">Verde</string>
