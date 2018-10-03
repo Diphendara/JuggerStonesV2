@@ -3,46 +3,46 @@
     <!-- settings: game -->
     <string name="settings_category_game">Gra</string>
     <string name="stoneInterval">Interwał Kamienia</string>
-    <string name="mode">Game mode</string>
-    <string name="mode_normal">Normal (100 stones per section)</string>
-    <string name="mode_extension">Expended (50 tiles per section)</string>
-    <string name="mode_infinite">Infinitely (Only stones)</string>
-    <string name="mode_custom">Custom mode</string>
-    <string name="interval_custom">Custom interval</string>
-    <string name="reverse">Count backwards</string>
-    <string name="reverse_summary">Note: does not work on Infinite mode</string>
-    <string name="immediateStart">Start immediately</string>
-    <string name="pause_after_point">Pause after point</string>
-    <string name="pause_after_gong">Pause after Gong</string>
+    <string name="mode">Tryb gry</string>
+    <string name="mode_normal">Normalny (100 kamieni na sekcję)</string>
+    <string name="mode_extension">Wydłużono (50 płytek na sekcję) na sekcję)</string>
+    <string name="mode_infinite">Nieskończenie (tylko kamienie)</string>
+    <string name="mode_custom">Tryb niestandardowy</string>
+    <string name="interval_custom">Niestandardowy odstęp</string>
+    <string name="reverse">Licz się wstecz</string>
+    <string name="reverse_summary">Uwaga: nie działa w trybie nieskończonym</string>
+    <string name="immediateStart">Zacznij od razu</string>
+    <string name="pause_after_point">Zatrzymaj po punkcie</string>
+    <string name="pause_after_gong">Zatrzymaj się po Gongu</string>
 
     <!-- settings: sounds -->
-    <string name="settings_category_sound">Sounds</string>
-    <string name="sounds_stones">Stones</string>
-    <string name="achievement">Achievement</string>
-    <string name="cash_reg">Cash register</string>
-    <string name="censure">Censure</string>
-    <string name="crow">Crow</string>
-    <string name="doh">Homer\'s D\'oh</string>
-    <string name="drum">Drum</string>
-    <string name="duck">Duck</string>
-    <string name="fb_notification">Facebook notification</string>
-    <string name="metal_gear">Metal gear</string>
-    <string name="pan">Pan</string>
+    <string name="settings_category_sound">Dźwięki</string>
+    <string name="sounds_stones">kamień</string>
+    <string name="achievement">Osiągnięcie</string>
+    <string name="cash_reg">Kasa</string>
+    <string name="censure">Cenzura</string>
+    <string name="crow">Wrona</string>
+    <string name="doh">Homer \ 'oh</string>
+    <string name="drum">Bęben</string>
+    <string name="duck">kaczka</string>
+    <string name="fb_notification">Powiadomienie na Facebooku</string>
+    <string name="metal_gear">Metalowy sprzęt</string>
+    <string name="pan">Patelnia</string>
 
     <string name="gong">Gong</string>
-    <string name="vuvuzela">Vuvucela</string>
+    <string name="vuvuzela">Vuvuzela</string>
 
     <!-- settings: others -->
-    <string name="settings_category_others">Other</string>
-    <string name="contact_title">Contact</string>
-    <string name="contact_description">Send e-mail to developer</string>
+    <string name="settings_category_others">Inny</string>
+    <string name="contact_title">Kontakt</string>
+    <string name="contact_description">Wyślij e-mail do programisty</string>
     <string name="playStore_title" translatable="false">@string/playStore</string>
-    <string name="playStore_description">Rate the app</string>
-    <string name="game_mode_title">Game mode</string>
-    <string name="hint_warning_stones">Default number is 100</string>
-    <string name="hint_warning_interval">Default number is 1.5s</string>
-    <string name="title_warning_stones">Number of stones before break</string>
-    <string name="timer_title">Timer configuration</string>
-    <string name="interval_title">Interval between stones</string>
+    <string name="playStore_description">Oceń aplikację</string>
+    <string name="game_mode_title">Tryb gry</string>
+    <string name="hint_warning_stones">Domyślna liczba to 100</string>
+    <string name="hint_warning_interval">Domyślna liczba to 1,5 s</string>
+    <string name="title_warning_stones">Liczba kamieni przed przerwą</string>
+    <string name="timer_title">Konfiguracja timera</string>
+    <string name="interval_title">Odstęp między kamieniami</string>
 
 </resources>
