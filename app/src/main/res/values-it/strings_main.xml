@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zero">0</string>
+    <string name="team1">Squadra 1</string>
+    <string name="team2">Squadra 2</string>
+    <string name="editTeams">Modifica squadre</string>
+    <string name="renameTeams">Rinomina squadre</string>
+    <string name="renameTeams_1">Rinomina squadra 1</string>
+    <string name="renameTeams_2">Rinomina squadra 2 2</string>
+    <string name="changeColor">Cambia colore</string>
+    <string name="changeColor_1">Cambia colore squadra 1</string>
+    <string name="changeColor_2">Cambia colore squadra 2</string>
+    <string name="setStones">Imposta pietre</string>
+    <string name="support">Contatti e supporto</string>
+    <string name="settings">Impostazioni</string>
+    <string name="resetStones">Reimposta pietre</string>
+
+    <string name="toast_teamLength">Per semplicità soltante le iniziali di ciascuna squadra (%1$d MAX)</string>
+    <string name="toast_infinity">ATTENZIONE: è stata selezionata la modalità infinita</string>
+</resources>
