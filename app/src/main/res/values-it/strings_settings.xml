@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- settings: game -->
+    <string name="settings_category_game">Gioco</string>
+    <string name="stoneInterval">Intervallo delle pietre</string>
+    <string name="mode">Modalità di gioco</string>
+    <string name="mode_normal">Normale (100 pietre per sezione)</string>
+    <string name="mode_extension">Estesa (50 piastrelle)</string>
+    <string name="mode_infinite">Infinita (Solo pietre)</string>
+    <string name="mode_custom">Modalità personalizzata</string>
+    <string name="interval_custom">Intervallo personalizzato</string>
+    <string name="reverse">Conto alla rovescia</string>
+    <string name="reverse_summary">Note: does not work on Infinite mode</string>
+    <string name="immediateStart">Inizia subito</string>
+    <string name="pause_after_point">Pausa dopo un punto</string>
+    <string name="pause_after_gong">Pausa dopo il gong</string>
+
+    <!-- settings: sounds -->
+    <string name="settings_category_sound">Suoni</string>
+    <string name="sounds_stones">Pietre</string>
+    <string name="achievement">Traguardi</string>
+    <string name="cash_reg">Registratore di cassa</string>
+    <string name="censure">Censura</string>
+    <string name="crow">Corvo</string>
+    <string name="doh">D\'oh di Homer</string>
+    <string name="drum">Batteria</string>
+    <string name="duck">Anatra</string>
+    <string name="fb_notification">Notifica di Facebook</string>
+    <string name="metal_gear">Metal gear</string>
+    <string name="pan">Padella</string>
+    <string name="stone">Pietra</string>
+
+    <string name="gong">Gong</string>
+    <string name="vuvuzela">Vuvuzela</string>
+
+    <!-- settings: others -->
+    <string name="settings_category_others">Altro</string>
+    <string name="contact_title">Contatti</string>
+    <string name="contact_description">Manda un'email allo sviluppatore</string>
+    <string name="playStore_title" translatable="false">@string/playStore</string>
+    <string name="playStore_description">Vota l'app</string>
+    <string name="game_mode_title">Modalità di gioco</string>
+    <string name="hint_warning_stones">Il valore base è 100</string>
+    <string name="hint_warning_interval">Il valore base è 1.5s</string>
+    <string name="title_warning_stones">Numero di pietre prima dell'interruzione</string>
+    <string name="timer_title">Configurazione timer</string>
+    <string name="interval_title">Intervallo tra le pietre</string>
+
+</resources>
