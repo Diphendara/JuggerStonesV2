@@ -4,16 +4,16 @@
     <string name="settings_category_game">Игра</string>
     <string name="stoneInterval">Интервал между камнями</string>
     <string name="mode">Игровой режим</string>
-    <string name="mode_normal">Обычно (100 штук на секцию)</string>
-    <string name="mode_extension">Расширенные (50 фишек на раздел)</string>
-    <string name="mode_infinite">Бесконечно (только камни)</string>
-    <string name="mode_custom">Персонализированный режим</string>
-    <string name="interval_custom">Персонализированный интервал</string>
+    <string name="mode_normal">Обычный (100 камней на раунд)</string>
+    <string name="mode_extension">Расширенный (50 фишек на раунд)</string>
+    <string name="mode_infinite">Бесконечный (только камни)</string>
+    <string name="mode_custom">Пользовательский режим</string>
+    <string name="interval_custom">Пользовательский интервал</string>
     <string name="reverse">Обратный отсчет</string>
-    <string name="reverse_summary">Примечание: он не работает в режиме бесконечности</string>
+    <string name="reverse_summary">Примечание: не работает в бесконечном режиме</string>
     <string name="immediateStart">Начать немедленно</string>
-    <string name="pause_after_point">Пауза после точки</string>
-    <string name="pause_after_gong">Пауза после (гонг) gong</string>
+    <string name="pause_after_point">Пауза после очка</string>
+    <string name="pause_after_gong">Пауза после гонга</string>
 
     <!-- settings: sounds -->
     <string name="settings_category_sound">Звуки</string>
@@ -22,27 +22,27 @@
     <string name="cash_reg">Кассовый аппарат</string>
     <string name="censure">Цензура</string>
     <string name="crow">Ворона</string>
-    <string name="doh">D\'о Гомера</string>
+    <string name="doh">D\'оh Гомера</string>
     <string name="drum">Барабан</string>
     <string name="duck">Утка</string>
-    <string name="fb_notification">Новости в Facebook</string>
-    <string name="metal_gear">(Металлическая передача) Metal gear</string>
+    <string name="fb_notification">Уведомление Facebook</string>
+    <string name="metal_gear">Металлическая передача</string>
     <string name="pan">Сковорода</string>
     <string name="stone">Камень</string>
 
-    <string name="gong">(Гонг)Gong</string>
-    <string name="vuvuzela"> (Вувузела) Vuvucela</string>
+    <string name="gong">Гонг</string>
+    <string name="vuvuzela">Вувузела</string>
 
     <!-- settings: others -->
-    <string name="settings_category_others">Другой</string>
-    <string name="contact_title">Контакт</string>
+    <string name="settings_category_others">Другие</string>
+    <string name="contact_title">Контакты</string>
     <string name="contact_description">Отправить письмо разработчику</string>
     <string name="playStore_description">Оцени приложение</string>
     <string name="game_mode_title">Игровой режим</string>
-    <string name="hint_warning_stones">По умолчанию это 100</string>
-    <string name="hint_warning_interval">По умолчанию это 1,5сек</string>
+    <string name="hint_warning_stones">По умолчанию 100</string>
+    <string name="hint_warning_interval">По умолчанию 1,5сек</string>
     <string name="title_warning_stones">Количество камней до перерыва</string>
-    <string name="timer_title">Конфигурация таймера</string>
+    <string name="timer_title">Настройки таймера</string>
     <string name="interval_title">Интервал между камнями</string>
 
 </resources>
