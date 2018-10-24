@@ -6,14 +6,14 @@
     <string name="mode">Modo de juego</string>
     <string name="mode_normal">Normal (100 piezas por sección)</string>
     <string name="mode_extension">Extendido (50 fichas por sección)</string>
-    <string name="mode_infinite">Infinito (Solo piedras)</string>
+    <string name="mode_infinite">Infinito (Sólo piedras)</string>
     <string name="mode_custom">Modo personalizado</string>
     <string name="interval_custom">Intervalo personalizado</string>
     <string name="reverse">Cuenta hacia atrás</string>
     <string name="reverse_summary">Nota: no funciona en modo infinito</string>
     <string name="immediateStart">Comenzar de inmediato</string>
     <string name="pause_after_point">Pausa después de punto</string>
-    <string name="pause_after_gong">Hacer una pausa después gong</string>
+    <string name="pause_after_gong">Hacer una pausa después del gong</string>
 
     <!-- settings: sounds -->
     <string name="settings_category_sound">Sonidos</string>
@@ -41,8 +41,8 @@
     <string name="game_mode_title">Modo de juego</string>
     <string name="hint_warning_stones">Por defecto es 100</string>
     <string name="hint_warning_interval">Por defecto es 1.5s</string>
-    <string name="title_warning_stones">Numero de piedras antes de la pausa</string>
-    <string name="timer_title">Configuración del timer</string>
+    <string name="title_warning_stones">Número de piedras antes de la pausa</string>
+    <string name="timer_title">Configuración del temporizador</string>
     <string name="interval_title">Intervalo entre piedras</string>
 
 </resources>
