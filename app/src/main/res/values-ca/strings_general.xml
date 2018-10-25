@@ -9,15 +9,15 @@
     <!-- error -->
     <string name="error">Error</string>
     <string name="error_version_loading_failed">No s\'ha pogut carregar la versió.</string>
-    <string name="error_values">Si obteniu aquest error, és a causa de la vostra actualització des
-        d\'una versió anterior (1,9 o menys), aneu a la configuració i canvieu l\'opció "Nombre de
+    <string name="error_values">Si rebeu aquest error, és a causa de la vostra actualització des
+        d\'una versió anterior (v1.9 o menys), aneu a la configuració i canvieu l\'opció "Nombre de
         pedres abans de fer una pausa" a 100 i "Interval personalitzat" a 1.5.
     </string>
 
     <!-- other -->
     <string name="reset">Restablir</string>
     <string name="up_improvements">Millores en procés: \n-Poder afegir i gravar sons personalitzats</string>
-    <string name="name_warning">El nom de l\'equip ha d\'estar entre 3 i 10 caràcters</string>
+    <string name="name_warning">El nom de l\'equip ha de ser entre 3 i 10 caràcters</string>
     <string name="change_team_names">Canvieu noms d\'equip</string>
     <string name="tweet_text">Estic utilitzant JuggerStones per seguir aquest partit, </string>
     <string name="email_send_message">Envia un correu&#8230;</string>
@@ -27,7 +27,7 @@
     <string name="set_stones">Establir pedres</string>
     <string name="stones_warning">No pot ser superior a 999</string>
     <string name="share_title">Compartir a través de</string>
-    <string name="pdf_client_warning">No hi ha cap client de pdf instal·lat</string>
+    <string name="pdf_client_warning">No hi ha cap client de PDF instal·lat</string>
     <string name="regulation">Reglament</string>
     <string name="reset_all">Restableix totes les dades</string>
 
