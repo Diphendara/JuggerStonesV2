@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- colors -->
+    <string name="color_gray">Grigio</string>
+    <string name="color_green">Verde</string>
+    <string name="color_red">Rosso</string>
+    <string name="color_yellow">Giallo</string>
+
+    <!-- error -->
+    <string name="error">Errore</string>
+    <string name="error_version_loading_failed">La versione non può essere caricata.</string>
+    <string name="error_values">Se ottieni questo errore è perchè hai aggiornata da una versione precedente (1.9 o inferiore), vai nelle impostazioni e cambia
+    l'opzione "Numero di pietre prima dell'interruzione" a 100 e "Intervallo personalizzato" a 1.5.</string>
+
+    <!-- other -->
+    <string name="reset">Reimposta nome e contatori.</string>
+    <string name="up_improvements">Miglioramenti in arrivo: \n-Puoi aggiungere un suono registrato</string>
+    <string name="name_warning">Il nome della squadra deve essere compreso tra 3 e 10 caratteri</string>
+    <string name="change_team_names">Cambia il nome delle squadre</string>
+    <string name="tweet_text">Sto usando JuggerStones per seguire questo gioco, </string>
+    <string name="email_send_message">Invia un'email&#8230;</string>
+    <string name="email_client_warning">Nessun client email installato</string>
+    <string name="change_team_name">Cambia il nome di </string>
+    <string name="cancel">Annulla</string>
+    <string name="set_stones">Imposta le pietre</string>
+    <string name="stones_warning">Non può essere maggiore di 999</string>
+    <string name="share_title">Condividi</string>
+    <string name="pdf_client_warning">Nessun client pdf installato</string>
+    <string name="regulation">Regolamento</string>
+    <string name="reset_all">Ripristina i dati</string>
+</resources>

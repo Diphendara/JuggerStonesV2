@@ -1,34 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- colors -->
     <string name="color_gray">Cерый</string>
     <string name="color_green">Зелёный</string>
     <string name="color_red">Красный</string>
-    <string name="color_yellow">Желтый</string>
+    <string name="color_yellow">Жёлтый</string>
 
     <!-- error -->
     <string name="error">Ошибка</string>
     <string name="error_version_loading_failed">Не удалось загрузить версию.</string>
-    <string name="error_values">Если вы получите эту ошибку, это из-за вашего обновления из
+    <string name="error_values">Если вы получите эту ошибку, это из-за вашего обновления с
         предыдущей версии (1.9 или меньше), перейдите к настройкам и измените параметр «Количество
-        камней до паузы» до 100 и «Пользовательский интервал» до 1,5.
+        камней до паузы» до 100 и «Пользовательский интервал» до 1.5.
     </string>
 
     <!-- other -->
-    <string name="reset">Перезапустить имена и счетчики</string>
-    <string name="up_improvements">Следующие улучшения: \ n - Могти добавлять звуки и записывать</string>
-    <string name="name_warning">Название команды должно быть от 3 до 10 символов</string>
-    <string name="change_team_names">Редактировать название команды</string>
-    <string name="tweet_text">Я использую JuggerStones для продолжения этой игры, </string>
+    <string name="reset">Сбросить имена и счетчики</string>
+    <string name="up_improvements">Предстоящие улучшения: \ n - Можно добавлять и записывать собственные звуки</string>
+    <string name="name_warning">Название команды должно содержать от 3 до 10 символов</string>
+    <string name="change_team_names">Редактировать названия команд</string>
+    <string name="tweet_text">Я использую JuggerStones для отслеживания этой игры, </string>
     <string name="email_send_message">Отправить электронное письмо&#8230;</string>
     <string name="email_client_warning">Не установлен клиент электронной почты</string>
-    <string name="change_team_name">Измените имя </string>
+    <string name="change_team_name">Изменить имя команды </string>
     <string name="cancel">Отменить</string>
-    <string name="set_stones">Изменить камни</string>
-    <string name="stones_warning">Он не может превышать 999</string>
-    <string name="share_title">Поделиться по</string>
-    <string name="pdf_client_warning">Нет установленного клиента PDF</string>
-    <string name="regulation">Регламент</string>
-    <string name = "reset_all">Перезапустить все данные</string>
+    <string name="set_stones">Установить камни</string>
+    <string name="stones_warning">Не может превышать 999</string>
+    <string name="share_title">Поделиться в</string>
+    <string name="pdf_client_warning">Не установлен PDF клиент</string>
+    <string name="regulation">Правила</string>
+    <string name = "reset_all">Сбросить все данные</string>
 
 </resources>
