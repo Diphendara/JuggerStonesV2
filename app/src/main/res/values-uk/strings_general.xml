@@ -30,5 +30,13 @@
     <string name="pdf_client_warning">Немає встановленого клієнта PDF</string>
     <string name="regulation">Регламент</string>
     <string name = "reset_all">Перезапустити всі дані</string>
+    <string name="rate">Оцінити</string>
+    <string name="rate_no">Не зараз</string>
+    <string name="rate_title">Оцініть APP</string>
+    <string name="rate_body">Оцініть APP допомагає мені багато чого продовжувати покращувати його.</string>
 
+    <!-- basics -->
+    <string name="never">ніколи</string>
+    <string name="yes">так</string>
+    <string name="no">ні</string>
 </resources>

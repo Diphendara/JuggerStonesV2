@@ -11,17 +11,17 @@
     <string name="jugger_link">www.jugger.org</string>
 
     <!-- languages -->
-    <string name="language">Language</string>
     <string name="language_catalan">Català</string>
     <string name="language_german">Deutsch</string>
     <string name="language_english">English</string>
     <string name="language_spanish">Español</string>
     <string name="language_french">Française</string>
     <string name="language_italian">Italiano</string>
-    <string name="language_portuguese">Pportuguês</string>
+    <string name="language_portuguese">Português</string>
     <string name="language_galician">Galego</string>
     <string name="language_russian">Русский</string>
     <string name="language_ukrainian">Українська</string>
     <string name="language_polish">Polski</string>
     <string name="language_telegu">తెలుగు</string>
+    <string name="language_indonesian">Indonesia</string>
 </resources>

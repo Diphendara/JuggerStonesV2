@@ -34,6 +34,7 @@
     <string name="vuvuzela">Vuvuzela</string>
 
     <!-- settings: others -->
+    <string name = "language">Język</string>
     <string name="settings_category_others">Inny</string>
     <string name="contact_title">Kontakt</string>
     <string name="contact_description">Wyślij e-mail do programisty</string>

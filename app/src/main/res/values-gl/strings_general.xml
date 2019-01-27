@@ -30,5 +30,13 @@
     <string name="pdf_client_warning">Non hai cliente de pdf instalado</string>
     <string name="regulation">Regulamento</string>
     <string name="reset_all">Reiniciar todos os datos</string>
+    <string name="rate">Valor</string>
+    <string name="rate_no">Agora non</string>
+    <string name="rate_title">Valora a aplicación</string>
+    <string name="rate_body">Valorar a aplicación me axuda moito para continuar melloralo.</string>
 
+    <!-- basics -->
+    <string name="never">Nunca</string>
+    <string name="yes">Si</string>
+    <string name="no">Non</string>
 </resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- settings: game -->
+    <string name="settings_category_game">Permainan</string>
+    <string name="stoneInterval">Jeda Biduk-biduk</string>
+    <string name="mode">Mode Permainan</string>
+    <string name="mode_normal">Normal (100 biduk per bagian)</string>
+    <string name="mode_extension">Expended (50 kotak per bagian)</string>
+    <string name="mode_infinite">Tanpa batas (Hanya biduk)</string>
+    <string name="mode_custom">Mode Kustom</string>
+    <string name="interval_custom">Jeda Kustom</string>
+    <string name="reverse">Hitungan mundur</string>
+    <string name="reverse_summary">Catatan: tidak dapat digunakan pada mode Tanpa batas</string>
+    <string name="immediateStart">Mulai langsung</string>
+    <string name="pause_after_point">Jeda setelah point</string>
+    <string name="pause_after_gong">Jeda setelah Gong</string>
+
+    <!-- settings: sounds -->
+    <string name="settings_category_sound">Suara</string>
+    <string name="sounds_stones">Biduk</string>
+    <string name="achievement">Pencapaian</string>
+    <string name="cash_reg">Laci Cash</string>
+    <string name="censure">Censure</string>
+    <string name="crow">Crow</string>
+    <string name="doh">Homer\'s D\'oh</string>
+    <string name="drum">Drum</string>
+    <string name="duck">Duck</string>
+    <string name="fb_notification">Notifikasi Facebook</string>
+    <string name="metal_gear">Gigi Metal</string>
+    <string name="pan">Pan</string>
+    <string name="stone">Biduk</string>
+
+    <string name="gong">Gong</string>
+    <string name="vuvuzela">Vuvucela</string>
+
+    <!-- settings: others -->
+    <string name = "language">Bahasa</string>
+    <string name="settings_category_others">Lainnya</string>
+    <string name="contact_title">Kontak</string>
+    <string name="contact_description">Kirim e-mail ke pengembang</string>
+    <string name="playStore_title" translatable="false">@string/playStore</string>
+    <string name="playStore_description">Rating applikasi</string>
+    <string name="game_mode_title">Mode Permainan</string>
+    <string name="hint_warning_stones">Nomor standar 100</string>
+    <string name="hint_warning_interval">Nomor standar 1.5s</string>
+    <string name="title_warning_stones">Jumlah biduk sebelum jeda</string>
+    <string name="timer_title">Konfigurasi waktu</string>
+    <string name="interval_title">Jeda antar biduk</string>
+
+</resources>

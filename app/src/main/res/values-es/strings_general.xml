@@ -28,6 +28,15 @@
     <string name="share_title">Compartir por</string>
     <string name="pdf_client_warning">No hay cliente de pdf instalado</string>
     <string name="regulation">Reglamento</string>
-    <string name = "reset_all">Reiniciar todos los datos</string>
+    <string name="reset_all">Reiniciar todos los datos</string>
+    <string name="rate">Calificar</string>
+    <string name="rate_no">No ahora</string>
+    <string name="rate_title">Califica la aplicación</string>
+    <string name="rate_body">Calificar la aplicación me ayuda mucho a continuar mejorándola.</string>
+
+    <!-- basics -->
+    <string name="never">Nunca</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
 
 </resources>

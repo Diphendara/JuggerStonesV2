@@ -30,5 +30,13 @@
     <string name="pdf_client_warning">No hi ha cap client de PDF instal·lat</string>
     <string name="regulation">Reglament</string>
     <string name="reset_all">Restableix totes les dades</string>
+    <string name="rate">Rate</string>
+    <string name="rate_no">Ara no</string>
+    <string name="rate_title">Valora l\'aplicació</string>
+    <string name="rate_body">Valorar l\'APP m\'ajuda molt per continuar millorant-la.</string>
 
+    <!-- basics -->
+    <string name="never">Mai</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
 </resources>

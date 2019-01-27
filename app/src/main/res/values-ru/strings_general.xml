@@ -30,5 +30,13 @@
     <string name="pdf_client_warning">Не установлен PDF клиент</string>
     <string name="regulation">Правила</string>
     <string name = "reset_all">Сбросить все данные</string>
+    <string name="rate">Темп</string>
+    <string name="rate_no">Не сейчас</string>
+    <string name="rate_title">Оцените приложение</string>
+    <string name="rate_body">Оценить приложение очень помогает мне продолжать улучшать его.</string>
 
+    <!-- basics -->
+    <string name="never">никогда</string>
+    <string name="yes">да</string>
+    <string name="no">нет</string>
 </resources>

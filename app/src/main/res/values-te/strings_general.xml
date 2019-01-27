@@ -29,4 +29,13 @@
     <string name="pdf_client_warning">పిడిఎఫ్ క్లయింట్ ఇన్స్టాల్ చేయబడలేదు</string>
     <string name="regulation">నియంత్రణ</string>
     <string name="reset_all">మొత్తం డేటాను రీసెట్ చేయండి</string>
+    <string name="rate">రేటు</string>
+    <string name="rate_no">ఇప్పుడు కాదు</string>
+    <string name="rate_title">APP ను రేట్ చేయండి</string>
+    <string name="rate_body">APP ను మెరుగుపరచడం కొనసాగించడానికి నాకు చాలా సహాయపడుతుంది.</string>
+
+    <!-- basics -->
+    <string name="never">ఎప్పుడూ</string>
+    <string name="yes">అవును</string>
+    <string name="no">ఏ</string>
 </resources>

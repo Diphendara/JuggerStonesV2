@@ -30,5 +30,13 @@
     <string name="pdf_client_warning">Il n\'y a pas de lecteur de pdf installé</string>
     <string name="regulation">Réglementation</string>
     <string name="reset_all">Réinitialiser toutes les données</string>
+    <string name="rate">Taux</string>
+    <string name="rate_no">Pas maintenant</string>
+    <string name="rate_title">Évaluer l\'application</string>
+    <string name="rate_body">Évaluer l\'APP m\'aide beaucoup à continuer de l\'améliorer.</string>
 
+    <!-- basics -->
+    <string name="never">Jamais</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
 </resources>

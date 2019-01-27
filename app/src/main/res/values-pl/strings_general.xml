@@ -29,4 +29,13 @@
     <string name="pdf_client_warning">Nie ma zainstalowanego klienta PDF</string>
     <string name="regulation">Regulacja</string>
     <string name="reset_all">Zresetuj wszystkie dane</string>
+    <string name="rate">Oceniać</string>
+    <string name="rate_no">Nie teraz</string>
+    <string name="rate_title">Oceń aplikację</string>
+    <string name="rate_body">Oceń APP bardzo mi pomaga, aby kontynuować ją poprawić.</string>
+
+    <!-- basics -->
+    <string name="never">Nigdy</string>
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
 </resources>

@@ -34,6 +34,7 @@
     <string name="vuvuzela"> (Вувузела) Vuvucela</string>
 
     <!-- settings: others -->
+    <string name="language">Мова</string>
     <string name="settings_category_others">Інший</string>
     <string name="contact_title">Контакт</string>
     <string name="contact_description">Надіслати лист розробнику</string>

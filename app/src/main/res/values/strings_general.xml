@@ -13,6 +13,7 @@
         version (1.9 or less), go to settings and change the option "Number of stones before pause"
         to 100 and "Custom interval" to 1.5.</string>
 
+
     <!-- other -->
     <string name="reset">Reset name and counters</string>
     <string name="up_improvements">Upcoming improvements: \n-Can add and record custom sounds</string>
@@ -29,4 +30,14 @@
     <string name="pdf_client_warning">There is no pdf client installed</string>
     <string name="regulation">Regulation</string>
     <string name="reset_all">Reset all the data</string>
+    <string name="rate">Rate</string>
+    <string name="rate_no">Not now</string>
+    <string name="rate_title">Rate the APP</string>
+    <string name="rate_body">Rate the APP helps me a lot to continue improve it.</string>
+
+    <!-- basics -->
+    <string name="never">Never</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
 </resources>

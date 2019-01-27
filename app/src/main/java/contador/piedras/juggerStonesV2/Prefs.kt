@@ -19,8 +19,13 @@ data class Prefs(private val context: Context) {
     val START_VALUE = "start_value"
     val ON_REVERSE ="reverse"
     val LANGUAGE = "language"
+    val SHOW_RATE_ALERT = "showRateAlert"
 
     private val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+
+    var showRateAlert: Boolean
+        get() = prefs.getBoolean(SHOW_RATE_ALERT, false)
+        set(value) = prefs.edit().putBoolean(SHOW_RATE_ALERT, value).apply()
 
     var maxValue: Long
         get(){

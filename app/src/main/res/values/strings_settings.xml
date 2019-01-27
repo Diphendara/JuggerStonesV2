@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- settings: game -->
     <string name="settings_category_game">Game</string>
     <string name="stoneInterval">Stone\'s interval</string>
@@ -34,6 +35,7 @@
     <string name="vuvuzela">Vuvucela</string>
 
     <!-- settings: others -->
+    <string name="language">Language</string>
     <string name="settings_category_others">Other</string>
     <string name="contact_title">Contact</string>
     <string name="contact_description">Send e-mail to developer</string>

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -48,6 +49,9 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         changeLanguage(this, preferences!!.language)
         setContentView(R.layout.activity_main)
         setListeners(preferences!!)
+        if(!(preferences!!.showRateAlert)) {
+            showRateAlert(preferences!!)
+        }
 
         val isRestart = intent.getBooleanExtra("restart",false)
         if (isRestart) {
@@ -57,6 +61,27 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
             tv_counter_t2.text = intent.getStringExtra("counterTeamTwo")
             tv_stones.text = intent.getStringExtra("stones")
         }
+    }
+
+    fun showRateAlert(preferences: Prefs) {
+        val alertDialog = AlertDialog.Builder(this).create()
+        alertDialog.setTitle(getString(R.string.rate_title))
+        alertDialog.setMessage(getString(R.string.rate_body))
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.rate)) { _, _ ->
+            preferences.showRateAlert = true
+            var playstoreuri1: Uri = Uri.parse("market://details?id=contador.piedras.juggerStonesV2")
+            var playstoreIntent1 = Intent(Intent.ACTION_VIEW, playstoreuri1)
+            startActivity(playstoreIntent1)
+            alertDialog.cancel()
+        }
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.rate_no)) { _, _ ->
+            alertDialog.cancel()
+        }
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.never)) { _, _ ->
+            preferences.showRateAlert = true
+            alertDialog.cancel()
+        }
+        alertDialog.show()
     }
 
     /**

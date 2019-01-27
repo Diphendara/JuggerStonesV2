@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zero">0</string>
+    <string name="team1">Tim 1</string>
+    <string name="team2">Tim 2</string>
+    <string name="editTeams">Ubah tim</string>
+    <string name="renameTeams">Ubah nama tim</string>
+    <string name="renameTeams_1">Ubah nama Tim 1</string>
+    <string name="renameTeams_2">Ubah nama Tim 2</string>
+    <string name="changeColor">Ganti warna</string>
+    <string name="changeColor_1">Ganti warna tim 1</string>
+    <string name="changeColor_2">Ganti warna tim 2</string>
+    <string name="setStones">Atur biduk</string>
+    <string name="support">Suport dan kontak</string>
+    <string name="settings">Pengaturan</string>
+    <string name="resetStones">Atur ulang biduk</string>
+
+    <string name="toast_teamLength">Untuk kenyamanan gunakan hanya inisial dari setiap tim (MAX %1$d)</string>
+    <string name="toast_infinity">WARNING: mode tak terbatas terpilih</string>
+</resources>

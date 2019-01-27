@@ -34,6 +34,7 @@
     <string name="vuvuzela">Vuvucela</string>
 
     <!-- settings: others -->
+    <string name="language">Sprache</string>
     <string name="settings_category_others">Anderes</string>
     <string name="contact_title">Kontakt</string>
     <string name="contact_description">E-Mail an Entwickler senden</string>

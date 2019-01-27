@@ -10,7 +10,7 @@
     <string name="error">Errore</string>
     <string name="error_version_loading_failed">La versione non può essere caricata.</string>
     <string name="error_values">Se ottieni questo errore è perchè hai aggiornata da una versione precedente (1.9 o inferiore), vai nelle impostazioni e cambia
-    l'opzione "Numero di pietre prima dell'interruzione" a 100 e "Intervallo personalizzato" a 1.5.</string>
+    l\'opzione "Numero di pietre prima dell\'interruzione" a 100 e "Intervallo personalizzato" a 1.5.</string>
 
     <!-- other -->
     <string name="reset">Reimposta nome e contatori.</string>
@@ -18,7 +18,7 @@
     <string name="name_warning">Il nome della squadra deve essere compreso tra 3 e 10 caratteri</string>
     <string name="change_team_names">Cambia il nome delle squadre</string>
     <string name="tweet_text">Sto usando JuggerStones per seguire questo gioco, </string>
-    <string name="email_send_message">Invia un'email&#8230;</string>
+    <string name="email_send_message">Inviare una mail</string>
     <string name="email_client_warning">Nessun client email installato</string>
     <string name="change_team_name">Cambia il nome di </string>
     <string name="cancel">Annulla</string>
@@ -28,4 +28,13 @@
     <string name="pdf_client_warning">Nessun client pdf installato</string>
     <string name="regulation">Regolamento</string>
     <string name="reset_all">Ripristina i dati</string>
+    <string name="rate">Vota</string>
+    <string name="rate_no">Non adesso</string>
+    <string name="rate_title">Valuta l\'APP</string>
+    <string name="rate_body">Valutare l\'APP mi aiuta molto a continuare a migliorarlo.</string>
+
+    <!-- basics -->
+    <string name="never">Mai</string>
+    <string name="yes">Sì</string>
+    <string name="no">No</string>
 </resources>
