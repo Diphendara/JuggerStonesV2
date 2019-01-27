@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- colors -->
+    <string name="color_gray">Abu-abu</string>
+    <string name="color_green">Hijau</string>
+    <string name="color_red">Merah</string>
+    <string name="color_yellow">Kuning</string>
+
+    <!-- error -->
+    <string name="error">Error</string>
+    <string name="error_version_loading_failed">Versi gagal diunduh.</string>
+    <string name="error_values">Jika anda menemukan error ini dikarenakan anda menggunakan update
+        versi (1.9 atau kurang), Pergi ke Pengaturan dan ganti opsi "Jumlah biduk sebelum istirahat"
+        ke 100 dan "Jeda" ke 1.5.</string>
+
+    <!-- other -->
+    <string name="reset">Atur ulang nama dan penghitung</string>
+    <string name="up_improvements">Pengembangan berikutnya: \n-Bisa menambah dan merekam suara</string>
+    <string name="name_warning">Nama tim sebaiknya diantara 3 sampai 10 karakter</string>
+    <string name="change_team_names">Ganti nama Tim</string>
+    <string name="tweet_text">Saya menggunakan JuggerStones untuk mengikuti pertandingan ini, </string>
+    <string name="email_send_message">Kirim pesan&#8230;</string>
+    <string name="email_client_warning">Tidak ada email client terinstall</string>
+    <string name="change_team_name">Ganti nama dari </string>
+    <string name="cancel">Batal</string>
+    <string name="set_stones">Atur Biduk</string>
+    <string name="stones_warning">Tidak boleh lebih dari 999</string>
+    <string name="share_title">Bagikan melalui</string>
+    <string name="pdf_client_warning">Tidak ada pembaca pdf terinstall</string>
+    <string name="regulation">Regulasi</string>
+    <string name="reset_all">Atur ulang semua data</string>
+</resources>
