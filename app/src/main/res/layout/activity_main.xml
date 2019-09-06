@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/background_dark"
     tools:context="contador.piedras.juggerStonesV2.Game"
-    android:keepScreenOn="true">
+    >
 
     <ImageButton
         android:id="@+id/b_play"

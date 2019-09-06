@@ -5,13 +5,13 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 28
     defaultConfig {
         applicationId "contador.piedras.juggerStonesV2"
         minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 13
-        versionName "1.13"
+        targetSdkVersion 28
+        versionCode 14
+        versionName "1.14"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
@@ -53,7 +53,7 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation"org.jetbrains.anko:anko-common:0.10.4"
 
     implementation 'com.jaredrummler:colorpicker:1.0.2'

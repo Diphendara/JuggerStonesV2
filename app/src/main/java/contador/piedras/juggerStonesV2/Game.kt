@@ -13,6 +13,7 @@ import android.text.TextUtils.isEmpty
 import android.util.TypedValue
 import android.view.Menu
 import android.view.MenuItem
+import android.view.WindowManager
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.LinearLayout
@@ -140,6 +141,8 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
      */
     private fun startTimer(preferences: Prefs) {
         b_change_mode.isEnabled = false
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+
         if (preferences.isTimerRunning) {
             b_play.setImageResource(R.drawable.ic_play)
             stopTimer(preferences, "pause")
@@ -169,6 +172,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
      * @param mode the mode how stop the timer, set the text stones to 0 (stop) or not (just pause)
      */
     private fun stopTimer(preferences: Prefs, mode: String) {
+        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         timer.cancel()
         preferences.isTimerRunning = false
         timer = Timer()
