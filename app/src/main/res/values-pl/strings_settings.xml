@@ -23,7 +23,10 @@
     <string name="censure">Cenzura</string>
     <string name="crow">Wrona</string>
     <string name="doh">Homer \'oh</string>
-    <string name="drum">Bęben</string>
+    <string name="drum1">Bęben 1</string>
+    <string name="drum2">Bęben 2</string>
+    <string name="drum3">Bęben 3</string>
+    <string name="drum4">Bęben 4</string>
     <string name="duck">kaczka</string>
     <string name="fb_notification">Powiadomienie na Facebooku</string>
     <string name="metal_gear">Metalowy sprzęt</string>

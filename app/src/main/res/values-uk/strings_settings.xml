@@ -23,7 +23,10 @@
     <string name="censure">Цензура</string>
     <string name="crow">Гава</string>
     <string name="doh">D\'о Гомера</string>
-    <string name="drum">Барабан</string>
+    <string name="drum1">Барабан 1</string>
+    <string name="drum2">Барабан 2</string>
+    <string name="drum3">Барабан 3</string>
+    <string name="drum4">Барабан 4</string>
     <string name="duck">Качка</string>
     <string name="fb_notification">Новини в Facebook</string>
     <string name="metal_gear">(Металева передача) Metal gear</string>

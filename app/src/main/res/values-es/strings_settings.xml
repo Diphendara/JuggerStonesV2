@@ -23,7 +23,10 @@
     <string name="censure">Censura</string>
     <string name="crow">Cuervo</string>
     <string name="doh">D\'oh de Homer</string>
-    <string name="drum">Tambor</string>
+    <string name="drum1">Tambor 1</string>
+    <string name="drum2">Tambor 2</string>
+    <string name="drum3">Tambor 3</string>
+    <string name="drum4">Tambor 4</string>
     <string name="duck">Pato</string>
     <string name="fb_notification">Notificación de Facebook</string>
     <string name="metal_gear">Metal gear</string>

@@ -23,7 +23,10 @@
     <string name="censure">Цензура</string>
     <string name="crow">Ворона</string>
     <string name="doh">D\'оh Гомера</string>
-    <string name="drum">Барабан</string>
+    <string name="drum1">Барабан 1</string>
+    <string name="drum2">Барабан 2</string>
+    <string name="drum3">Барабан 3</string>
+    <string name="drum4">Барабан 4</string>
     <string name="duck">Утка</string>
     <string name="fb_notification">Уведомление Facebook</string>
     <string name="metal_gear">Металлическая передача</string>

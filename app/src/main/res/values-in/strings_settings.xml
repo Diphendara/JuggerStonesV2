@@ -23,7 +23,10 @@
     <string name="censure">Censure</string>
     <string name="crow">Crow</string>
     <string name="doh">Homer\'s D\'oh</string>
-    <string name="drum">Drum</string>
+    <string name="drum1">Drum 1</string>
+    <string name="drum2">Drum 2</string>
+    <string name="drum3">Drum 3</string>
+    <string name="drum4">Drum 4</string>
     <string name="duck">Duck</string>
     <string name="fb_notification">Notifikasi Facebook</string>
     <string name="metal_gear">Gigi Metal</string>

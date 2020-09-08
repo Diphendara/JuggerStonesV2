@@ -76,7 +76,10 @@
         <item>@string/censure</item>
         <item>@string/crow</item>
         <item>@string/doh</item>
-        <item>@string/drum</item>
+        <item>@string/drum1</item>
+        <item>@string/drum2</item>
+        <item>@string/drum3</item>
+        <item>@string/drum4</item>
         <item>@string/duck</item>
         <item>@string/fb_notification</item>
         <item>@string/metal_gear</item>
@@ -89,7 +92,10 @@
         <item>censure</item>
         <item>crow</item>
         <item>doh</item>
-        <item>drum</item>
+        <item>drum1</item>
+        <item>drum2</item>
+        <item>drum3</item>
+        <item>drum4</item>
         <item>duck</item>
         <item>fb</item>
         <item>metal_gear</item>
