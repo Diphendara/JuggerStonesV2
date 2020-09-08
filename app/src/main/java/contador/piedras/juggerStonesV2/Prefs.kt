@@ -22,8 +22,7 @@ data class Prefs(private val context: Context) {
     val ON_REVERSE ="reverse"
     val LANGUAGE = "language"
     val SHOW_RATE_ALERT = "showRateAlert"
-    val TEAM_COLOR_1 = "team_color_1"
-    val TEAM_COLOR_2 = "team_color_2"
+    val GONG_AFTER_POINT = "gong_after_point"
 
     private val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
@@ -51,7 +50,7 @@ data class Prefs(private val context: Context) {
         set(value) = prefs.edit().putBoolean(STOP_AFTER_GONG, value).apply()
 
     var stopAfterPoint: Boolean
-        get() = prefs.getBoolean(STOP_AFTER_POINT, false)
+        get() = prefs.getBoolean(STOP_AFTER_POINT, true)
         set(value) = prefs.edit().putBoolean(STOP_AFTER_POINT, value).apply()
 
     var counterInterval: Long
@@ -82,11 +81,8 @@ data class Prefs(private val context: Context) {
         get() = prefs.getString(LANGUAGE, Locale.getDefault().toString().substring(0..1))
         set(value) = prefs.edit().putString(LANGUAGE, value).apply()
 
-    var teamColor1: String
-        get() = prefs.getString(TEAM_COLOR_1, "00FF00")
-        set(value) = prefs.edit().putString(TEAM_COLOR_1, value).apply()
+    var gongAfterPoint: Boolean
+        get() = prefs.getBoolean(GONG_AFTER_POINT, false)
+        set(value) = prefs.edit().putBoolean(GONG_AFTER_POINT, value).apply()
 
-    var teamColor2: String
-        get() = prefs.getString(TEAM_COLOR_2, "FF0000")
-        set(value) = prefs.edit().putString(TEAM_COLOR_2, value).apply()
 }

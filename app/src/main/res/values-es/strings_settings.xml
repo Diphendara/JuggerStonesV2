@@ -13,6 +13,7 @@
     <string name="reverse_summary">Nota: no funciona en modo infinito</string>
     <string name="immediateStart">Comenzar de inmediato</string>
     <string name="pause_after_point">Pausa después de punto</string>
+    <string name="gong_after_point">Gong después de punto</string>
     <string name="pause_after_gong">Hacer una pausa después del gong</string>
 
     <!-- settings: sounds -->

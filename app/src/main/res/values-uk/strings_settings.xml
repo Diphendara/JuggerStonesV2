@@ -13,7 +13,8 @@
     <string name="reverse_summary">Примітка: він не працює в режимі нескінченності</string>
     <string name="immediateStart">Почати негайно</string>
     <string name="pause_after_point">Пауза після крапки</string>
-    <string name="pause_after_gong">Пауза після (гонг) gong</string>
+    <string name="gong_after_point">гонг після крапки</string>
+    <string name="pause_after_gong">Пауза після гонг</string>
 
     <!-- settings: sounds -->
     <string name="settings_category_sound">Звуки</string>

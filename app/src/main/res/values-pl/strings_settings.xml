@@ -13,6 +13,7 @@
     <string name="reverse_summary">Uwaga: nie działa w trybie nieskończonym</string>
     <string name="immediateStart">Zacznij od razu</string>
     <string name="pause_after_point">Zatrzymaj po punkcie</string>
+    <string name="gong_after_point">Gongu po punkcie</string>
     <string name="pause_after_gong">Zatrzymaj się po Gongu</string>
 
     <!-- settings: sounds -->

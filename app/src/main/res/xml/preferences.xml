@@ -25,9 +25,13 @@
             android:key="immediateStart"
             android:title="@string/immediateStart" />
         <CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="stop_after_point"
             android:title="@string/pause_after_point" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="gong_after_point"
+            android:title="@string/gong_after_point" />
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="stop_after_gong"

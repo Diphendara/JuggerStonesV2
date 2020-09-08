@@ -192,11 +192,11 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         setUpdateCounterListener(b_plus_counter, "plus", tv_stones, preferences)
         setUpdateCounterListener(b_minus_counter, "minus", tv_stones, preferences)
 
-        setUpdateCounterListener(b_plus_t1, "plus", tv_counter_t1, preferences)
-        setUpdateCounterListener(b_minus_t1, "minus", tv_counter_t1, preferences)
+        setUpdateTeamPointsListener(b_plus_t1, "plus", tv_counter_t1, preferences)
+        setUpdateTeamPointsListener(b_minus_t1, "minus", tv_counter_t1, preferences)
 
-        setUpdateCounterListener(b_plus_t2, "plus", tv_counter_t2, preferences)
-        setUpdateCounterListener(b_minus_t2, "minus", tv_counter_t2, preferences)
+        setUpdateTeamPointsListener(b_plus_t2, "plus", tv_counter_t2, preferences)
+        setUpdateTeamPointsListener(b_minus_t2, "minus", tv_counter_t2, preferences)
 
         renameOneTeam(tv_t1)
         renameOneTeam(tv_t2)
@@ -298,12 +298,21 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
     private fun setUpdateCounterListener(button: ImageButton, mode: String, counter: TextView, preferences: Prefs) {
         button.setOnClickListener{
             updateCounter(counter, mode)
-            if (preferences.stopAfterPoint) {
-                stopTimer(preferences, "pause")
-            }
         }
     }
 
+    private fun setUpdateTeamPointsListener(button: ImageButton, mode: String, counter: TextView, preferences: Prefs) {
+        button.setOnClickListener{
+            updateCounter(counter, mode)
+            if (preferences.stopAfterPoint) {
+                stopTimer(preferences, "pause")
+                if(preferences.gongAfterPoint) {
+                    val sound = Sound(preferences.stoneSound, preferences.gongSound)
+                    sound.playGong(this)
+                }
+            }
+        }
+    }
     /**
      * Shows a alertDialog for rename one team
      * @param teamName TextView who will be changed

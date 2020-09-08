@@ -26,6 +26,7 @@ class SettingsActivity : PreferenceActivity() {
             bindSummaryValue(findPreference("gong_sound"))
             bindSummaryValue(findPreference("immediateStart"))
             bindSummaryValue(findPreference("stop_after_gong"))
+            bindSummaryValue(findPreference("gong_after_point"))
             bindSummaryValue(findPreference("reverse"))
             bindSummaryValue(findPreference("language"))
 

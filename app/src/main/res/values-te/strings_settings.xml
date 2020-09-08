@@ -13,6 +13,7 @@
     <string name="reverse_summary">గమనిక: అనంతమైన రీతిలో పనిచేయదు</string>
     <string name="immediateStart">వెంటనే ప్రారంభించండి</string>
     <string name="pause_after_point">పాయింట్ తర్వాత పాజ్ చేయండి</string>
+    <string name="gong_after_point">గాంగ్ తర్వాత పాజ్ చేయండి</string>
     <string name="pause_after_gong">గాంగ్ తర్వాత పాజ్ చేయండి</string>
 
     <!-- settings: sounds -->

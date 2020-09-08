@@ -12,6 +12,7 @@
     <string name="reverse_summary">Nota: não funciona em Infinity</string>
     <string name="immediateStart">Começar imediatamente</string>
     <string name="pause_after_point">Pausa após o ponto</string>
+    <string name="gong_after_point">Gong após o ponto</string>
     <string name="pause_after_gong">Pausa após gong</string>
 
     <!-- settings: sounds -->

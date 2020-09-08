@@ -13,6 +13,7 @@
     <string name="reverse_summary">Catatan: tidak dapat digunakan pada mode Tanpa batas</string>
     <string name="immediateStart">Mulai langsung</string>
     <string name="pause_after_point">Jeda setelah point</string>
+    <string name="gong_after_point">Gong setelah point</string>
     <string name="pause_after_gong">Jeda setelah Gong</string>
 
     <!-- settings: sounds -->

@@ -14,6 +14,7 @@
     <string name="reverse_summary">Note: does not work on Infinite mode</string>
     <string name="immediateStart">Start immediately</string>
     <string name="pause_after_point">Pause after point</string>
+    <string name="gong_after_point">Gong after point</string>
     <string name="pause_after_gong">Pause after Gong</string>
 
     <!-- settings: sounds -->

@@ -13,6 +13,7 @@
     <string name="reverse_summary">Примечание: не работает в бесконечном режиме</string>
     <string name="immediateStart">Начать немедленно</string>
     <string name="pause_after_point">Пауза после очка</string>
+    <string name="gong_after_point">гонга после очка</string>
     <string name="pause_after_gong">Пауза после гонга</string>
 
     <!-- settings: sounds -->
