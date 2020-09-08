@@ -2,10 +2,12 @@ package contador.piedras.juggerStonesV2
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.preference.PreferenceManager
 import java.util.*
 
 
+@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 data class Prefs(private val context: Context) {
 
     val MAX_VALUE = "stonesMaxValue"
@@ -20,6 +22,8 @@ data class Prefs(private val context: Context) {
     val ON_REVERSE ="reverse"
     val LANGUAGE = "language"
     val SHOW_RATE_ALERT = "showRateAlert"
+    val TEAM_COLOR_1 = "team_color_1"
+    val TEAM_COLOR_2 = "team_color_2"
 
     private val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
@@ -78,4 +82,11 @@ data class Prefs(private val context: Context) {
         get() = prefs.getString(LANGUAGE, Locale.getDefault().toString().substring(0..1))
         set(value) = prefs.edit().putString(LANGUAGE, value).apply()
 
+    var teamColor1: String
+        get() = prefs.getString(TEAM_COLOR_1, "00FF00")
+        set(value) = prefs.edit().putString(TEAM_COLOR_1, value).apply()
+
+    var teamColor2: String
+        get() = prefs.getString(TEAM_COLOR_2, "FF0000")
+        set(value) = prefs.edit().putString(TEAM_COLOR_2, value).apply()
 }

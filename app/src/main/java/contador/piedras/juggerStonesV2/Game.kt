@@ -23,7 +23,6 @@ import com.jaredrummler.android.colorpicker.ColorPickerDialog
 import com.jaredrummler.android.colorpicker.ColorPickerDialogListener
 import io.fabric.sdk.android.Fabric
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.share
 import org.jetbrains.anko.toast
 import java.util.*
 
@@ -58,21 +57,23 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         if (isRestart) {
             tv_t1.text = intent.getStringExtra("nameTeamOne")
             tv_t2.text = intent.getStringExtra("nameTeamTwo")
+            tv_t1.setTextColor(intent.getIntExtra("colorTeamOne", -16711936))
+            tv_t2.setTextColor(intent.getIntExtra("colorTeamTwo", -65536))
             tv_counter_t1.text = intent.getStringExtra("counterTeamOne")
             tv_counter_t2.text = intent.getStringExtra("counterTeamTwo")
             tv_stones.text = intent.getStringExtra("stones")
         }
     }
 
-    fun showRateAlert(preferences: Prefs) {
+    private fun showRateAlert(preferences: Prefs) {
         val alertDialog = AlertDialog.Builder(this).create()
         alertDialog.setTitle(getString(R.string.rate_title))
         alertDialog.setMessage(getString(R.string.rate_body))
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.rate)) { _, _ ->
             preferences.showRateAlert = true
-            var playstoreuri1: Uri = Uri.parse("market://details?id=contador.piedras.juggerStonesV2")
-            var playstoreIntent1 = Intent(Intent.ACTION_VIEW, playstoreuri1)
-            startActivity(playstoreIntent1)
+            val playStoreUri: Uri = Uri.parse("market://details?id=contador.piedras.juggerStonesV2")
+            val playStoreIntent = Intent(Intent.ACTION_VIEW, playStoreUri)
+            startActivity(playStoreIntent)
             alertDialog.cancel()
         }
         alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.rate_no)) { _, _ ->
@@ -116,6 +117,8 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         val intent = Intent(baseContext, Game::class.java)
         intent.putExtra("nameTeamOne", tv_t1.text.toString())
         intent.putExtra("nameTeamTwo", tv_t2.text.toString())
+        intent.putExtra("colorTeamOne", tv_t1.currentTextColor)
+        intent.putExtra("colorTeamTwo", tv_t2.currentTextColor)
         intent.putExtra("counterTeamOne", tv_counter_t1.text.toString())
         intent.putExtra("counterTeamTwo", tv_counter_t2.text.toString())
         intent.putExtra("stones", tv_stones.text.toString())
@@ -259,7 +262,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
 
     /**
      * It invoque the library for the change the color of a textView
-     * @param team TextView who color will be changeded
+     * @param team TextView who color will be changed
      */
     private fun changeTeamColors(team: TextView) {
         ColorPickerDialog.newBuilder()
@@ -272,7 +275,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
     }
 
     /**
-     * @param textView TextView who color will be changeded
+     * @param textView TextView who color will be changed
      */
     private fun changeTeamListener(textView: TextView) {
         textView.setOnLongClickListener{
