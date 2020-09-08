@@ -30,12 +30,17 @@ data class Prefs(private val context: Context) {
         get() = prefs.getBoolean(SHOW_RATE_ALERT, false)
         set(value) = prefs.edit().putBoolean(SHOW_RATE_ALERT, value).apply()
 
-    var maxValue: Long
+    var maxValue: Int
         get(){
             val actualValue = prefs.getString(MAX_VALUE, "100")
-            return if ( actualValue == "") 100 else actualValue.toLong()
+
+            return if(actualValue!!.toInt() > 9999){
+                999
+            } else {
+                actualValue.toInt()
+            }
         }
-        set(value) = prefs.edit().putLong(MAX_VALUE, value).apply()
+        set(value) = prefs.edit().putInt(MAX_VALUE, value).apply()
 
     var onReverse: Boolean
         get() = prefs.getBoolean(ON_REVERSE, false)
@@ -57,16 +62,16 @@ data class Prefs(private val context: Context) {
         get()
         {
             val actualValue = prefs.getString(COUNTER_INTERVAL, "1.5")
-            return if ( actualValue == "")  1500 else (actualValue.toFloat() * 1000).toLong()
+            return if ( actualValue == "")  1500 else (actualValue!!.toFloat() * 1000).toLong()
         }
         set(value) = prefs.edit().putLong(COUNTER_INTERVAL, value).apply()
 
     var stoneSound: String
-        get() = prefs.getString(STONE_SOUND, "censure")
+        get() = prefs.getString(STONE_SOUND, "censure")!!
         set(value) = prefs.edit().putString(STONE_SOUND, value).apply()
 
     var gongSound: String
-        get() = prefs.getString(GONG_SOUND, "gong")
+        get() = prefs.getString(GONG_SOUND, "gong")!!
         set(value) = prefs.edit().putString(GONG_SOUND, value).apply()
 
     var counterDelay: Long
@@ -78,7 +83,7 @@ data class Prefs(private val context: Context) {
         set(value) = prefs.edit().putBoolean(IS_ON, value).apply()
 
     var language: String
-        get() = prefs.getString(LANGUAGE, Locale.getDefault().toString().substring(0..1))
+        get() = prefs.getString(LANGUAGE, Locale.getDefault().toString().substring(0..1))!!
         set(value) = prefs.edit().putString(LANGUAGE, value).apply()
 
     var gongAfterPoint: Boolean

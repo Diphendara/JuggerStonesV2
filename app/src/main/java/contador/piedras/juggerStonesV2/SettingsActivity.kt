@@ -59,8 +59,8 @@ class SettingsActivity : PreferenceActivity() {
                             }
                         }
                         if(preference.key == "stone_sound" || preference.key == "gong_sound" ){
-                            val actualStone = sharedPreference.getString("stone_sound", "stone")
-                            val actualGong = sharedPreference.getString("gong_sound", "gong")
+                            val actualStone = sharedPreference.getString("stone_sound", "stone")!!
+                            val actualGong = sharedPreference.getString("gong_sound", "gong")!!
                             if(preference.key == "stone_sound" && newValue != actualStone){
                                 val soundPlayer = Sound(newValue.toString(),actualGong)
                                 soundPlayer.playStone(preference.context)

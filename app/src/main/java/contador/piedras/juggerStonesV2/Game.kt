@@ -155,7 +155,7 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         preferences.isTimerRunning = true
         try{
             timer.scheduleAtFixedRate(
-                    CounterTask(this, tv_stones.text.toString().toLong(),
+                    CounterTask(this, tv_stones.text.toString().toInt(),
                             Sound(preferences.stoneSound, preferences.gongSound), preferences,
                             tv_stones), preferences.counterDelay,
                     preferences.counterInterval)
