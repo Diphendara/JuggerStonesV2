@@ -13,16 +13,19 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="contador.piedras.juggerStonesV2.Game">
+        <activity android:name="contador.piedras.juggerStonesV2.Game"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
 
             </intent-filter>
         </activity>
-        <activity android:name="contador.piedras.juggerStonesV2.SettingsActivity"/>
+        <activity android:name="contador.piedras.juggerStonesV2.SettingsActivity"
+            android:screenOrientation="portrait"/>
 
-        <activity android:name="contador.piedras.juggerStonesV2.SendEmail">
+        <activity android:name="contador.piedras.juggerStonesV2.SendEmail"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="contador.piedras.jugger.SEND_EMAIL" />
                 <category android:name="android.intent.category.DEFAULT"/>

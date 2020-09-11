@@ -241,8 +241,8 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         shareText += tv_t1.text.toString() + " "+tv_counter_t1.text.toString()
         shareText += " - "
         shareText += tv_counter_t2.text.toString() +" "+ tv_t2.text.toString()
-        shareText += " " + getString(R.string.playStore_link)
-        shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,shareText)
+        shareText += " " + getString(R.string.tweet_ht) + " " + getString(R.string.playStore_link)
+        shareIntent.putExtra(Intent.EXTRA_TEXT,shareText)
         startActivity(Intent.createChooser(shareIntent,getString(R.string.share_title)))
     }
 
@@ -305,11 +305,11 @@ class Game : AppCompatActivity(), ColorPickerDialogListener {
         button.setOnClickListener{
             updateCounter(counter, mode)
             if (preferences.stopAfterPoint) {
-                stopTimer(preferences, "pause")
-                if(preferences.gongAfterPoint) {
+                if(preferences.gongAfterPoint && preferences.isTimerRunning) {
                     val sound = Sound(preferences.stoneSound, preferences.gongSound)
                     sound.playGong(this)
                 }
+                stopTimer(preferences, "pause")
             }
         }
     }
